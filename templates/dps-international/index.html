@@ -1,155 +1,1743 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<!--[if lte IE 8]>         <html lang="en-US" class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en-US"> <!--<![endif]-->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DPS International School Portal - School Website Template Demo</title>
-    <meta name="description" content="Live website template demo for DPS International School Portal (CBSE Senior Secondary (Aff. No. 2130045)). Developed by Dev Sharma.">
-    <link rel="icon" href="/freelancers/img/favicon.ico">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&display=swap">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
-            background: #ffffff;
-            color: #0F172A;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
+<meta charset="utf-8"/>
+<title>ABC Public School | Senior Secondary - CBSE / International School</title>
 
-        /* Sticky Top Header Bar */
-        .template-top-bar {
-            position: sticky;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background: #0A2540;
-            color: #ffffff;
-            padding: 12px 24px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            z-index: 1000;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
-            flex-wrap: wrap;
-            gap: 12px;
-        }
+<link href="assets/school-logo-white.png" rel="icon"/>
+<meta content="ABC Public School is a premier learning institution offering world-class curriculum, holistic education, and state-of-the-art facilities." name="description"/>
+<meta content="ABC Public School, CBSE School, Senior Secondary, Holistic Education, Admissions" name="keywords"/>
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<link href="assets/fonts.css" media="all" rel="stylesheet"/>
+<link href="../../css/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap">
+<link href="assets/application.css" media="all" rel="stylesheet"/>
+<style>
+/* Cleaned essential styles used in body */
+.fs_style_3 { font-size: 16pt; color: #ff0000; }
+.fs_style_4 { font-size: 10pt; line-height: 1em; color: #336699; }
+.fs_style_5 { font-size: 10pt; line-height: 1em; font-weight: bold; color: #336699; }
+.fs_style_6 { float: right; margin: 5px 1em 1em 5px; }
 
-        .template-top-left {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
+/* Template Top Bar & Drawer Menu Fix */
+.template-top-bar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 48px;
+    background: #0A2540;
+    color: #ffffff;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 99999999;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    font-family: 'Google Sans', Roboto, -apple-system, sans-serif;
+    box-sizing: border-box;
+}
+.template-top-bar .template-badge {
+    background: rgba(0, 175, 144, 0.25);
+    color: #00AF90;
+    border: 1px solid rgba(0, 175, 144, 0.5);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 9999px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+.template-top-bar .template-title-text {
+    font-size: 14px;
+    font-weight: 700;
+    color: #ffffff;
+}
+.template-top-bar .template-sub-text {
+    font-size: 12px;
+    color: #94A3B8;
+}
+.template-top-bar .btn-get-website {
+    background: linear-gradient(135deg, #00AF90 0%, #008770 100%);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 12px;
+    padding: 6px 14px;
+    border-radius: 9999px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 175, 144, 0.4);
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    outline: none;
+    transition: all 0.2s ease;
+}
+.template-top-bar .btn-get-website:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 175, 144, 0.6);
+}
+.template-top-bar .btn-all-templates {
+    background: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 12px;
+    padding: 5px 12px;
+    border-radius: 9999px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    transition: background 0.2s ease;
+}
+.template-top-bar .btn-all-templates:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+@media (max-width: 768px) {
+    .template-top-bar {
+        height: 44px;
+        padding: 0 12px;
+    }
+    .template-top-bar .template-sub-text,
+    .template-top-bar .btn-all-templates {
+        display: none !important;
+    }
+    .template-top-bar .template-badge {
+        font-size: 10px;
+        padding: 2px 6px;
+    }
+    .template-top-bar .template-title-text {
+        font-size: 13px;
+    }
+    .template-top-bar .btn-get-website {
+        font-size: 11px;
+        padding: 5px 10px;
+    }
+}
 
-        .template-pill-badge {
-            background: rgba(0, 175, 144, 0.2);
-            color: #00AF90;
-            border: 1px solid rgba(0, 175, 144, 0.4);
-            font-size: 11px;
-            font-weight: 800;
-            padding: 4px 10px;
-            border-radius: 9999px;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-        }
+/* Crucial Drawer Menu header fix: prevent clipping under template-top-bar */
+.fsMenu.fsStyleAutoclear {
+    top: 48px !important;
+    height: calc(100vh - 48px) !important;
+}
+@media (max-width: 768px) {
+    .fsMenu.fsStyleAutoclear {
+        top: 44px !important;
+        height: calc(100vh - 44px) !important;
+    }
+}
+</style>
+<style id="fsHSLColors">
+			:root {
+				--primary-color-h: 210.0;
+				--primary-color-s: 100.00%;
+				--primary-color-l: 20.00%;
+				--primary-color-hsl: var(--primary-color-h), var(--primary-color-s), var(--primary-color-l);
+				--primary-color: #003366;
+				--secondary-color-h: 1.8;
+				--secondary-color-s: 100.00%;
+				--secondary-color-l: 60.78%;
+				--secondary-color-hsl: var(--secondary-color-h), var(--secondary-color-s), var(--secondary-color-l);
+				--secondary-color: #FF3D37;
+				--tertiary-color-h: 40.98;
+				--tertiary-color-s: 100.00%;
+				--tertiary-color-l: 64.12%;
+				--tertiary-color-hsl: var(--tertiary-color-h), var(--tertiary-color-s), var(--tertiary-color-l);
+				--tertiary-color: #FFC548;
+			}
+		</style>
+<link href="assets/main.css" media="all" rel="stylesheet"/>
+<style>
+  :root {
+    --display-accred-panel: none;
+    --has-sticky-header: false;
+    --is-district-site: false;
+    --header-logo-enabled: true;
+    --footer-logo-enabled: true;
+    --header-logo-bg: false;
+    --footer-logo-bg: false;
+    --header-logo-height-class: ;
+    --footer-logo-height-class: ;
+    --show-header-location-name: false;
+    --show-header-location-title: false;
+    --show-header-subtitle: false;
+    --show-header-motto: false;
+    --show-footer-title: false;
+    --weglot-display-position: default;
+    --hero-image-display: cropped;
+  }
+</style>
+<script src="assets/head.js"></script>
 
-        .template-title {
-            font-size: 15px;
-            font-weight: 800;
-            color: #ffffff;
-        }
+<script type="text/javascript">
+		(function(window) {
+			window.FS.currentPage = {
+				dateFormat: 'dm',
+				homepageVideoOptimization: false,
+				timeFormat: '24'
+			};
+			const settings = FS.getNS('settings');
+			settings.styleManagerEnabled = true;
+			settings.calendarsEnabled = true;
+			// Add A11ySettings to window for conditional loading
+			window.A11ySettings = {"search_element":false,"resource_element":false,"post_element":false,"post_tools":false,"location_element":false,"minor_enhancements":false,"calendar_element":false,"calendar_tools":false,"accordion_element":false,"feed_element":false,"issue_element":false,"cloudinary_video_player":false,"athletics_element":false,"constituent_element":false,"audioeye_admin":false};
+		})(window);
 
-        .template-board {
-            font-size: 13px;
-            color: #94A3B8;
-        }
 
-        .template-top-actions {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-
-        .btn-claim {
-            background: linear-gradient(135deg, #00AF90 0%, #008770 100%);
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: 800;
-            font-size: 13px;
-            padding: 9px 20px;
-            border-radius: 9999px;
-            border: none;
-            cursor: pointer;
-            box-shadow: 0 4px 14px rgba(0, 175, 144, 0.4);
-            transition: all 0.2s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .btn-claim:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 6px 18px rgba(0, 175, 144, 0.5);
-            color: #ffffff;
-        }
-
-        .btn-back {
-            background: rgba(255, 255, 255, 0.1);
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 13px;
-            padding: 8px 16px;
-            border-radius: 9999px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: background 0.2s ease;
-        }
-
-        .btn-back:hover {
-            background: rgba(255, 255, 255, 0.2);
-            color: #ffffff;
-        }
-
-        /* Empty White Page Canvas */
-        .empty-white-page {
-            flex: 1;
-            background: #ffffff;
-            width: 100%;
-            min-height: calc(100vh - 65px);
-            /* Empty white canvas ready for school website design */
-        }
-    </style>
+	</script>
 </head>
-<body>
+<body class="fsLiveMode fsHasHeader fsHasMenu fsHasFooter fsHasOneColumnLayout home fsLocation1 fsAccountBarTop fsHasTheme10" data-lazy-load-media="false" data-logged-in="false" data-resource-optimizations="true">
 
-    <!-- Sticky Top Header Bar -->
+    <!-- Sticky Top Header Bar for Portfolio Demo -->
     <header class="template-top-bar">
-        <div class="template-top-left">
-            <span class="template-pill-badge">Demo Template</span>
-            <span class="template-title">DPS International School Portal</span>
-            <span class="template-board">• CBSE Senior Secondary (Aff. No. 2130045)</span>
+        <div style="display: flex; align-items: center; gap: 10px;">
+            <span class="template-badge">Live Demo</span>
+            <span class="template-title-text">Template - 01</span>
+            <span class="template-sub-text">• CBSE Senior Secondary</span>
         </div>
-        <div class="template-top-actions">
-            <a href="/freelancers/index.html?claim=dps-international#contact" class="btn-claim">
-                Get This Website For Your School &rarr;
-            </a>
-            <a href="/freelancers/index.html#projects" class="btn-back">
+        <div style="display: flex; align-items: center; gap: 8px;">
+            <button type="button" class="btn-get-website" onclick="openQuoteModal();">
+                Get This Website &rarr;
+            </button>
+            <a href="/#projects" class="btn-all-templates">
                 &larr; All Templates
             </a>
         </div>
     </header>
 
-    <!-- Empty White Page Body (Clean Canvas) -->
-    <main class="empty-white-page">
-        <!-- Empty White Page: Template code will be added here -->
-    </main>
 
-</body>
-</html>
+
+
+<a href="#fsPageContent" id="fsSkipToMainContentLink">Skip To Main Content</a>
+<div id="fsPageWrapper">
+<div id="fsMenu">
+<div class="fsMenu fsStyleAutoclear" data-settings-id="114966" data-use-new="true" id="fsEl_118397">
+<section class="fsElement fsEmbed toggle-close-container" data-use-new="true" id="fsEl_118537">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_118537">Toggle Close Container</h2>
+</header>
+<div class="fsElementContent">
+<button aria-label="hide canvas menu" class="mobile-close" data-text="menu">
+<span>Close</span>
+</button>
+</div>
+</section>
+<section class="fsElement fsLocationElement fsSingleItem menu--logo fsThumbnailOriginal fsThumbnailFull" data-use-new="true" id="fsEl_118538">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_118538">Menu Logo</h2>
+</header>
+<div class="fsElementContent">
+<article class="fsLocationSingleItem"><div class="fsThumbnail fsThumbnailLogo"><a class="fsLocationLink" href="#"><img alt="ABC Public School Crest Emblem" data-aspect-ratio="1.0" height="1000" loading="lazy" src="assets/school-logo-white.png" width="1000"/></a></div><a class="fsLocationLink fsLocationLinkWrapper" href="#"><div class="fsTitle fsLocationTitle">ABC</div><div class="fsLocationSubtitle">Public School</div></a></article>
+</div>
+</section>
+<section class="fsElement fsNavigation fsList mobile--main--nav" data-use-new="true" id="fsEl_118546">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_118546">Mobile Main Nav</h2>
+</header>
+<div class="fsElementContent">
+<nav><ul class="fsNavLevel1"><li class="fsNavParentPage"><a href="about.html">About</a><div class="fsNavPageInfo"><ul class="fsNavLevel2"><li><a href="#">Mission &amp; Strategy</a></li><li><a href="#">Our Legacy</a></li><li><a href="#">Leadership</a></li><li><a href="#">Governance</a></li><li><a href="#">News &amp; Media</a></li><li><a href="#">School Calendar</a></li></ul></div></li><li class="fsNavParentPage"><a href="admissions.html">Admissions</a><div class="fsNavPageInfo"><ul class="fsNavLevel2"><li><a href="#">Inquire &amp; Visit</a></li><li><a href="#" target="_blank">Virtual Tour<span class="fsStyleSROnly" data-nosnippet="">(opens in new window/tab)</span></a></li><li><a href="#">Community Stories</a></li><li><a href="#">Apply</a></li><li><a href="#">Tuition &amp; Fees</a></li><li><a href="#">Access Programme</a></li><li><a href="#">Financial Aid &amp; Scholarship</a></li><li><a href="#">Admissions FAQ</a></li><li><a href="#">Security &amp; Transport</a></li></ul></div></li><li class="fsNavParentPage"><a href="academics.html">Academics</a><div class="fsNavPageInfo"><ul class="fsNavLevel2"><li><a href="#">Lower School</a></li><li><a href="#">Middle School</a></li><li><a href="#">High School</a></li><li><a href="#">Student Support</a></li><li><a href="#">STEM Learning at ABC Public School</a></li><li><a href="#">Language Learning</a></li><li><a href="#">Community Engagement</a></li><li><a href="#">Academic Performance</a></li></ul></div></li><li class="fsNavParentPage"><a href="#">Student Life</a><div class="fsNavPageInfo"><ul class="fsNavLevel2"><li><a href="#">Arts</a></li><li><a href="#">Athletics</a></li><li><a href="#">After-School Activities</a></li><li><a href="#">Camps</a></li><li><a href="#">Homecoming 2026</a></li></ul></div></li><li class="fsNavParentPage"><a href="#">Give to ABC Public School</a><div class="fsNavPageInfo"><ul class="fsNavLevel2"><li><a href="#">Make a Gift</a></li><li><a href="#">Gift Policy</a></li><li><a href="#">Tax Deductibility</a></li></ul></div></li><li class="fsNavParentPage"><a href="#">Join ABC Public School</a><div class="fsNavPageInfo"><ul class="fsNavLevel2"><li><a href="about.html">About School</a></li><li><a href="#">Professional Development</a></li><li><a href="#">Life in India &amp; Campus Community</a></li></ul></div></li><li><a href="#">Contact</a></li></ul></nav>
+</div>
+</section>
+<section class="fsElement fsNavigation fsList mobile--my--isb" data-use-new="true" id="fsEl_118547">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_118547">Portal</h2>
+</header>
+<div class="fsElementContent">
+<nav><ul class="fsNavLevel1"><li><a href="#">Community</a></li><li><a href="#">Alumni</a></li><li><a href="#">ABC Public School Shop</a></li></ul></nav>
+</div>
+</section>
+<section class="fsElement fsNavigation fsList menu--cta--nav" data-use-new="true" id="fsEl_118539">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_118539">CTA Nav</h2>
+</header>
+<div class="fsElementContent">
+<nav><ul class="fsNavLevel1"><li class="icon-location-custom"><a href="admissions.html#visit">Visit</a></li><li class="icon-apply-custom"><a href="admissions.html#apply">Apply</a></li></ul></nav>
+</div>
+</section>
+<section class="fsElement fsNavigation fsList nav-main" data-use-new="true" id="fsEl_118549">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_118549">Main Nav Desktop</h2>
+</header>
+<div class="fsElementContent">
+<nav><ul class="fsNavLevel1"><li class="fsNavParentPage"><a href="about.html">About</a><div class="fsNavPageInfo"><ul class="fsNavLevel2"><li><a href="#">Mission &amp; Strategy</a></li><li><a href="#">Our Legacy</a></li><li><a href="#">Leadership</a></li><li><a href="#">Governance</a></li><li><a href="#">News &amp; Media</a></li><li><a href="#">School Calendar</a></li></ul></div></li><li class="fsNavParentPage"><a href="admissions.html">Admissions</a><div class="fsNavPageInfo"><ul class="fsNavLevel2"><li><a href="#">Inquire &amp; Visit</a></li><li><a href="#" target="_blank">Virtual Tour<span class="fsStyleSROnly" data-nosnippet="">(opens in new window/tab)</span></a></li><li><a href="#">Community Stories</a></li><li><a href="#">Apply</a></li><li><a href="#">Tuition &amp; Fees</a></li><li><a href="#">Access Programme</a></li><li><a href="#">Financial Aid &amp; Scholarship</a></li><li><a href="#">Admissions FAQ</a></li><li><a href="#">Security &amp; Transport</a></li></ul></div></li><li class="fsNavParentPage"><a href="academics.html">Academics</a><div class="fsNavPageInfo"><ul class="fsNavLevel2"><li><a href="#">Lower School</a></li><li><a href="#">Middle School</a></li><li><a href="#">High School</a></li><li><a href="#">Student Support</a></li><li><a href="#">STEM Learning at ABC Public School</a></li><li><a href="#">Language Learning</a></li><li><a href="#">Community Engagement</a></li><li><a href="#">Academic Performance</a></li></ul></div></li><li class="fsNavParentPage"><a href="#">Student Life</a><div class="fsNavPageInfo"><ul class="fsNavLevel2"><li><a href="#">Arts</a></li><li><a href="#">Athletics</a></li><li><a href="#">After-School Activities</a></li><li><a href="#">Camps</a></li><li><a href="#">Homecoming 2026</a></li></ul></div></li><li class="fsNavParentPage"><a href="#">Give to ABC Public School</a><div class="fsNavPageInfo"><ul class="fsNavLevel2"><li><a href="#">Make a Gift</a></li><li><a href="#">Gift Policy</a></li><li><a href="#">Tax Deductibility</a></li></ul></div></li><li class="fsNavParentPage"><a href="#">Join ABC Public School</a><div class="fsNavPageInfo"><ul class="fsNavLevel2"><li><a href="about.html">About School</a></li><li><a href="#">Professional Development</a></li><li><a href="#">Life in India &amp; Campus Community</a></li></ul></div></li><li><a href="#">Contact</a></li></ul></nav>
+</div>
+</section>
+<section class="fsElement fsNavigation fsList nav-social" data-use-new="true" id="fsEl_118548">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_118548">Menu Socials</h2>
+</header>
+<div class="fsElementContent">
+<nav><ul class="fsNavLevel1"><li><a href="#">Instagram</a></li><li><a href="#" target="_blank">Facebook<span class="fsStyleSROnly" data-nosnippet="">(opens in new window/tab)</span></a></li><li><a href="#">LinkedIn</a></li><li><a href="#">YouTube</a></li></ul></nav>
+</div>
+</section>
+</div>
+</div>
+<header class="fsHeader" id="fsHeader">
+<div class="fsBanner fsStyleAutoclear" data-settings-id="114962" data-use-new="true" id="fsEl_118393">
+<section class="fsElement fsContainer header--holder" data-use-new="true" id="fsEl_118398">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_118398">Header Holder</h2>
+</header>
+<div class="fsElementContent">
+<section class="fsElement fsLocationElement fsSingleItem header--logo fsThumbnailOriginal fsThumbnailFull" data-use-new="true" id="fsEl_118408">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_118408">Header Logo</h2>
+</header>
+<div class="fsElementContent">
+<article class="fsLocationSingleItem"><div class="fsThumbnail fsThumbnailLogo"><a class="fsLocationLink" href="#"><img alt="ABC Public School Crest Emblem" data-aspect-ratio="1.0" height="1000" loading="lazy" src="assets/school-logo-white.png" width="1000"/></a></div><a class="fsLocationLink fsLocationLinkWrapper" href="#"><div class="fsTitle fsLocationTitle">ABC</div><div class="fsLocationSubtitle">Public School</div></a></article>
+</div>
+</section>
+<section class="fsElement fsContainer header--right--column" data-use-new="true" id="fsEl_118409">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_118409">Header Right Column</h2>
+</header>
+<div class="fsElementContent">
+<section class="fsElement fsSearchElement fsSearchForm header--search custom--search" id="fsEl_118410">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_118410">Search</h2>
+<div class="fsElementHeaderContent">
+<button aria-label="open search" class="open-site-search"><span>Open Search</span></button>
+</div>
+</header>
+<div class="fsElementContent">
+<form action="https://www.abcpublicschool.edu.in/search-results" data-controller="search-form" data-draft-mode="false" method="get" novalidate="novalidate">
+<label class="fsFieldLabel" for="fsSearchInput_118410">Search</label>
+<div class="fsSearchElementKeyword">
+<input class="fsStyleSearchField fsStyleDefaultField" data-search-form-target="input" id="fsSearchInput_118410" name="q" placeholder="Search website..." type="text"/>
+<button aria-label="Clear" class="fsButtonClear fsStateHidden" data-action="click-&gt;search-form#clearSearch" data-search-form-target="clear" type="reset">
+<span>Clear</span>
+</button>
+</div>
+<button class="fsSearchElementSearchButton fsStyleUpdateButton" type="submit">Search</button>
+</form>
+</div>
+<footer>
+<div class="fsElementFooterContent">
+<button aria-label="close search" class="close-site-search"><span>Close Search</span></button>
+</div>
+</footer>
+</section>
+<section class="fsElement fsNavigation fsList desktop--my--isb icon-user-custom" data-use-new="true" id="fsEl_118411">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_118411">portal</h2>
+</header>
+<div class="fsElementContent">
+<nav><ul class="fsNavLevel1"><li><a href="#">Community</a></li><li><a href="#">Alumni</a></li><li><a href="#">ABC Public School Shop</a></li></ul></nav>
+</div>
+</section>
+<section class="fsElement fsEmbed toggle-menu-container" data-use-new="true" id="fsEl_118412">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_118412">Toggle Menu Container</h2>
+</header>
+<div class="fsElementContent">
+<button aria-label="show canvas menu" class="mobile-toggle" data-text="menu">
+<span>Menu</span>
+</button>
+</div>
+</section>
+</div>
+</section>
+</div>
+</section>
+<section class="fsElement fsContainer canvas-menu news-events-canvas-container" data-use-new="true" id="fsEl_118582">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_118582">News Events Canvas</h2>
+</header>
+<div class="fsElementContent">
+<section class="fsElement fsEmbed close-canvas-container news-events-close-trigger" data-use-new="true" id="fsEl_118583">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_118583">Close Canvas</h2>
+</header>
+<div class="fsElementContent">
+<button aria-label="Hide news events Canvas" class="close-trigger-canvas" type="button">
+<span>Hide News &amp; Events Canvas</span>
+</button>
+</div>
+</section>
+<section class="fsElement fsPanelGroup fsTabs news--events--tabs fsPanelIconBefore" data-use-new="true" id="fsEl_118584">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_118584">News &amp; events</h2>
+</header>
+<div class="fsElementContent">
+<ul class="fsTabsNav" role="tablist">
+<li class="fsTabsNavItem" id="fsTab-118585" role="presentation">
+<a aria-controls="fsEl_118585" aria-selected="false" href="#fs-panel-118585" role="tab">news stories</a>
+</li>
+<li class="fsTabsNavItem" id="fsTab-118587" role="presentation">
+<a aria-controls="fsEl_118587" aria-selected="false" href="#fs-panel-118587" role="tab">upcoming events</a>
+</li>
+</ul>
+<section class="fsElement fsPanel fsStyleAutoclear" data-use-new="true" id="fsEl_118585" role="tabpanel">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_118585"><a aria-controls="fsPanelContent_118585" aria-expanded="false" href="#fs-panel-118585" role="button">news stories</a></h2>
+</header>
+<div aria-hidden="true" class="fsElementContent">
+<a id="fs-panel-118585"></a>
+<section class="fsElement fsPostElement fsList canvas--posts--list fsThumbnailFull fsItemCount_10" data-board-id="312" data-overwrite-title="" data-use-new="true" id="fsEl_118589">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_118589">Post</h2>
+</header>
+<div class="fsElementContent">
+<div class="fsListItems">
+<article aria-labelledby="fsArticle_118589_3896" class="fsStyleAutoclear fsBoard-312" data-authenticated-comments="true" data-post-id="3896">
+<a class="fsThumbnail fsPostLink fsPostBackgroundThumbnail" data-aspect-ratio="1.25" data-image-sizes='[{"url":"images/avif/photo_02_1080x1350.avif"}]' data-opens-in="popup" data-slug="news-feed/post/chuck-dorney-1962" href="#" style="; background-image: url('images/avif/photo_02_1080x1350.avif'); background-size: cover; background-position: center;"><img alt="Indian High School Students in Library Study Session" data-aspect-ratio="1.25" data-image-sizes='[{"url": "images/avif/photo_02_1080x1350.avif", "width": 1080}]' height="1350" loading="lazy" src="images/avif/photo_02_1080x1350.avif" srcset="images/avif/photo_02_1080x1350.avif 1080w" width="1080"/></a>
+<div class="fsTitle" id="fsArticle_118589_3896">
+<a class="fsPostLink" data-opens-in="popup" data-slug="news-feed/post/chuck-dorney-1962" href="#">Distinguished Keynote: Future Pathways in AI, Ethics &amp; Global Innovation</a></div>
+<div class="fsDateTime">
+<time class="fsDate" datetime="2026-10-09T14:17:00+02:00">
+<span class="fsDay">9</span> <span class="fsMonth">Oct</span> <span class="fsYear">2026</span>
+</time>
+</div>
+</article>
+<article aria-labelledby="fsArticle_118589_3895" class="fsStyleAutoclear fsBoard-312" data-authenticated-comments="true" data-post-id="3895">
+<a class="fsThumbnail fsPostLink fsPostBackgroundThumbnail" data-aspect-ratio="0.75" data-image-sizes='[{"url":"images/avif/photo_03_2200x1650.avif"}]' data-opens-in="popup" data-slug="news-feed/post/lower-school-project" href="#" style="; background-image: url('images/avif/photo_03_2200x1650.avif'); background-size: cover; background-position: center;"><img alt="Primary School Creative Arts Project" data-aspect-ratio="0.75" data-image-sizes='[{"url": "images/avif/photo_03_2200x1650.avif", "width": 2200}]' height="1650" loading="lazy" src="images/avif/photo_03_2200x1650.avif" srcset="images/avif/photo_03_2200x1650.avif 2200w" width="2200"/></a>
+<div class="fsTitle" id="fsArticle_118589_3895">
+<a class="fsPostLink" data-opens-in="popup" data-slug="news-feed/post/lower-school-project" href="#">Annual Science &amp; Maker Faire: Student Research Showcases</a></div>
+<div class="fsDateTime">
+<time class="fsDate" datetime="2026-10-07T14:13:00+02:00">
+<span class="fsDay">7</span> <span class="fsMonth">Oct</span> <span class="fsYear">2026</span>
+</time>
+</div>
+</article>
+<article aria-labelledby="fsArticle_118589_3894" class="fsStyleAutoclear fsBoard-312" data-authenticated-comments="true" data-post-id="3894">
+<a class="fsThumbnail fsPostLink fsPostBackgroundThumbnail" data-aspect-ratio="0.7793345008756567" data-image-sizes='[{"url":"images/avif/photo_04_1142x890.avif"}]' data-opens-in="popup" data-slug="news-feed/post/kindness-empathy" href="#" style="; background-image: url('images/avif/photo_04_1142x890.avif'); background-size: cover; background-position: center;"><img alt="Indian Student Scholars in Collaborative Discussion" data-aspect-ratio="0.7793345008756567" data-image-sizes='[{"url": "images/avif/photo_04_1142x890.avif", "width": 1142}]' height="890" loading="lazy" src="images/avif/photo_04_1142x890.avif" srcset="images/avif/photo_04_1142x890.avif 1142w" width="1142"/></a>
+<div class="fsTitle" id="fsArticle_118589_3894">
+<a class="fsPostLink" data-opens-in="popup" data-slug="news-feed/post/kindness-empathy" href="#">Youth Diplomacy &amp; Model UN Delegation Achieves Top Honours</a></div>
+<div class="fsDateTime">
+<time class="fsDate" datetime="2026-10-01T14:11:00+02:00">
+<span class="fsDay">1</span> <span class="fsMonth">Oct</span> <span class="fsYear">2026</span>
+</time>
+</div>
+</article>
+<article aria-labelledby="fsArticle_118589_3893" class="fsStyleAutoclear fsBoard-312" data-authenticated-comments="true" data-post-id="3893">
+<a class="fsThumbnail fsPostLink fsPostBackgroundThumbnail" data-aspect-ratio="0.9054054054054054" data-image-sizes='[{"url":"images/avif/photo_05_1332x1206.avif"}]' data-opens-in="popup" data-slug="news-feed/post/class-2027-success" href="#" style="; background-image: url('images/avif/photo_05_1332x1206.avif'); background-size: cover; background-position: center;"><img alt="School Football Championship Match" data-aspect-ratio="0.9054054054054054" data-image-sizes='[{"url": "images/avif/photo_05_1332x1206.avif", "width": 1332}]' height="1206" loading="lazy" src="images/avif/photo_05_1332x1206.avif" srcset="images/avif/photo_05_1332x1206.avif 1332w" width="1332"/></a>
+<div class="fsTitle" id="fsArticle_118589_3893">
+<a class="fsPostLink" data-opens-in="popup" data-slug="news-feed/post/class-2027-success" href="#">National Scholastic Championship: Outstanding Accolades for Senior Debaters</a></div>
+<div class="fsDateTime">
+<time class="fsDate" datetime="2026-09-25T14:29:00+02:00">
+<span class="fsDay">25</span> <span class="fsMonth">Sep</span> <span class="fsYear">2026</span>
+</time>
+</div>
+</article>
+<article aria-labelledby="fsArticle_118589_3892" class="fsStyleAutoclear fsBoard-312" data-authenticated-comments="true" data-post-id="3892">
+<a class="fsThumbnail fsPostLink fsPostBackgroundThumbnail" data-aspect-ratio="1.162109375" data-image-sizes='[{"url":"images/avif/photo_06_1024x1190.avif"}]' data-opens-in="popup" data-slug="news-feed/post/congratulations-alumni-universities-asia" href="#" style="; background-image: url('images/avif/photo_06_1024x1190.avif'); background-size: cover; background-position: center;"><img alt="Athletic Sports Stadium and Running Track" data-aspect-ratio="1.162109375" data-image-sizes='[{"url": "images/avif/photo_06_1024x1190.avif", "width": 1024}]' height="1190" loading="lazy" src="images/avif/photo_06_1024x1190.avif" srcset="images/avif/photo_06_1024x1190.avif 1024w" width="1024"/></a>
+<div class="fsTitle" id="fsArticle_118589_3892">
+<a class="fsPostLink" data-opens-in="popup" data-slug="news-feed/post/congratulations-alumni-universities-asia" href="#">
+			From ABC Public School to World’s Leading Universities
+</a></div>
+<div class="fsDateTime">
+<time class="fsDate" datetime="2026-09-21T11:38:00+02:00">
+<span class="fsDay">21</span> <span class="fsMonth">Sep</span> <span class="fsYear">2026</span>
+</time>
+</div>
+</article>
+<article aria-labelledby="fsArticle_118589_3890" class="fsStyleAutoclear fsBoard-312" data-authenticated-comments="true" data-post-id="3890">
+<a class="fsThumbnail fsPostLink fsPostBackgroundThumbnail" data-aspect-ratio="0.7544141252006421" data-image-sizes='[{"url":"images/avif/photo_07_1246x940.avif"}]' data-opens-in="popup" data-slug="news-feed/post/celebrating-community-engagement" href="#" style="; background-image: url('images/avif/photo_07_1246x940.avif'); background-size: cover; background-position: center;"><img alt="STEM Robotics and Maker Innovation Lab" data-aspect-ratio="0.7544141252006421" data-image-sizes='[{"url": "images/avif/photo_07_1246x940.avif", "width": 1246}]' height="940" loading="lazy" src="images/avif/photo_07_1246x940.avif" srcset="images/avif/photo_07_1246x940.avif 1246w" width="1246"/></a>
+<div class="fsTitle" id="fsArticle_118589_3890">
+<a class="fsPostLink" data-opens-in="popup" data-slug="news-feed/post/celebrating-community-engagement" href="#">
+			A great year of Community Engagement!
+</a></div>
+<div class="fsDateTime">
+<time class="fsDate" datetime="2026-09-17T11:03:00+02:00">
+<span class="fsDay">17</span> <span class="fsMonth">Sep</span> <span class="fsYear">2026</span>
+</time>
+</div>
+</article>
+<article aria-labelledby="fsArticle_118589_3889" class="fsStyleAutoclear fsBoard-312" data-authenticated-comments="true" data-post-id="3889">
+<a class="fsThumbnail fsPostLink fsPostBackgroundThumbnail" data-aspect-ratio="1.0883458646616542" data-image-sizes='[{"url":"images/avif/photo_08_1064x1158.avif"}]' data-opens-in="popup" data-slug="news-feed/post/ananya-athlete-success" href="#" style="; background-image: url('images/avif/photo_08_1064x1158.avif'); background-size: cover; background-position: center;"><img alt="Ananya Verma - National Athletics Champion" data-aspect-ratio="1.0883458646616542" data-image-sizes='[{"url": "images/avif/photo_08_1064x1158.avif", "width": 1064}]' height="1158" loading="lazy" src="images/avif/photo_08_1064x1158.avif" srcset="images/avif/photo_08_1064x1158.avif 1064w" width="1064"/></a>
+<div class="fsTitle" id="fsArticle_118589_3889">
+<a class="fsPostLink" data-opens-in="popup" data-slug="news-feed/post/ananya-athlete-success" href="#">
+			Celebrating Ananya Verma – National Athletics &amp; Badminton Champion!
+</a></div>
+<div class="fsDateTime">
+<time class="fsDate" datetime="2026-09-15T10:58:00+02:00">
+<span class="fsDay">15</span> <span class="fsMonth">Sep</span> <span class="fsYear">2026</span>
+</time>
+</div>
+</article>
+<article aria-labelledby="fsArticle_118589_3887" class="fsStyleAutoclear fsBoard-312" data-authenticated-comments="true" data-post-id="3887">
+<a class="fsThumbnail fsPostLink fsPostBackgroundThumbnail" data-aspect-ratio="0.8255250403877221" data-image-sizes='[{"url":"images/avif/photo_09_1238x1022.avif"}]' data-opens-in="popup" data-slug="news-feed/post/student-success-aarav" href="#" style="; background-image: url('images/avif/photo_09_1238x1022.avif'); background-size: cover; background-position: center;"><img alt="Aarav Sharma - Science Olympiad Gold Medalist" data-aspect-ratio="0.8255250403877221" data-image-sizes='[{"url": "images/avif/photo_09_1238x1022.avif", "width": 1238}]' height="1022" loading="lazy" src="images/avif/photo_09_1238x1022.avif" srcset="images/avif/photo_09_1238x1022.avif 1238w" width="1238"/></a>
+<div class="fsTitle" id="fsArticle_118589_3887">
+<a class="fsPostLink" data-opens-in="popup" data-slug="news-feed/post/student-success-aarav" href="#">
+			Class of 2027 Success – Congratulations, Aarav Sharma!
+</a></div>
+<div class="fsDateTime">
+<time class="fsDate" datetime="2026-09-10T10:30:00+02:00">
+<span class="fsDay">10</span> <span class="fsMonth">Sep</span> <span class="fsYear">2026</span>
+</time>
+</div>
+</article>
+<article aria-labelledby="fsArticle_118589_3886" class="fsStyleAutoclear fsBoard-312" data-authenticated-comments="true" data-post-id="3886">
+<a class="fsThumbnail fsPostLink fsPostBackgroundThumbnail" data-aspect-ratio="1.1575875486381324" data-image-sizes='[{"url":"images/avif/photo_10_1028x1190.avif"}]' data-opens-in="popup" data-slug="news-feed/post/lower-school-science-lab" href="#" style="; background-image: url('images/avif/photo_10_1028x1190.avif'); background-size: cover; background-position: center;"><img alt="Advanced Chemistry &amp; Biology Science Lab" data-aspect-ratio="1.1575875486381324" data-image-sizes='[{"url": "images/avif/photo_10_1028x1190.avif", "width": 1028}]' height="1190" loading="lazy" src="images/avif/photo_10_1028x1190.avif" srcset="images/avif/photo_10_1028x1190.avif 1028w" width="1028"/></a>
+<div class="fsTitle" id="fsArticle_118589_3886">
+<a class="fsPostLink" data-opens-in="popup" data-slug="news-feed/post/lower-school-science-lab" href="#">
+			New Lower School Science Lab
+</a></div>
+<div class="fsDateTime">
+<time class="fsDate" datetime="2026-09-08T10:23:00+02:00">
+<span class="fsDay">8</span> <span class="fsMonth">Sep</span> <span class="fsYear">2026</span>
+</time>
+</div>
+</article>
+<article aria-labelledby="fsArticle_118589_3882" class="fsStyleAutoclear fsBoard-312" data-authenticated-comments="true" data-post-id="3882">
+<a class="fsThumbnail fsPostLink fsPostBackgroundThumbnail" data-aspect-ratio="0.75" data-image-sizes='[{"url":"images/avif/photo_11_2200x1650.avif"}]' data-opens-in="popup" data-slug="news-feed/post/75-years-logo-drawing" href="#" style="; background-image: url('images/avif/photo_11_2200x1650.avif'); background-size: cover; background-position: center;"><img alt="School Campus and Green Grounds" data-aspect-ratio="0.75" data-image-sizes='[{"url": "images/avif/photo_11_2200x1650.avif", "width": 2200}]' height="1650" loading="lazy" src="images/avif/photo_11_2200x1650.avif" srcset="images/avif/photo_11_2200x1650.avif 2200w" width="2200"/></a>
+<div class="fsTitle" id="fsArticle_118589_3882">
+<a class="fsPostLink" data-opens-in="popup" data-slug="news-feed/post/75-years-logo-drawing" href="#">
+			75 years of ABC Public School, seen through the eyes of our Grade 5 students
+</a></div>
+<div class="fsDateTime">
+<time class="fsDate" datetime="2026-09-04T13:49:00+02:00">
+<span class="fsDay">4</span> <span class="fsMonth">Sep</span> <span class="fsYear">2026</span>
+</time>
+</div>
+</article>
+</div>
+</div>
+<footer>
+<div class="fsElementFooterContent">
+<p><a data-page-name="News &amp; Media" href="#">view all news</a></p>
+</div>
+</footer>
+</section>
+</div>
+</section>
+<section class="fsElement fsPanel fsStyleAutoclear" data-use-new="true" id="fsEl_118587" role="tabpanel">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_118587"><a aria-controls="fsPanelContent_118587" aria-expanded="false" href="#fs-panel-118587" role="button">upcoming events</a></h2>
+</header>
+<div aria-hidden="true" class="fsElementContent">
+<a id="fs-panel-118587"></a>
+<section class="fsElement fsCalendar fsList canvas--events--list fsItemCount_10" data-calendar-ids="30" data-calendars-feed-uuid="552c6e76-58eb-48f5-bb1f-889f7b41830e" data-new-calendar-style="true" data-teams-feed-uuid="f8b25dd5-24f0-41b1-9e89-6f49723cb7c1" data-use-new="true" id="fsEl_118590">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_118590">Canvas Calendar List</h2>
+</header>
+<div class="fsElementContent">
+<div class="fsElementEmpty">There are no events to display</div>
+</div>
+<footer>
+<div class="fsElementFooterContent">
+<p><a data-page-name="School Calendar" href="#">view full calendar</a></p>
+</div>
+</footer>
+</section>
+</div>
+</section>
+</div>
+</section>
+</div>
+</section>
+<section class="fsElement fsNavigation fsList sticky--cta--nav" data-use-new="true" id="fsEl_118854">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_118854">Sticky CTA</h2>
+</header>
+<div class="fsElementContent">
+<nav><ul class="fsNavLevel1"><li><a href="#"> visit</a></li><li><a href="#">apply</a></li></ul></nav>
+</div>
+</section>
+<section class="fsElement fsNavigation fsList horizontal-nav" data-use-new="true" id="fsEl_118726">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_118726">horizontal-nav</h2>
+</header>
+<div class="fsElementContent">
+<nav></nav>
+</div>
+</section>
+<section class="fsElement fsNavigation fsList nav-sub mobile-nav-sub" data-use-new="true" id="fsEl_118727">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_118727">In This Section</h2>
+</header>
+<div class="fsElementContent">
+<nav></nav>
+</div>
+</section>
+<section class="fsElement fsNavigation fsBreadcrumb site-bread" data-use-new="true" id="fsEl_118728">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_118728">Breadcrumb</h2>
+</header>
+<div class="fsElementContent">
+<nav aria-label="breadcrumbs">
+<ul>
+<li aria-current="location">
+			Home
+</li>
+</ul>
+</nav>
+</div>
+</section>
+</div>
+</header>
+<div class="fsPageBodyWrapper" id="fsPageBodyWrapper">
+<div class="fsStyleAutoclear fsPageBody" id="fsPageBody">
+<main class="fsPageContent" id="fsPageContent">
+<h1 class="fsPageTitle">Home</h1>
+<div class="fsPageLayout fsLayout fsOneColumnLayout fsStyleAutoclear" data-use-new="true" id="fsEl_104438">
+<div class="fsDiv fsStyleAutoclear" id="fsEl_104439">
+<section class="fsElement fsContent site--preloader" data-use-new="true" id="fsEl_118725">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_118725">Empowering</h2>
+</header>
+<div class="fsElementContent">
+<ul><li><em>Curiosity</em></li><li><em>Leadership</em></li><li><em>Excellence</em></li></ul>
+</div>
+</section>
+<section class="fsElement fsResourceElement fsSlideshow hero-banner fsSlideshowHorizontal fsStatePlaying" data-display-items="collections_and_resources" data-source-element-id="123443" data-source-page-id="4747" data-use-new="true" id="fsEl_123443">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_123443">HP Hero</h2>
+<div class="fsElementHeaderContent">
+<p>Inspiring Global Visionaries, Fostering Purpose &amp; Academic Distinction</p>
+</div>
+</header>
+<div class="fsElementContent">
+<div class="fsElementSlideshow" data-adaptive-height="true" data-arrows="true" data-autoplay="true" data-autoplay-speed="10000" data-dots="true" data-fade="true" data-slides-to-show="1" data-slideshow-item-label="Resource item" data-slideshow-label="" data-tabbable-slides="false" data-vertical="false"><fieldset aria-controls="fsEl_123443" aria-label="slideshow controls" class="fsElementSlideshowControls"><button aria-hidden="false" aria-label="pause slideshow" class="fsSlideshowPause" value="pause slideshow"><span class="fsStyleSROnly">pause slideshow</span></button><button aria-hidden="true" aria-label="play slideshow" class="fsSlideshowPlay fsStateHidden" value="play slideshow"><span class="fsStyleSROnly">play slideshow</span></button></fieldset><article class="fsResource fsStyleAutoclear fsResourceTypeImage"><figure><picture><img alt="Indian High School Students in Modern Campus Library" data-aspect-ratio="0.6662526614620298" data-image-sizes='[{"url": "images/avif/photo_12_2200x1466.avif", "width": 2200}]' data-permitted-user="true" data-resource-title="Home-hero-dronefields.jpg" data-resource-uuid="0d29bc71-d786-4a91-9410-9571ec030e28" height="1466" loading="lazy" src="images/avif/photo_12_2200x1466.avif" srcset="images/avif/photo_12_2200x1466.avif 2200w" width="2200"/></picture></figure></article><article class="fsResource fsStyleAutoclear fsResourceTypeImage"><figure><picture><img alt="Olympic-Standard Sports Stadium and Running Track" data-aspect-ratio="0.666748046875" data-image-sizes='[{"url": "images/avif/photo_13_2200x1467.avif", "width": 2200}]' data-permitted-user="true" data-resource-title="interior-image-min.jpg" data-resource-uuid="ebb999bd-da04-442e-9bea-a816fa571557" height="1467" loading="lazy" src="images/avif/photo_13_2200x1467.avif" srcset="images/avif/photo_13_2200x1467.avif 2200w" width="2200"/></picture></figure></article><article class="fsResource fsStyleAutoclear fsResourceTypeImage"><figure><picture><img alt="Students Collaborating in STEM Robotics Lab" data-aspect-ratio="0.66650390625" data-image-sizes='[{"url": "images/avif/photo_14_2200x1466.avif", "width": 2200}]' data-permitted-user="true" data-resource-title="home-hero-image2-min.jpg" data-resource-uuid="54a27031-3745-4c89-86f9-9f867fce5674" height="1466" loading="lazy" src="images/avif/photo_14_2200x1466.avif" srcset="images/avif/photo_14_2200x1466.avif 2200w" width="2200"/></picture></figure></article><article class="fsResource fsStyleAutoclear fsResourceTypeImage"><figure><picture><img alt="Students Conducting Experiments in Science Laboratory" data-aspect-ratio="0.666748046875" data-image-sizes='[{"url": "images/avif/photo_15_2200x1467.avif", "width": 2200}]' data-permitted-user="true" data-resource-title="home-hero-image3-min.jpg" data-resource-uuid="03010063-f7b4-4162-9fad-8c4caf9d6ddb" height="1467" loading="lazy" src="images/avif/photo_15_2200x1467.avif" srcset="images/avif/photo_15_2200x1467.avif 2200w" width="2200"/></picture></figure></article><article class="fsResource fsStyleAutoclear fsResourceTypeImage"><figure><picture><img alt="Senior Indian Scholars in Academic Mentorship Session" data-aspect-ratio="0.666748046875" data-image-sizes='[{"url": "images/avif/photo_16_2200x1467.avif", "width": 2200}]' data-permitted-user="true" data-resource-title="home-hero-image4-min.jpg" data-resource-uuid="bcaf3acb-ee81-46e2-8542-2dc5376bb1cc" height="1467" loading="lazy" src="images/avif/photo_16_2200x1467.avif" srcset="images/avif/photo_16_2200x1467.avif 2200w" width="2200"/></picture></figure></article></div><button aria-label="Previous" class="fsPrevButton fsLeftArrow">&lt;</button><button aria-label="Next" class="fsNextButton fsRightArrow">&gt;</button>
+</div>
+<footer>
+<div class="fsElementFooterContent">
+<p>An extraordinary educational journey equipping curious minds for an interconnected world.</p>
+</div>
+</footer>
+</section>
+<section class="fsElement fsContainer container--buttons--wrapper" data-use-new="true" id="fsEl_123451">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_123451">Container Buttons Wrapper</h2>
+</header>
+<div class="fsElementContent">
+<section class="fsElement fsContent homepage--button" data-use-new="true" id="fsEl_123452">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_123452">Virtual Campus Tour</h2>
+</header>
+<div class="fsElementContent">
+<p><a data-page-name="Virtual Tour" href="#" target="_blank">Explore Virtual Campus Tour</a></p>
+</div>
+</section>
+<section class="fsElement fsEmbed toggle-container-btn toggle-news-events-container" data-use-new="true" id="fsEl_123453">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_123453">Toggle News Events Container</h2>
+</header>
+<div class="fsElementContent">
+<button aria-label="show news events canvas" class="news-events-canvas-trigger trigger-btn" type="button">
+<span>Latest News &amp; Events</span>
+<span class="rotate-arrow"></span>
+</button>
+</div>
+</section>
+</div>
+</section>
+<section class="fsElement fsContent homepage-intro" data-use-new="true" id="fsEl_118379">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_118379">Intro text</h2>
+</header>
+<div class="fsElementContent">
+<p>Welcome to a premier learning community dedicated to intellectual discovery, cultural character, and academic mastery. Across every classroom, modern laboratory, and sports arena, we nurture young scholars to lead with wisdom and empathy.</p>
+</div>
+</section>
+<div class="fsElement fsContainer homepage-learning" data-use-new="true" id="fsEl_123444">
+<div class="fsElementContent">
+<section class="fsElement fsResourceElement fsSingleItem learning-intro" data-display-items="collections_and_resources" data-source-element-id="123445" data-source-page-id="4747" data-use-new="true" id="fsEl_123445">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_123445">An Education Sculpted for Global Leaders</h2>
+<div class="fsElementHeaderContent">
+<p>Bespoke Intellectual Pathways</p>
+</div>
+</header>
+<div class="fsElementContent">
+<article class="fsResource fsResourceTypeImage"><figure><picture><img alt="Holistic Education for Future Indian and Global Leaders" data-aspect-ratio="0.6666666666666666" data-image-sizes='[{"url": "images/avif/photo_17_2200x1467.avif", "width": 2200}]' data-permitted-user="true" data-resource-title="HomePage.jpg" data-resource-uuid="bfdac341-9dfa-4fb9-b2ad-7030c54f056b" height="1467" loading="lazy" src="images/avif/photo_17_2200x1467.avif" srcset="images/avif/photo_17_2200x1467.avif 2200w" width="2200"/></picture></figure></article>
+</div>
+<footer>
+<div class="fsElementFooterContent">
+<p>Our multidisciplinary curriculum integrates rigorous CBSE Senior Secondary frameworks with progressive NEP 2020 experiential modules, empowering every student to cultivate sharp critical thinking, scientific curiosity, and enduring human values.</p>
+</div>
+</footer>
+</section>
+<section class="fsElement fsContainer learning-slider" data-use-new="true" id="fsEl_123446">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_123446">Foundations of Our Educational Ethos</h2>
+<div class="fsElementHeaderContent">
+<p>Comprehensive Pillars of Student Growth</p>
+</div>
+</header>
+<div class="fsElementContent">
+<section class="fsElement fsResourceElement fsSingleItem learning-box" data-display-items="collections_and_resources" data-source-element-id="123447" data-source-page-id="4747" data-use-new="true" id="fsEl_123447">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_123447">Collaborative Culture</h2>
+<div class="fsElementHeaderContent">
+<p>Students learn through shared problem solving, team robotics challenges, peer debate conclaves, and cooperative community service, developing genuine emotional intelligence and empathy.</p>
+</div>
+</header>
+<div class="fsElementContent">
+<article class="fsResource fsResourceTypeImage"><figure><picture><img alt="Collaborative Culture and Mentorship in Early Years" data-aspect-ratio="0.6666666666666666" data-image-sizes='[{"url": "images/avif/photo_18_2200x1467.avif", "width": 2200}]' data-permitted-user="true" data-resource-title="Relationships.jpg" data-resource-uuid="e53241ef-ebcc-4267-bd93-9bf36251e46e" height="1467" loading="lazy" src="images/avif/photo_18_2200x1467.avif" srcset="images/avif/photo_18_2200x1467.avif 2200w" width="2200"/></picture></figure></article>
+</div>
+</section>
+<section class="fsElement fsResourceElement fsSingleItem learning-box" data-display-items="collections_and_resources" data-source-element-id="123448" data-source-page-id="4747" data-use-new="true" id="fsEl_123448">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_123448">Inquiry-Driven Pedagogy</h2>
+<div class="fsElementHeaderContent">
+<p>Transcending rote learning, our pedagogical model encourages active questioning, hypothesis testing, and hands-on laboratory investigation across every scientific and humanistic discipline.</p>
+</div>
+</header>
+<div class="fsElementContent">
+<article class="fsResource fsResourceTypeImage"><figure><picture><img alt="Inquiry-Driven Scientific Discovery and Experimentation" data-aspect-ratio="0.6666666666666666" data-image-sizes='[{"url": "images/avif/photo_19_2200x1467.avif", "width": 2200}]' data-permitted-user="true" data-resource-title="pedagogy.jpg" data-resource-uuid="0a02f813-9fd3-45c4-a06f-db329850171b" height="1467" loading="lazy" src="images/avif/photo_19_2200x1467.avif" srcset="images/avif/photo_19_2200x1467.avif 2200w" width="2200"/></picture></figure></article>
+</div>
+</section>
+<section class="fsElement fsResourceElement fsSingleItem learning-box" data-display-items="collections_and_resources" data-source-element-id="123449" data-source-page-id="4747" data-use-new="true" id="fsEl_123449">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_123449">Adaptive Academic Journeys</h2>
+<div class="fsElementHeaderContent">
+<p>Flexible elective streams, Olympiad mentoring, and personalized guidance adapt seamlessly to each student's distinct intellectual strengths, learning tempo, and university goals.</p>
+</div>
+</header>
+<div class="fsElementContent">
+<article class="fsResource fsResourceTypeImage"><figure><picture><img alt="Adaptive Learning in Robotics, Coding &amp; Technology" data-aspect-ratio="0.6666666666666666" data-image-sizes='[{"url": "images/avif/photo_20_2200x1467.avif", "width": 2200}]' data-permitted-user="true" data-resource-title="FlexibleLearningPaths.jpg" data-resource-uuid="0dcf16ae-1df0-4623-9d51-848eed911445" height="1467" loading="lazy" src="images/avif/photo_20_2200x1467.avif" srcset="images/avif/photo_20_2200x1467.avif 2200w" width="2200"/></picture></figure></article>
+</div>
+</section>
+<section class="fsElement fsResourceElement fsSingleItem learning-box" data-display-items="collections_and_resources" data-source-element-id="123450" data-source-page-id="4747" data-use-new="true" id="fsEl_123450">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_123450">Modern Learning Environments</h2>
+<div class="fsElementHeaderContent">
+<p>Smart interactive classrooms, specialized Atal Tinkering Labs, Olympic athletic facilities, and tranquil green courtyards create an uplifting environment for daily scholarly pursuits.</p>
+</div>
+</header>
+<div class="fsElementContent">
+<article class="fsResource fsResourceTypeImage"><figure><picture><img alt="State-of-the-art Sports Facilities and Campus Grounds" data-aspect-ratio="0.6666666666666666" data-image-sizes='[{"url": "images/avif/photo_21_2200x1467.avif", "width": 2200}]' data-permitted-user="true" data-resource-title="2ED6047B-6691-45A1-84E1-8FE9B9F4AB24_1_201_a.jpg" data-resource-uuid="a45db26d-29d2-44fb-b712-714f38bb459d" height="1467" loading="lazy" src="images/avif/photo_21_2200x1467.avif" srcset="images/avif/photo_21_2200x1467.avif 2200w" width="2200"/></picture></figure></article>
+</div>
+</section>
+</div>
+</section>
+</div>
+</div>
+<section class="fsElement fsContainer homepage-grade-levels three" data-use-new="true" id="fsEl_123454">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_123454">Our Educational Continuum</h2>
+<div class="fsElementHeaderContent">
+<h2>Nurturing Growth from Foundation to University</h2>
+</div>
+</header>
+<div class="fsElementContent">
+<section class="fsElement fsResourceElement fsSingleItem grade-box" data-display-items="collections_and_resources" data-source-element-id="123455" data-source-page-id="4747" data-use-new="true" id="fsEl_123455">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_123455">Primary School</h2>
+<div class="fsElementHeaderContent">
+<p>Early Years to Grade 5</p>
+</div>
+</header>
+<div class="fsElementContent">
+<article class="fsResource fsResourceTypeImage"><figure><picture><img alt="Primary School: Creative Discovery and Exploration" data-aspect-ratio="0.6666666666666666" data-image-sizes='[{"url": "images/avif/photo_22_2200x1467.avif", "width": 2200}]' data-permitted-user="true" data-resource-title="HomePageECC.jpg" data-resource-uuid="e8d81b04-537e-4d58-8d16-0d38f4c2a88a" height="1467" loading="lazy" src="images/avif/photo_22_2200x1467.avif" srcset="images/avif/photo_22_2200x1467.avif 2200w" width="2200"/></picture></figure></article>
+</div>
+<footer>
+<div class="fsElementFooterContent">
+<p><a data-page-name="Lower School" href="#">Discover Primary School</a></p>
+</div>
+</footer>
+</section>
+<section class="fsElement fsResourceElement fsSingleItem grade-box" data-display-items="collections_and_resources" data-source-element-id="123457" data-source-page-id="4747" data-use-new="true" id="fsEl_123457">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_123457">Middle School</h2>
+<div class="fsElementHeaderContent">
+<p>Grades 6 to 8</p>
+</div>
+</header>
+<div class="fsElementContent">
+<article class="fsResource fsResourceTypeImage"><figure><picture><img alt="Middle School: Innovation, Science &amp; Robotics" data-aspect-ratio="0.6667186282151208" data-image-sizes='[{"url": "images/avif/photo_23_2200x1467.avif", "width": 2200}]' data-permitted-user="true" data-resource-title="HomepageMiddleSchool.jpg" data-resource-uuid="649b8355-2e3b-4c55-a551-9119148c85a9" height="1467" loading="lazy" src="images/avif/photo_23_2200x1467.avif" srcset="images/avif/photo_23_2200x1467.avif 2200w" width="2200"/></picture></figure></article>
+</div>
+<footer>
+<div class="fsElementFooterContent">
+<p><a data-page-name="Middle School" href="#">Discover Middle School</a></p>
+</div>
+</footer>
+</section>
+<section class="fsElement fsResourceElement fsSingleItem grade-box" data-display-items="collections_and_resources" data-source-element-id="123458" data-source-page-id="4747" data-use-new="true" id="fsEl_123458">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_123458">Senior School</h2>
+<div class="fsElementHeaderContent">
+<p>Grades 9 to 12</p>
+</div>
+</header>
+<div class="fsElementContent">
+<article class="fsResource fsResourceTypeImage"><figure><picture><img alt="Senior School: Pre-University Academic Mastery" data-aspect-ratio="0.6666666666666666" data-image-sizes='[{"url": "images/avif/photo_24_2200x1467.avif", "width": 2200}]' data-permitted-user="true" data-resource-title="HSHeroImage.jpg" data-resource-uuid="3efa27ff-f120-4954-9ffc-75c1b646ccf9" height="1467" loading="lazy" src="images/avif/photo_24_2200x1467.avif" srcset="images/avif/photo_24_2200x1467.avif 2200w" width="2200"/></picture></figure></article>
+</div>
+<footer>
+<div class="fsElementFooterContent">
+<p><a data-page-name="High School" href="#">Discover Senior School</a></p>
+</div>
+</footer>
+</section>
+</div>
+<footer>
+<div class="fsElementFooterContent">
+<p><a data-page-name="Learning" href="#">Learning at ABC Public School</a></p>
+</div>
+</footer>
+</section>
+<section class="fsElement fsPanelGroup fsTabs homepage-testimonials fsPanelIconBefore" data-use-new="true" id="fsEl_118550">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_118550">Voices of Our Community</h2>
+<div class="fsElementHeaderContent">
+<p>Perspectives &amp; Reflections</p>
+</div>
+</header>
+<div class="fsElementContent">
+<ul class="fsTabsNav" role="tablist">
+<li class="fsTabsNavItem" id="fsTab-118551" role="presentation">
+<a aria-controls="fsEl_118551" aria-selected="false" href="#fs-panel-118551" role="tab">Students</a>
+</li>
+<li class="fsTabsNavItem" id="fsTab-118553" role="presentation">
+<a aria-controls="fsEl_118553" aria-selected="false" href="#fs-panel-118553" role="tab">Parents</a>
+</li>
+<li class="fsTabsNavItem" id="fsTab-118555" role="presentation">
+<a aria-controls="fsEl_118555" aria-selected="false" href="#fs-panel-118555" role="tab">Alumni</a>
+</li>
+</ul>
+<section class="fsElement fsPanel fsStyleAutoclear" data-use-new="true" id="fsEl_118551" role="tabpanel">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_118551"><a aria-controls="fsPanelContent_118551" aria-expanded="false" href="#fs-panel-118551" role="button">Students</a></h2>
+</header>
+<div aria-hidden="true" class="fsElementContent">
+<a id="fs-panel-118551"></a>
+<div class="fsElement fsContent intro-text" data-use-new="true" id="fsEl_123465">
+<div class="fsElementContent">
+<p>Hear firsthand from our scholars about their transformative experiences, collaborative projects, and daily life on our vibrant campus.</p>
+</div>
+</div>
+<div class="fsElement fsContainer community-testimonials" data-use-new="true" id="fsEl_123459">
+<div class="fsElementContent">
+<section class="fsElement fsResourceElement fsSingleItem testimonial-box" data-display-items="collections_and_resources" data-source-element-id="123460" data-source-page-id="4747" data-use-new="true" id="fsEl_123460">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_123460">Diya Chawla</h2>
+<div class="fsElementHeaderContent">
+<h3>Primary School Explorer • Grade 4</h3>
+<p>My teachers make every morning so exciting! From hands-on experiential science models to coding interactive animated stories and exploring Indian folklore in our sunny library, learning here feels like a big daily adventure.</p>
+<p>I love our campus organic gardening days and pottery classes where we learn by doing with friends. Everyone here is so encouraging, patient, and kind!</p>
+</div>
+</header>
+<div class="fsElementContent">
+<article class="fsResource fsResourceTypeImage"><figure><picture><img alt="Diya Chawla - Primary School Perspective" data-aspect-ratio="0.6966551326412919" data-image-sizes='[{"url": "images/avif/photo_25_867x604.avif", "width": 867}]' data-permitted-user="true" data-resource-title="Students_Testimonials-5.png" data-resource-uuid="85999e9a-df17-4444-9259-cb4c892a680c" height="604" loading="lazy" src="images/avif/photo_25_867x604.avif" srcset="images/avif/photo_25_867x604.avif 867w" width="867"/></picture></figure></article>
+</div>
+<footer>
+<div class="fsElementFooterContent">
+<figure class="fsImage"><picture><img alt="Diya Chawla Primary School Story" data-image-sizes='[{"url": "images/avif/photo_26_867x578.avif", "width": 867}]' data-resource-description="" data-resource-filename="Students_Testimonials-5.png" data-resource-uuid="85999e9a-df17-4444-9259-cb4c892a680c" height="578" loading="lazy" role="presentation" src="images/avif/photo_26_867x578.avif" srcset="images/avif/photo_26_867x578.avif 867w" width="867"/></picture></figure>
+<p>&nbsp;</p>
+</div>
+</footer>
+</section>
+<section class="fsElement fsResourceElement fsSingleItem testimonial-box" data-display-items="collections_and_resources" data-source-element-id="123461" data-source-page-id="4747" data-use-new="true" id="fsEl_123461">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_123461">Arjun Nair</h2>
+<div class="fsElementHeaderContent">
+<h3>Middle School Innovator • ATL Tinkering Lab Lead</h3>
+<p>Leading our school Atal Tinkering Lab team opened up a completely new world for me. We built an IoT-based smart irrigation model and presented it at the CBSE Regional Science Exhibition.</p>
+<p>Our mentors never just give answers; they inspire us to ask bold questions, test hypotheses, and fail forward until our prototypes solve real community challenges.</p>
+</div>
+</header>
+<div class="fsElementContent">
+<article class="fsResource fsResourceTypeImage"><figure><picture><img alt="Arjun Nair - Middle School Robotics Innovation" data-aspect-ratio="0.6966551326412919" data-image-sizes='[{"url": "images/avif/photo_27_867x604.avif", "width": 867}]' data-permitted-user="true" data-resource-title="Students_Testimonials-1.png" data-resource-uuid="33af9d60-e5db-45ad-a01a-d5b0b5a321b8" height="604" loading="lazy" src="images/avif/photo_27_867x604.avif" srcset="images/avif/photo_27_867x604.avif 867w" width="867"/></picture></figure></article>
+</div>
+<footer>
+<div class="fsElementFooterContent">
+<figure class="fsImage"><picture><img alt="Arjun Nair Robotics & STEM" data-image-sizes='[{"url": "images/avif/photo_28_867x578.avif", "width": 867}]' data-resource-description="" data-resource-filename="Students_Testimonials-1.png" data-resource-uuid="33af9d60-e5db-45ad-a01a-d5b0b5a321b8" height="578" loading="lazy" role="presentation" src="images/avif/photo_28_867x578.avif" srcset="images/avif/photo_28_867x578.avif 867w" width="867"/></picture></figure>
+<p>&nbsp;</p>
+</div>
+</footer>
+</section>
+<section class="fsElement fsResourceElement fsSingleItem testimonial-box" data-display-items="collections_and_resources" data-source-element-id="123462" data-source-page-id="4747" data-use-new="true" id="fsEl_123462">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_123462">Aarav Sharma</h2>
+<div class="fsElementHeaderContent">
+<h3>Senior Secondary Scholar • CBSE All-India Ranker</h3>
+<p>Balancing board exam excellence with competitive entrance coaching felt seamless because of structured faculty mentorship. Teachers conduct personalized doubt-clearing clinics every single afternoon.</p>
+<p>Beyond academics, captaining our school swimming team instilled discipline, time management, and mental resilience that gave me deep confidence for national Olympiads.</p>
+</div>
+</header>
+<div class="fsElementContent">
+<article class="fsResource fsResourceTypeImage"><figure><picture><img alt="Aarav Sharma - Senior Secondary Scholar Perspective" data-aspect-ratio="0.6966551326412919" data-image-sizes='[{"url": "images/avif/photo_29_867x604.avif", "width": 867}]' data-permitted-user="true" data-resource-title="Students_Testimonials-3.png" data-resource-uuid="2008f1fb-66e7-4bc8-8039-f97061f2d1c6" height="604" loading="lazy" src="images/avif/photo_29_867x604.avif" srcset="images/avif/photo_29_867x604.avif 867w" width="867"/></picture></figure></article>
+</div>
+<footer>
+<div class="fsElementFooterContent">
+<figure class="fsImage"><picture><img alt="Aarav Sharma Senior Scholar Story" data-image-sizes='[{"url": "images/avif/photo_30_867x578.avif", "width": 867}]' data-resource-description="" data-resource-filename="Students_Testimonials-3.png" data-resource-uuid="2008f1fb-66e7-4bc8-8039-f97061f2d1c6" height="578" loading="lazy" role="presentation" src="images/avif/photo_30_867x578.avif" srcset="images/avif/photo_30_867x578.avif 867w" width="867"/></picture></figure>
+<p>&nbsp;</p>
+</div>
+</footer>
+</section>
+<section class="fsElement fsResourceElement fsSingleItem testimonial-box" data-display-items="collections_and_resources" data-source-element-id="123463" data-source-page-id="4747" data-use-new="true" id="fsEl_123463">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_123463">Priya Patel</h2>
+<div class="fsElementHeaderContent">
+<h3>Head Girl &amp; Model United Nations President</h3>
+<p>Serving as Head Girl has been the most empowering milestone of my student journey. Leading 1,200 scholars and organizing our flagship inter-school MUN conclave gave me real-world executive experience.</p>
+<p>The inclusive culture here ensures every learner finds their voice, whether collaborating in student council elections or spearheading city-wide community outreach programs.</p>
+</div>
+</header>
+<div class="fsElementContent">
+<article class="fsResource fsResourceTypeImage"><figure><picture><img alt="Priya Patel - Head Girl & MUN President" data-aspect-ratio="0.6966551326412919" data-image-sizes='[{"url": "images/avif/photo_31_867x604.avif", "width": 867}]' data-permitted-user="true" data-resource-title="Students_Testimonials-9.png" data-resource-uuid="af1f6b99-d6a4-4435-94d4-0e3cc56e1e42" height="604" loading="lazy" src="images/avif/photo_31_867x604.avif" srcset="images/avif/photo_31_867x604.avif 867w" width="867"/></picture></figure></article>
+</div>
+<footer>
+<div class="fsElementFooterContent">
+<figure class="fsImage"><picture><img alt="Priya Patel Student Leadership" data-image-sizes='[{"url": "images/avif/photo_32_867x578.avif", "width": 867}]' data-resource-description="" data-resource-filename="Students_Testimonials-9.png" data-resource-uuid="af1f6b99-d6a4-4435-94d4-0e3cc56e1e42" height="578" loading="lazy" role="presentation" src="images/avif/photo_32_867x578.avif" srcset="images/avif/photo_32_867x578.avif 867w" width="867"/></picture></figure>
+<p>&nbsp;</p>
+</div>
+</footer>
+</section>
+<section class="fsElement fsResourceElement fsSingleItem testimonial-box" data-display-items="collections_and_resources" data-source-element-id="123464" data-source-page-id="4747" data-use-new="true" id="fsEl_123464">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_123464">Kabir Sen</h2>
+<div class="fsElementHeaderContent">
+<h3>Performing Arts &amp; Indian Classical Music Lead</h3>
+<p>Our school’s 800-seat amphitheater and acoustic music recording studio became my creative sanctuary. Learning classical instruments alongside Western orchestral performance gave me an expansive musical foundation.</p>
+<p>Representing our institution at national youth festivals and composing original school ensemble scores demonstrated how creative expression builds lifelong camaraderie.</p>
+</div>
+</header>
+<div class="fsElementContent">
+<article class="fsResource fsResourceTypeImage"><figure><picture><img alt="Kabir Sen - Performing Arts Scholar" data-aspect-ratio="0.6966551326412919" data-image-sizes='[{"url": "images/avif/photo_33_867x604.avif", "width": 867}]' data-permitted-user="true" data-resource-title="Students_Testimonials-8.png" data-resource-uuid="0e9bef55-c4d0-45cd-973b-79dd01354f2d" height="604" loading="lazy" src="images/avif/photo_33_867x604.avif" srcset="images/avif/photo_33_867x604.avif 867w" width="867"/></picture></figure></article>
+</div>
+<footer>
+<div class="fsElementFooterContent">
+<figure class="fsImage"><picture><img alt="Kabir Sen Instrumental Music Rehearsal" data-image-sizes='[{"url": "images/avif/photo_34_867x578.avif", "width": 867}]' data-resource-description="" data-resource-filename="Students_Testimonials-8.png" data-resource-uuid="0e9bef55-c4d0-45cd-973b-79dd01354f2d" height="578" loading="lazy" role="presentation" src="images/avif/photo_34_867x578.avif" srcset="images/avif/photo_34_867x578.avif 867w" width="867"/></picture></figure>
+<p>&nbsp;</p>
+</div>
+</footer>
+</section>
+</div>
+<footer>
+<div class="fsElementFooterContent">
+<p><a data-page-name="Community Stories" href="#">More Community Stories</a></p>
+</div>
+</footer>
+</div>
+</div>
+</section>
+<section class="fsElement fsPanel fsStyleAutoclear" data-use-new="true" id="fsEl_118553" role="tabpanel">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_118553"><a aria-controls="fsPanelContent_118553" aria-expanded="false" href="#fs-panel-118553" role="button">Parents</a></h2>
+</header>
+<div aria-hidden="true" class="fsElementContent">
+<a id="fs-panel-118553"></a>
+<div class="fsElement fsContent intro-text" data-use-new="true" id="fsEl_118557">
+<div class="fsElementContent">Parents are vital partners in our educational mission. Together, we foster an environment where children are valued, challenged, and inspired to achieve their fullest potential.</div>
+</div>
+<div class="fsElement fsContainer community-testimonials" data-use-new="true" id="fsEl_121777">
+<div class="fsElementContent">
+<section class="fsElement fsResourceElement fsSingleItem testimonial-box" data-display-items="collections_and_resources" data-source-element-id="121778" data-source-page-id="4747" data-use-new="true" id="fsEl_121778">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_121778">Mrs. Sunita Kapoor</h2>
+<div class="fsElementHeaderContent">
+<h3>Parent Association President • Mother of Grade 10 Scholar</h3>
+<p>Watching our daughter flourish with intellectual curiosity, emotional poise, and cultural values has been our family's greatest reassurance. Faculty members truly partner with parents at every developmental juncture.</p>
+<p>The transparent communication channels and safe campus transport network give us complete peace of mind every single morning.</p>
+</div>
+</header>
+<div class="fsElementContent">
+<article class="fsResource fsResourceTypeImage"><figure><picture><img alt="Mrs. Sunita Kapoor - Parent Perspective" data-aspect-ratio="0.6966551326412919" data-image-sizes='[{"url": "images/avif/photo_35_867x604.avif", "width": 867}]' data-permitted-user="true" data-resource-title="AlixVerney.png" data-resource-uuid="422c47c1-7c14-415f-a617-aa6f3f832a8c" height="604" loading="lazy" src="images/avif/photo_35_867x604.avif" srcset="images/avif/photo_35_867x604.avif 867w" width="867"/></picture></figure></article>
+</div>
+<footer>
+<div class="fsElementFooterContent">
+<figure class="fsImage"><picture><img alt="Sunita Kapoor Family Community" data-image-sizes='[{"url": "images/avif/photo_36_867x578.avif", "width": 867}]' data-resource-description="" data-resource-filename="AlixVerney.png" data-resource-uuid="422c47c1-7c14-415f-a617-aa6f3f832a8c" height="578" loading="lazy" role="presentation" src="images/avif/photo_36_867x578.avif" srcset="images/avif/photo_36_867x578.avif 867w" width="867"/></picture></figure>
+<p>&nbsp;</p>
+</div>
+</footer>
+</section>
+<section class="fsElement fsResourceElement fsSingleItem testimonial-box" data-display-items="collections_and_resources" data-source-element-id="123937" data-source-page-id="4747" data-use-new="true" id="fsEl_123937">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_123937">Rajesh Singhal</h2>
+<div class="fsElementHeaderContent">
+<h3>Alumni Parent &amp; Tech Enterprise Leader, Gurugram</h3>
+<p>Both our sons graduated from here and transitioned seamlessly into top tier engineering colleges. The school instills character, humility, and rigorous foundational mathematics without burnout.</p>
+<p>The sports complex and debate clubs nurtured their leadership abilities just as profoundly as their classroom syllabi.</p>
+</div>
+</header>
+<div class="fsElementContent">
+<article class="fsResource fsResourceTypeImage"><figure><picture><img alt="Rajesh Singhal - Alumni Parent Reflection" data-aspect-ratio="0.6966551326412919" data-image-sizes='[{"url": "images/avif/photo_37_867x604.avif", "width": 867}]' data-permitted-user="true" data-resource-title="KarikaS.png" data-resource-uuid="73271948-a4dd-4326-bf62-c633f5bf8326" height="604" loading="lazy" src="images/avif/photo_37_867x604.avif" srcset="images/avif/photo_37_867x604.avif 867w" width="867"/></picture></figure></article>
+</div>
+<footer>
+<div class="fsElementFooterContent">
+<figure class="fsImage"><picture><img alt="Rajesh Singhal Campus Heritage" data-image-sizes='[{"url": "images/avif/photo_38_867x578.avif", "width": 867}]' data-resource-description="" data-resource-filename="KarikaS.png" data-resource-uuid="73271948-a4dd-4326-bf62-c633f5bf8326" height="578" loading="lazy" role="presentation" src="images/avif/photo_38_867x578.avif" srcset="images/avif/photo_38_867x578.avif 867w" width="867"/></picture></figure>
+<p>&nbsp;</p>
+</div>
+</footer>
+</section>
+<section class="fsElement fsResourceElement fsSingleItem testimonial-box" data-display-items="collections_and_resources" data-source-element-id="123987" data-source-page-id="4747" data-use-new="true" id="fsEl_123987">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_123987">Dr. Meenakshi Sundaram</h2>
+<div class="fsElementHeaderContent">
+<h3>Early Years Parent • Pediatrician, New Delhi</h3>
+<p>The foundational years here focus on experiential discovery, joyful socialization, and speech clarity. As a physician, I deeply admire their balanced emphasis on mental wellness and outdoor nature playtime.</p>
+<p>Our young son looks forward to coming to school every single morning with sparkling enthusiasm.</p>
+</div>
+</header>
+<div class="fsElementContent">
+<article class="fsResource fsResourceTypeImage"><figure><picture><img alt="Dr. Meenakshi Sundaram - Early Years Parent" data-aspect-ratio="0.6966551326412919" data-image-sizes='[{"url": "images/avif/photo_39_867x604.avif", "width": 867}]' data-permitted-user="true" data-resource-title="ThereseS.png" data-resource-uuid="3b3c7d0e-0828-4257-a902-8b29b1dd555c" height="604" loading="lazy" src="images/avif/photo_39_867x604.avif" srcset="images/avif/photo_39_867x604.avif 867w" width="867"/></picture></figure></article>
+</div>
+<footer>
+<div class="fsElementFooterContent">
+<figure class="fsImage"><picture><img alt="Dr. Meenakshi Sundaram Early Learning" data-image-sizes='[{"url": "images/avif/photo_40_867x578.avif", "width": 867}]' data-resource-description="" data-resource-filename="ThereseS.png" data-resource-uuid="3b3c7d0e-0828-4257-a902-8b29b1dd555c" height="578" loading="lazy" role="presentation" src="images/avif/photo_40_867x578.avif" srcset="images/avif/photo_40_867x578.avif 867w" width="867"/></picture></figure>
+<p>&nbsp;</p>
+</div>
+</footer>
+</section>
+</div>
+<footer>
+<div class="fsElementFooterContent">
+<p><a href="#">More Community Stories</a></p>
+</div>
+</footer>
+</div>
+</div>
+</section>
+<section class="fsElement fsPanel fsStyleAutoclear" data-use-new="true" id="fsEl_118555" role="tabpanel">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_118555"><a aria-controls="fsPanelContent_118555" aria-expanded="false" href="#fs-panel-118555" role="button">Alumni</a></h2>
+</header>
+<div aria-hidden="true" class="fsElementContent">
+<a id="fs-panel-118555"></a>
+<div class="fsElement fsContent intro-text" data-use-new="true" id="fsEl_118558">
+<div class="fsElementContent">
+<p>Our worldwide alumni network comprises visionary researchers, civic leaders, entrepreneurs, and artists shaping industries across five continents.</p>
+</div>
+</div>
+<div class="fsElement fsContainer community-testimonials" data-use-new="true" id="fsEl_123466">
+<div class="fsElementContent">
+<section class="fsElement fsResourceElement fsSingleItem testimonial-box" data-display-items="collections_and_resources" data-source-element-id="123467" data-source-page-id="4747" data-use-new="true" id="fsEl_123467">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_123467">Priya Sengupta</h2>
+<div class="fsElementHeaderContent">
+<h3>Class of 2012 — AI &amp; DeepTech Founder, Bengaluru</h3>
+<p>My passion for computer science sparked right here in the school computer laboratory when our faculty introduced us to algorithms and Python programming long before it became standard curriculum.</p>
+<p>The independent thinking and ethical foundation instilled by my school mentors were crucial when founding our AI healthcare startup in Bengaluru.</p>
+</div>
+</header>
+<div class="fsElementContent">
+<article class="fsResource fsResourceTypeImage"><figure><picture><img alt="Priya Sengupta - Technology Entrepreneur" data-aspect-ratio="0.652267818574514" data-image-sizes='[{"url": "images/avif/photo_41_926x604.avif", "width": 926}]' data-permitted-user="true" data-resource-title="Alumnitestimonials.png" data-resource-uuid="b3b561dc-71da-4034-b51f-2d3f5526012f" height="604" loading="lazy" src="images/avif/photo_41_926x604.avif" srcset="images/avif/photo_41_926x604.avif 926w" width="926"/></picture></figure></article>
+</div>
+<footer>
+<div class="fsElementFooterContent">
+<figure class="fsImage"><picture><img alt="Priya Sengupta AI Innovation" data-image-sizes='[{"url": "images/avif/photo_42_926x617.avif", "width": 926}]' data-resource-description="" data-resource-filename="Alumnitestimonials.png" data-resource-uuid="b3b561dc-71da-4034-b51f-2d3f5526012f" height="617" loading="lazy" role="presentation" src="images/avif/photo_42_926x617.avif" srcset="images/avif/photo_42_926x617.avif 926w" width="926"/></picture></figure>
+<p>&nbsp;</p>
+</div>
+</footer>
+</section>
+<section class="fsElement fsResourceElement fsSingleItem testimonial-box" data-display-items="collections_and_resources" data-source-element-id="123468" data-source-page-id="4747" data-use-new="true" id="fsEl_123468">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_123468">Dr. Siddharth Rao</h2>
+<div class="fsElementHeaderContent">
+<h3>Class of 2016 — AIIMS Delhi Alumnus &amp; Biomedical Researcher</h3>
+<p>The state-of-the-art biology and chemistry laboratories in senior secondary gave me hands-on experimental confidence that set me apart when entering AIIMS Delhi for medical school.</p>
+<p>The emphasis on empathy, patient care ethos, and scientific rigor laid a bedrock that guides my current translational oncology research.</p>
+</div>
+</header>
+<div class="fsElementContent">
+<article class="fsResource fsResourceTypeImage"><figure><picture><img alt="Dr. Siddharth Rao - Biomedical Scientist" data-aspect-ratio="0.652267818574514" data-image-sizes='[{"url": "images/avif/photo_43_926x604.avif", "width": 926}]' data-permitted-user="true" data-resource-title="Alumni_testimonials-2.png" data-resource-uuid="3e5ee52a-e4f7-4fe6-b7e6-b2053b5e8453" height="604" loading="lazy" src="images/avif/photo_43_926x604.avif" srcset="images/avif/photo_43_926x604.avif 926w" width="926"/></picture></figure></article>
+</div>
+<footer>
+<div class="fsElementFooterContent">
+<figure class="fsImage"><picture><img alt="Dr. Siddharth Rao Medical Research" data-image-sizes='[{"url": "images/avif/photo_44_926x617.avif", "width": 926}]' data-resource-description="" data-resource-filename="Alumni_testimonials-2.png" data-resource-uuid="3e5ee52a-e4f7-4fe6-b7e6-b2053b5e8453" height="617" loading="lazy" role="presentation" src="images/avif/photo_44_926x617.avif" srcset="images/avif/photo_44_926x617.avif 926w" width="926"/></picture></figure>
+<p>&nbsp;</p>
+</div>
+</footer>
+</section>
+<section class="fsElement fsResourceElement fsSingleItem testimonial-box" data-display-items="collections_and_resources" data-source-element-id="123469" data-source-page-id="4747" data-use-new="true" id="fsEl_123469">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_123469">Rohan Singhania</h2>
+<div class="fsElementHeaderContent">
+<h3>Class of 2020 — IIT Delhi Alumnus &amp; CleanTech Innovator</h3>
+<p>The rigorous analytical problem-solving environment and mathematics olympiad coaching at school were instrumental in helping me secure a top rank in JEE Advanced and graduate from IIT Delhi.</p>
+<p>The values of environmental stewardship we learned during school solar energy projects now power our clean-tech enterprise based in Gurugram.</p>
+</div>
+</header>
+<div class="fsElementContent">
+<article class="fsResource fsResourceTypeImage"><figure><picture><img alt="Rohan Singhania - CleanTech Innovator" data-aspect-ratio="0.652267818574514" data-image-sizes='[{"url": "images/avif/photo_45_926x604.avif", "width": 926}]' data-permitted-user="true" data-resource-title="Alumni_testimonials-1.png" data-resource-uuid="594ce391-3945-4747-9de7-583fa3179ebc" height="604" loading="lazy" src="images/avif/photo_45_926x604.avif" srcset="images/avif/photo_45_926x604.avif 926w" width="926"/></picture></figure></article>
+</div>
+<footer>
+<div class="fsElementFooterContent">
+<figure class="fsImage"><picture><img alt="Rohan Singhania Sustainability" data-image-sizes='[{"url": "images/avif/photo_46_926x617.avif", "width": 926}]' data-resource-description="" data-resource-filename="Alumni_testimonials-1.png" data-resource-uuid="594ce391-3945-4747-9de7-583fa3179ebc" height="617" loading="lazy" role="presentation" src="images/avif/photo_46_926x617.avif" srcset="images/avif/photo_46_926x617.avif 926w" width="926"/></picture></figure>
+<p>&nbsp;</p>
+</div>
+</footer>
+</section>
+<section class="fsElement fsResourceElement fsSingleItem testimonial-box" data-display-items="collections_and_resources" data-source-element-id="123470" data-source-page-id="4747" data-use-new="true" id="fsEl_123470">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_123470">Vikramaditya Mehta</h2>
+<div class="fsElementHeaderContent">
+<h3>Class of 2014 — Sustainable Architect &amp; Urban Planner, CEPT</h3>
+<p>Designing with cultural sensitivity and sustainability was rooted in my school days, from our architectural heritage field trips across Rajasthan to studio design courses.</p>
+<p>Those formative principles guide every green school campus and sustainable public transit hub my studio designs across India today.</p>
+</div>
+</header>
+<div class="fsElementContent">
+<article class="fsResource fsResourceTypeImage"><figure><picture><img alt="Vikramaditya Mehta - Sustainable Architect" data-aspect-ratio="0.652267818574514" data-image-sizes='[{"url": "images/avif/photo_47_926x604.avif", "width": 926}]' data-permitted-user="true" data-resource-title="Alumni_testimonials-4.png" data-resource-uuid="2a93f0c4-6ff2-4500-9d7b-5e4debc4a325" height="604" loading="lazy" src="images/avif/photo_47_926x604.avif" srcset="images/avif/photo_47_926x604.avif 926w" width="926"/></picture></figure></article>
+</div>
+<footer>
+<div class="fsElementFooterContent">
+<figure class="fsImage"><picture><img alt="Vikramaditya Mehta Built Environments" data-image-sizes='[{"url": "images/avif/photo_48_926x617.avif", "width": 926}]' data-resource-description="" data-resource-filename="Alumni_testimonials-4.png" data-resource-uuid="2a93f0c4-6ff2-4500-9d7b-5e4debc4a325" height="617" loading="lazy" role="presentation" src="images/avif/photo_48_926x617.avif" srcset="images/avif/photo_48_926x617.avif 926w" width="926"/></picture></figure>
+<p>&nbsp;</p>
+</div>
+</footer>
+</section>
+<section class="fsElement fsResourceElement fsSingleItem testimonial-box" data-display-items="collections_and_resources" data-source-element-id="123471" data-source-page-id="4747" data-use-new="true" id="fsEl_123471">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_123471">Aarav Malhotra</h2>
+<div class="fsElementHeaderContent">
+<h3>Class of 2018 — Senior Policy Analyst, NITI Aayog &amp; DSE Alumnus</h3>
+<p>Participating in inter-school parliamentary debates, economics conclaves, and commerce exhibitions provided a profound foundation for my postgraduate studies at Delhi School of Economics.</p>
+<p>The faculty inspired us to analyze economic data with critical nuance, directly shaping my work in national education and skill development policy.</p>
+</div>
+</header>
+<div class="fsElementContent">
+<article class="fsResource fsResourceTypeImage"><figure><picture><img alt="Aarav Malhotra - Policy Analyst" data-aspect-ratio="0.652267818574514" data-image-sizes='[{"url": "images/avif/photo_49_926x604.avif", "width": 926}]' data-permitted-user="true" data-resource-title="Alumni_testimonials-2_1.png" data-resource-uuid="76f8f37e-a829-44d3-805a-4a55601c8d06" height="604" loading="lazy" src="images/avif/photo_49_926x604.avif" srcset="images/avif/photo_49_926x604.avif 926w" width="926"/></picture></figure></article>
+</div>
+<footer>
+<div class="fsElementFooterContent">
+<figure class="fsImage"><picture><img alt="Aarav Malhotra Economic Policy" data-image-sizes='[{"url": "images/avif/photo_50_926x617.avif", "width": 926}]' data-resource-description="" data-resource-filename="Alumni_testimonials-2_1.png" data-resource-uuid="76f8f37e-a829-44d3-805a-4a55601c8d06" height="617" loading="lazy" role="presentation" src="images/avif/photo_50_926x617.avif" srcset="images/avif/photo_50_926x617.avif 926w" width="926"/></picture></figure>
+<p>&nbsp;</p>
+</div>
+</footer>
+</section>
+<section class="fsElement fsResourceElement fsSingleItem testimonial-box" data-display-items="collections_and_resources" data-source-element-id="123472" data-source-page-id="4747" data-use-new="true" id="fsEl_123472">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_123472">Ananya Iyer</h2>
+<div class="fsElementHeaderContent">
+<h3>Class of 2010 — Advocate, Supreme Court of India</h3>
+<p>The moral clarity, critical thinking, and public speaking culture fostered at school formed the bedrock of my legal career at the Supreme Court of India.</p>
+<p>The school taught us that academic privilege comes with a deep responsibility to serve the wider Indian society with justice and integrity.</p>
+</div>
+</header>
+<div class="fsElementContent">
+<article class="fsResource fsResourceTypeImage"><figure><picture><img alt="Ananya Iyer - Supreme Court Advocate" data-aspect-ratio="0.652267818574514" data-image-sizes='[{"url": "images/avif/photo_51_926x604.avif", "width": 926}]' data-permitted-user="true" data-resource-title="Alumni_testimonials-3.png" data-resource-uuid="beb90d33-8c22-454b-a392-cb7539ed7f1a" height="604" loading="lazy" src="images/avif/photo_51_926x604.avif" srcset="images/avif/photo_51_926x604.avif 926w" width="926"/></picture></figure></article>
+</div>
+<footer>
+<div class="fsElementFooterContent">
+<figure class="fsImage"><picture><img alt="Ananya Iyer Constitutional Law" data-image-sizes='[{"url": "images/avif/photo_52_926x617.avif", "width": 926}]' data-resource-description="" data-resource-filename="Alumni_testimonials-3.png" data-resource-uuid="beb90d33-8c22-454b-a392-cb7539ed7f1a" height="617" loading="lazy" role="presentation" src="images/avif/photo_52_926x617.avif" srcset="images/avif/photo_52_926x617.avif 926w" width="926"/></picture></figure>
+<p>&nbsp;</p>
+</div>
+</footer>
+</section>
+</div>
+<footer>
+<div class="fsElementFooterContent">
+<p><a href="#">More Community Stories</a></p>
+</div>
+</footer>
+</div>
+</div>
+</section>
+</div>
+<footer>
+<div class="fsElementFooterContent">
+<p><a data-page-name="Community Stories" href="#">More Community Stories</a></p>
+</div>
+</footer>
+</section>
+<section class="fsElement fsContainer enh-facts image-left" data-use-new="true" id="fsEl_123437">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_123437">A Legacy of Distinction</h2>
+<div class="fsElementHeaderContent">
+<p>ABC Public School By The Numbers</p>
+</div>
+</header>
+<div class="fsElementContent">
+<section class="fsElement fsResourceElement fsSingleItem fact-box fact-shape-arrow color-purple" data-display-items="collections_and_resources" data-source-element-id="123438" data-source-page-id="4747" data-use-new="true" id="fsEl_123438">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_123438">30<em>+</em></h2>
+<div class="fsElementHeaderContent">
+<p>Global Languages &amp; Electives</p>
+</div>
+</header>
+<div class="fsElementContent">
+<article class="fsResource fsResourceTypeImage"><figure><picture><img alt="Over 30 Global Languages and Indian Regional Literacies" data-aspect-ratio="0.6666666666666666" data-image-sizes='[{"url": "images/avif/photo_53_2200x1467.avif", "width": 2200}]' data-permitted-user="true" data-resource-title="Morethanaschoolanguages.jpg" data-resource-uuid="4fb00d13-6ae4-4a4d-b953-a1895806397a" height="1467" loading="lazy" src="images/avif/photo_53_2200x1467.avif" srcset="images/avif/photo_53_2200x1467.avif 2200w" width="2200"/></picture></figure></article>
+</div>
+<footer>
+<div class="fsElementFooterContent">
+<p>Comprehensive multilingual pathways including Sanskrit, Hindi, French, German, Spanish, and Mandarin, developing global fluency from primary years.</p>
+</div>
+</footer>
+</section>
+<section class="fsElement fsResourceElement fsSingleItem fact-box fact-shape-circle color-green" data-display-items="collections_and_resources" data-source-element-id="123439" data-source-page-id="4747" data-use-new="true" id="fsEl_123439">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_123439">40<em>+</em></h2>
+<div class="fsElementHeaderContent">
+<p>Nationalities &amp; Pan-India Diversity</p>
+</div>
+</header>
+<div class="fsElementContent">
+<article class="fsResource fsResourceTypeImage"><figure><picture><img alt="Diverse Cohort from Over 40 Nationalities and Regions" data-aspect-ratio="0.666606170598911" data-image-sizes='[{"url": "images/avif/photo_54_2200x1467.avif", "width": 2200}]' data-permitted-user="true" data-resource-title="Nationalities.jpg" data-resource-uuid="91fc0734-f77a-462b-926f-d1658eb6dc6f" height="1467" loading="lazy" src="images/avif/photo_54_2200x1467.avif" srcset="images/avif/photo_54_2200x1467.avif 2200w" width="2200"/></picture></figure></article>
+</div>
+<footer>
+<div class="fsElementFooterContent">
+<p>A harmonious community bringing together families across 28 Indian states alongside diplomatic and expatriate cohorts in an inclusive environment.</p>
+</div>
+</footer>
+</section>
+<section class="fsElement fsResourceElement fsSingleItem fact-box fact-shape-heart color-pink" data-display-items="collections_and_resources" data-source-element-id="123440" data-source-page-id="4747" data-use-new="true" id="fsEl_123440">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_123440">1250<em>+</em></h2>
+<div class="fsElementHeaderContent">
+<p>Scholars Across All Grades</p>
+</div>
+</header>
+<div class="fsElementContent">
+<article class="fsResource fsResourceTypeImage"><figure><picture><img alt="Over 1,250 Scholars from Early Years to Grade 12" data-aspect-ratio="0.6666666666666666" data-image-sizes='[{"url": "images/avif/photo_55_2200x1467.avif", "width": 2200}]' data-permitted-user="true" data-resource-title="students.jpg" data-resource-uuid="60e9c4f0-597f-4173-a242-bae9debca114" height="1467" loading="lazy" src="images/avif/photo_55_2200x1467.avif" srcset="images/avif/photo_55_2200x1467.avif 2200w" width="2200"/></picture></figure></article>
+</div>
+<footer>
+<div class="fsElementFooterContent">
+<p>Empowering young minds from foundational Early Years through Senior Secondary with progressive NEP 2020 pedagogical integration.</p>
+</div>
+</footer>
+</section>
+<section class="fsElement fsResourceElement fsSingleItem fact-box fact-shape-arrow" data-display-items="collections_and_resources" data-source-element-id="123441" data-source-page-id="4747" data-use-new="true" id="fsEl_123441">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_123441">185<em>+</em></h2>
+<div class="fsElementHeaderContent">
+<p>Distinguished Faculty Members</p>
+</div>
+</header>
+<div class="fsElementContent">
+<article class="fsResource fsResourceTypeImage"><figure><picture><img alt="Over 185 Dedicated International and National Educators" data-aspect-ratio="0.6666666666666666" data-image-sizes='[{"url": "images/avif/photo_56_2200x1467.avif", "width": 2200}]' data-permitted-user="true" data-resource-title="Teachers.jpg" data-resource-uuid="7d51c985-a25e-4ac5-b38a-c5f01bdb73ea" height="1467" loading="lazy" src="images/avif/photo_56_2200x1467.avif" srcset="images/avif/photo_56_2200x1467.avif 2200w" width="2200"/></picture></figure></article>
+</div>
+<footer>
+<div class="fsElementFooterContent">
+<p>Renowned pedagogical leaders, CBSE master trainers, and experienced educators devoted to holistic student development and academic mastery.</p>
+</div>
+</footer>
+</section>
+<section class="fsElement fsResourceElement fsSingleItem fact-box fact-shape-star color-yellow" data-display-items="collections_and_resources" data-source-element-id="123442" data-source-page-id="4747" data-use-new="true" id="fsEl_123442">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_123442">7:1</h2>
+<div class="fsElementHeaderContent">
+<p>Student-to-Teacher Ratio</p>
+</div>
+</header>
+<div class="fsElementContent">
+<article class="fsResource fsResourceTypeImage"><figure><picture><img alt="Small 7:1 Student-to-Teacher Ratio for Personal Mentorship" data-aspect-ratio="0.6666115702479339" data-image-sizes='[{"url": "images/avif/photo_57_2200x1467.avif", "width": 2200}]' data-permitted-user="true" data-resource-title="Ratio.jpg" data-resource-uuid="eafeab6f-d8ed-4284-9a2c-6be75a23f626" height="1467" loading="lazy" src="images/avif/photo_57_2200x1467.avif" srcset="images/avif/photo_57_2200x1467.avif 2200w" width="2200"/></picture></figure></article>
+</div>
+<footer>
+<div class="fsElementFooterContent">
+<p>Small class cohorts guarantee customized learning attention, individualized academic pacing, and daily pastoral guidance for every child.</p>
+</div>
+</footer>
+</section>
+</div>
+<footer>
+<div class="fsElementFooterContent">
+<p><a data-page-name="About" href="#">Discover more facts</a></p>
+</div>
+</footer>
+</section>
+<section class="fsElement fsContainer hp-highlights" data-use-new="true" id="fsEl_123474">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_123474">Signature Programmes</h2>
+<div class="fsElementHeaderContent">
+<h2>Excellence Across Every Dimension</h2>
+</div>
+</header>
+<div class="fsElementContent">
+<section class="fsElement fsResourceElement fsSingleItem program-box" data-display-items="collections_and_resources" data-source-element-id="123475" data-source-page-id="4747" data-use-new="true" id="fsEl_123475">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_123475">Academic Rigour</h2>
+<div class="fsElementHeaderContent">
+<h3>Inquiry, Analysis &amp; Scholarly Mastery</h3>
+<p>Rigorous CBSE Senior Secondary and international inquiry curriculum mapped to national competitive examinations, NEP 2020 skill standards, and prestigious university entry pathways across India and abroad.</p>
+<p><a data-page-name="Learning" href="#">Explore Academic Pathways</a></p>
+</div>
+</header>
+<div class="fsElementContent">
+<article class="fsResource fsResourceTypeImage"><figure><picture><img alt="Academic Rigour: Inquiry, Analysis &amp; Scholarly Mastery" data-aspect-ratio="0.66650390625" data-image-sizes='[{"url": "images/avif/photo_58_2200x1466.avif", "width": 2200}]' data-permitted-user="true" data-resource-title="e1.jpg" data-resource-uuid="5a7a7efd-2a56-41ee-8608-4e9e6398f99d" height="1466" loading="lazy" src="images/avif/photo_58_2200x1466.avif" srcset="images/avif/photo_58_2200x1466.avif 2200w" width="2200"/></picture></figure></article>
+</div>
+</section>
+<section class="fsElement fsResourceElement fsSingleItem program-box" data-display-items="collections_and_resources" data-source-element-id="123476" data-source-page-id="4747" data-use-new="true" id="fsEl_123476">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_123476">World Languages</h2>
+<div class="fsElementHeaderContent">
+<h3>Multilingual Fluency &amp; Cultural Acumen</h3>
+<p>Immersive language acquisition programs spanning Indian classical Sanskrit, Hindi, and modern world languages, fostering intercultural respect, linguistic precision, and global diplomatic perspective.</p>
+<p><a data-page-name="Language Learning" href="#">Explore Language Offerings</a></p>
+</div>
+</header>
+<div class="fsElementContent">
+<article class="fsResource fsResourceTypeImage"><figure><picture><img alt="World Languages: Multilingual Fluency &amp; Cultural Acumen" data-aspect-ratio="0.6666666666666666" data-image-sizes='[{"url": "images/avif/photo_59_2200x1467.avif", "width": 2200}]' data-permitted-user="true" data-resource-title="languages.jpg" data-resource-uuid="1689bee7-a501-4cfa-96f1-7204b349c05f" height="1467" loading="lazy" src="images/avif/photo_59_2200x1467.avif" srcset="images/avif/photo_59_2200x1467.avif 2200w" width="2200"/></picture></figure></article>
+</div>
+</section>
+<section class="fsElement fsResourceElement fsSingleItem program-box" data-display-items="collections_and_resources" data-source-element-id="123477" data-source-page-id="4747" data-use-new="true" id="fsEl_123477">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_123477">Athletics &amp; Wellness</h2>
+<div class="fsElementHeaderContent">
+<h3>Sportsmanship, Character &amp; Athletic Mastery</h3>
+<p>Olympic-standard athletic training infrastructure including indoor badminton courts, synthetic all-weather athletics tracks, temperature-regulated aquatic pavilion, and daily yoga mindfulness.</p>
+<p><a data-page-name="Athletics" href="#">Explore Athletics Programmes</a></p>
+</div>
+</header>
+<div class="fsElementContent">
+<article class="fsResource fsResourceTypeImage"><figure><picture><img alt="Athletics &amp; Wellness: Sportsmanship &amp; Athletic Mastery" data-aspect-ratio="0.6666666666666666" data-image-sizes='[{"url": "images/avif/photo_60_2200x1467.avif", "width": 2200}]' data-permitted-user="true" data-resource-title="athletics.jpg" data-resource-uuid="ecaf82d7-3985-4bce-8783-8fe257055f93" height="1467" loading="lazy" src="images/avif/photo_60_2200x1467.avif" srcset="images/avif/photo_60_2200x1467.avif 2200w" width="2200"/></picture></figure></article>
+</div>
+</section>
+<section class="fsElement fsResourceElement fsSingleItem program-box" data-display-items="collections_and_resources" data-source-element-id="123609" data-source-page-id="4747" data-use-new="true" id="fsEl_123609">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_123609">Visual &amp; Performing Arts</h2>
+<div class="fsElementHeaderContent">
+<h3>Creative Vision, Expression &amp; Performance</h3>
+<p>A comprehensive fine arts and performing academy featuring digital sculpture labs, Hindustani classical ragas, theatrical stagecraft, and regular state and national arts showcases.</p>
+<p><a data-page-name="Arts" href="#">Explore Arts &amp; Music</a></p>
+</div>
+</header>
+<div class="fsElementContent">
+<article class="fsResource fsResourceTypeImage"><figure><picture><img alt="Visual &amp; Performing Arts: Creative Vision &amp; Performance" data-aspect-ratio="0.625" data-image-sizes='[{"url": "images/avif/photo_61_2200x1375.avif", "width": 2200}]' data-permitted-user="true" data-resource-title="Urinetownrehearsal-7.jpg" data-resource-uuid="11655ada-8b3a-4958-bd37-3e0fa6f33a3d" height="1375" loading="lazy" src="images/avif/photo_61_2200x1375.avif" srcset="images/avif/photo_61_2200x1375.avif 2200w" width="2200"/></picture></figure></article>
+</div>
+</section>
+<section class="fsElement fsResourceElement fsSingleItem program-box" data-display-items="collections_and_resources" data-source-element-id="123610" data-source-page-id="4747" data-use-new="true" id="fsEl_123610">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_123610">Pastoral Care &amp; Support</h2>
+<div class="fsElementHeaderContent">
+<h3>Holistic Wellbeing &amp; Individual Mentorship</h3>
+<p>Compassionate student counselors, dedicated life-skills facilitators, and proactive mental health workshops fostering emotional resilience and joyful confidence at every developmental stage.</p>
+<p><a data-page-name="Student Support" href="#">Explore Student Wellbeing</a></p>
+</div>
+</header>
+<div class="fsElementContent">
+<article class="fsResource fsResourceTypeImage"><figure><picture><img alt="Pastoral Care &amp; Support: Holistic Student Wellbeing" data-aspect-ratio="0.6666666666666666" data-image-sizes='[{"url": "images/avif/photo_62_2200x1467.avif", "width": 2200}]' data-permitted-user="true" data-resource-title="DSC_48061.jpg" data-resource-uuid="594ce571-b344-4da4-91e1-1e1d6f6033f8" height="1467" loading="lazy" src="images/avif/photo_62_2200x1467.avif" srcset="images/avif/photo_62_2200x1467.avif 2200w" width="2200"/></picture></figure></article>
+</div>
+</section>
+<section class="fsElement fsResourceElement fsSingleItem program-box" data-display-items="collections_and_resources" data-source-element-id="123478" data-source-page-id="4747" data-use-new="true" id="fsEl_123478">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_123478">Co-Curricular Life</h2>
+<div class="fsElementHeaderContent">
+<h3>Passions, Innovation &amp; Leadership Clubs</h3>
+<p>Over 40 dynamic student-led societies spanning Atal Tinkering Labs, robotics engineering, green eco-warriors, astronomy clubs, Model UN, and community service projects.</p>
+<p><a data-page-name="After-School Activities" href="#">Explore Co-Curricular Life</a></p>
+</div>
+</header>
+<div class="fsElementContent">
+<article class="fsResource fsResourceTypeImage"><figure><picture><img alt="Co-Curricular Life: Robotics, Innovation &amp; Clubs" data-aspect-ratio="0.6666666666666666" data-image-sizes='[{"url": "images/avif/photo_63_2200x1467.avif", "width": 2200}]' data-permitted-user="true" data-resource-title="AfterSchool.jpg" data-resource-uuid="b229e9ba-1c90-473d-9a66-2e23ad46c6e5" height="1467" loading="lazy" src="images/avif/photo_63_2200x1467.avif" srcset="images/avif/photo_63_2200x1467.avif 2200w" width="2200"/></picture></figure></article>
+</div>
+</section>
+</div>
+</section>
+</div>
+</div>
+</main>
+</div>
+</div>
+<footer class="fsFooter" id="fsFooter">
+<div class="fsBanner fsStyleAutoclear" data-settings-id="114965" data-use-new="true" id="fsEl_118396">
+<section class="fsElement fsContainer footer--holder" data-use-new="true" id="fsEl_118616">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_118616">Footer Holder</h2>
+</header>
+<div class="fsElementContent">
+<section class="fsElement fsContainer footer--top--wrapper" data-use-new="true" id="fsEl_118617">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_118617">Footer Top Wrapper</h2>
+</header>
+<div class="fsElementContent">
+<section class="fsElement fsLocationElement fsSingleItem footer--logo fsThumbnailOriginal fsThumbnailFull" data-use-new="true" id="fsEl_118619">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_118619">Footer Logo</h2>
+</header>
+<div class="fsElementContent">
+<article class="fsLocationSingleItem"><div class="fsThumbnail fsThumbnailLogo"><a class="fsLocationLink" href="#"><img alt="ABC Public School" height="122" loading="lazy" src="assets/school-logo-white.png" width="122"/></a></div><a class="fsLocationLink fsLocationLinkWrapper" href="#"><div class="fsTitle fsLocationTitle">ABC</div><div class="fsLocationSubtitle">Public School</div></a></article>
+</div>
+</section>
+<section class="fsElement fsLayout fsFourColumnLayout footer--top--layout fsStyleAutoclear" data-use-new="true" id="fsEl_118620">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_118620">Footer Top Layout</h2>
+</header>
+<div class="fsDiv fsStyleColumn fsStyleColumn-1 fsStyleAutoclear" id="fsEl_118621">
+<section class="fsElement fsLocationElement fsSingleItem footer--contact--details fsThumbnailOriginal fsThumbnailSmall" data-use-new="true" id="fsEl_118625">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_118625">Contact Details</h2>
+</header>
+<div class="fsElementContent">
+<article class="fsLocationSingleItem"><div class="fsLocationAddress fsLocationAddress-1">Institutional Area, Sector 62, Gurugram, Delhi NCR 122002, India</div><div class="fsLocationPhone"><a href="#">+91 (0124) 456-7890</a></div></article>
+</div>
+<footer>
+<div class="fsElementFooterContent">
+<p><a href="#" target="_blank">Find us on Google Maps</a></p>
+</div>
+</footer>
+</section>
+</div>
+<div class="fsDiv fsStyleColumn fsStyleColumn-2 fsStyleAutoclear" id="fsEl_118622">
+<section class="fsElement fsNavigation fsList footer--quicklinks--nav" data-use-new="true" id="fsEl_118626">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_118626">Useful links</h2>
+</header>
+<div class="fsElementContent">
+<nav><ul class="fsNavLevel1"><li><a href="about.html">About School</a></li><li><a href="admissions.html">Admissions &amp; FAQs</a></li><li><a href="mandatory-disclosure.html">Mandatory Public Disclosure (SARAS)</a></li></ul></nav>
+</div>
+</section>
+</div>
+<div class="fsDiv fsStyleColumn fsStyleColumn-3 fsStyleAutoclear" id="fsEl_118623">
+<section class="fsElement fsNavigation fsList footer--cta--nav" data-use-new="true" id="fsEl_118627">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_118627">Footer CTA</h2>
+</header>
+<div class="fsElementContent">
+<nav><ul class="fsNavLevel1"><li class="icon-location-custom"><a href="admissions.html#visit">Visit</a></li><li class="icon-apply-custom"><a href="admissions.html#apply">Apply</a></li></ul></nav>
+</div>
+</section>
+</div>
+<div class="fsDiv fsStyleColumn fsStyleColumn-4 fsStyleColumn-last fsStyleAutoclear" id="fsEl_118624">
+<section class="fsElement fsContainer footer--accreditations" data-use-new="true" id="fsEl_118628">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_118628">accreditations</h2>
+</header>
+<div class="fsElementContent">
+<section class="fsElement fsResourceElement fsSingleItem" data-display-items="collections_and_resources" data-source-element-id="118629" data-source-page-id="5793" data-use-new="true" id="fsEl_118629">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_118629">Accreditation logo 1</h2>
+</header>
+<div class="fsElementContent">
+<article class="fsResource fsResourceTypeImage"><figure><a class="fsResourceLink" data-permitted-user="true" data-preview="false" data-resource-title="IB World School" data-resource-type="Image" href="#" target="_blank"><picture><img alt="International Baccalaureate (IB) World School" data-aspect-ratio="0.9838709677419355" data-image-sizes='[{"url": "images/avif/photo_65_62x61.avif", "width": 62}]' data-permitted-user="true" data-resource-title="ib-acc-logo.svg" data-resource-uuid="2f4108b6-494a-4db8-9f89-e219c3552d2e" height="61" loading="lazy" src="images/avif/photo_65_62x61.avif" srcset="images/avif/photo_65_62x61.avif 62w" width="62"/></picture></a></figure></article>
+</div>
+</section>
+<section class="fsElement fsResourceElement fsSingleItem" data-display-items="collections_and_resources" data-source-element-id="118630" data-source-page-id="5793" data-use-new="true" id="fsEl_118630">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_118630">Accreditation logo 2</h2>
+</header>
+<div class="fsElementContent">
+<article class="fsResource fsResourceTypeImage"><figure><a class="fsResourceLink" data-permitted-user="true" data-preview="false" data-resource-title="CBSE Affiliated" data-resource-type="Image" href="#" target="_blank"><picture><img alt="Central Board of Secondary Education (CBSE)" data-aspect-ratio="0.20118343195266272" data-image-sizes='[{"url": "images/avif/photo_66_169x34.avif", "width": 169}]' data-permitted-user="true" data-resource-title="CIS_white-acc.png" data-resource-uuid="2fc57647-9e0b-41df-8efc-538860b828b5" height="34" loading="lazy" src="images/avif/photo_66_169x34.avif" srcset="images/avif/photo_66_169x34.avif 169w" width="169"/></picture></a></figure></article>
+</div>
+</section>
+<section class="fsElement fsResourceElement fsSingleItem" data-display-items="collections_and_resources" data-source-element-id="118631" data-source-page-id="5793" data-use-new="true" id="fsEl_118631">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_118631">Accreditation logo 3</h2>
+</header>
+<div class="fsElementContent">
+<article class="fsResource fsResourceTypeImage"><figure><a class="fsResourceLink" data-permitted-user="true" data-preview="false" data-resource-title="ICSE / CISCE Affiliated" data-resource-type="Image" href="#" target="_blank"><picture><img alt="Indian Certificate of Secondary Education (ICSE / CISCE)" data-aspect-ratio="0.6666666666666666" data-image-sizes='[{"url": "images/avif/photo_67_63x42.avif", "width": 63}]' data-permitted-user="true" data-resource-title="msa-cess-logo.png" data-resource-uuid="b42031ad-a374-41bb-b02f-9d4fb3e37ef8" height="42" loading="lazy" src="images/avif/photo_67_63x42.avif" srcset="images/avif/photo_67_63x42.avif 63w" width="63"/></picture></a></figure></article>
+</div>
+</section>
+</div>
+</section>
+</div>
+</section>
+<section class="fsElement fsEmbed back--to--top mobile" data-use-new="true" id="fsEl_118645">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_118645">Mobile Back To Top BTN -  Footer</h2>
+</header>
+<div class="fsElementContent">
+<button aria-label="go top" class="back-top">
+<span>Back to top</span>
+</button>
+</div>
+</section>
+<section class="fsElement fsContent footer--decorative--icons" data-use-new="true" id="fsEl_118644">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_118644">Decorative Icons</h2>
+</header>
+<div class="fsElementContent">
+<ul>
+<li>Icon 1</li>
+<li>Icon 2</li>
+<li>Icon 3</li>
+<li>Icon 4</li>
+<li>Icon 5</li>
+<li>Icon 6</li>
+</ul>
+</div>
+</section>
+</div>
+</section>
+<section class="fsElement fsContainer footer--bottom--wrapper" data-use-new="true" id="fsEl_118618">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_118618">Footer Bottom Wrapper</h2>
+</header>
+<div class="fsElementContent">
+<section class="fsElement fsNavigation fsList footer--utility--nav" data-use-new="true" id="fsEl_118632">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_118632">Footer Utility</h2>
+</header>
+<div class="fsElementContent">
+<nav><ul class="fsNavLevel1"><li><a href="#">Site Map</a></li><li><a href="#">Accessibility</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#" target="_blank">Cookie Policy<span class="fsStyleSROnly" data-nosnippet="">(opens in new window/tab)</span></a></li></ul></nav>
+</div>
+</section>
+<section class="fsElement fsNavigation fsList nav-social" data-use-new="true" id="fsEl_118633">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_118633">Socials</h2>
+</header>
+<div class="fsElementContent">
+<nav><ul class="fsNavLevel1"><li><a href="#">Instagram</a></li><li><a href="#" target="_blank">Facebook<span class="fsStyleSROnly" data-nosnippet="">(opens in new window/tab)</span></a></li><li><a href="#">LinkedIn</a></li><li><a href="#">YouTube</a></li></ul></nav>
+</div>
+</section>
+</div>
+</section>
+<section class="fsElement fsEmbed back--to--top desktop" data-use-new="true" id="fsEl_118715">
+<header>
+<h2 class="fsElementTitle" id="fsElementTitle_118715">Desktop Back To Top BTN -  Footer</h2>
+</header>
+<div class="fsElementContent">
+<button aria-label="go top" class="back-top">
+<span>Back to top</span>
+</button>
+</div>
+</section>
+</div>
+</section>
+</div>
+</footer>
+<div id="fsPoweredByFinalsite" role="complementary">
+<div>
+<a href="#" target="_blank" title="Powered by Finalsite opens in a new window">Powered by Finalsite</a>
+</div>
+</div>
+</div>
+<div aria-atomic="true" aria-live="polite" class="fsStyleSROnly" id="fs-global-aria-live-polite"></div>
+    <!-- ====== DIRECT SCHOOL ENQUIRY QUOTE MODAL (IN-PAGE UX) ====== -->
+    <div id="quoteModalBackdrop" class="quote-modal-backdrop" onclick="handleQuoteModalBackdrop(event)" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(15, 23, 42, 0.75); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); z-index: 999999999; align-items: center; justify-content: center; padding: 16px; box-sizing: border-box; overflow-y: auto;">
+        
+        <div class="quote-modal-card" role="dialog" aria-modal="true" aria-labelledby="modalFormHeading" style="background: #ffffff; border-radius: 24px; box-shadow: 0 8px 24px rgba(60, 64, 67, 0.2); padding: 24px; max-width: 500px; width: 100%; position: relative; font-family: 'Google Sans', Roboto, Arial, sans-serif; box-sizing: border-box; margin: auto; animation: quoteModalPop 0.25s cubic-bezier(0.16, 1, 0.3, 1);">
+            
+            <!-- Close Button -->
+            <button type="button" class="quote-modal-close" onclick="closeQuoteModal()" aria-label="Close quote modal" style="position: absolute; top: 18px; right: 18px; background: #f1f3f4; border: none; border-radius: 50%; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; color: #5f6368; cursor: pointer; transition: background 0.2s;">×</button>
+
+            <!-- Header -->
+            <div class="quote-modal-header" style="margin-bottom: 16px; padding-right: 32px;">
+                <span class="quote-modal-badge" style="display: inline-block; background: #e8f0fe; color: #1a73e8; font-size: 1rem; font-weight: 500; padding: 3px 10px; border-radius: 12px; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px;">Direct School Enquiry</span>
+                <h3 id="modalFormHeading" class="quote-modal-title" style="font-size: 1.8rem; font-weight: 500; color: #202124; margin: 0 0 2px 0; line-height: 1.2;">Get Direct School Website Quote</h3>
+                <p class="quote-modal-subtitle" style="font-size: 1.2rem; color: #5f6368; margin: 0;">Direct quote • All fields compulsory • Response in 2 hours</p>
+            </div>
+
+            <!-- Dynamic Selected Template Alert Banner -->
+            <div id="modalSelectedTemplateBox" style="display: block; background: #e8f0fe; border: 1px solid #1a73e8; border-radius: 12px; padding: 10px 14px; margin-bottom: 14px;">
+                <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 6px;">
+                    <div>
+                        <span style="font-size: 1rem; font-weight: 500; color: #174ea6;">🎯 Selected Template:</span>
+                        <div id="modalSelectedTemplateTitle" style="font-size: 1.25rem; font-weight: 500; color: #202124; margin-top: 1px;">Template - 01 (CBSE Senior Secondary)</div>
+                    </div>
+                    <button type="button" onclick="clearModalSelectedTemplate()" style="background: none; border: none; color: #1a73e8; font-size: 1.1rem; font-weight: 500; cursor: pointer; text-decoration: underline;">
+                        Change
+                    </button>
+                </div>
+            </div>
+
+            <!-- Form -->
+            <form id="modalSchoolEnquiryForm" onsubmit="submitModalSchoolEnquiry(event)">
+                <input type="hidden" id="modal_template_name" name="template_name" value="Template - 01">
+                <input type="hidden" id="modal_template_link" name="template_link" value="https://design.cseel.org/templates/dps-international/index.html">
+                <!-- Anti-bot Honeypot Trap -->
+                <input type="text" id="modal_website_hp" name="website_hp" style="display:none !important;" tabindex="-1" autocomplete="off">
+
+                <!-- Field 1: School Name -->
+                <div class="form-group text-left" style="margin-bottom: 12px;">
+                    <label style="font-weight: 500; color: #3c4043; font-size: 1.2rem; margin-bottom: 4px; display: block;">School / Institution Name *</label>
+                    <input type="text" id="modal_school_name" name="school_name" class="form-control" placeholder="e.g. Delhi Public School" required="" style="border-radius: 8px; padding: 10px 14px; font-size: 1.25rem; border: 1px solid #dadce0; width: 100%; box-sizing: border-box; outline: none; transition: border-color 0.2s, box-shadow 0.2s;" onfocus="this.style.borderColor='#1a73e8'; this.style.boxShadow='0 0 0 2px rgba(26,115,232,0.2)';" onblur="this.style.borderColor='#dadce0'; this.style.boxShadow='none';">
+                </div>
+
+                <!-- Field 2: Person Name -->
+                <div class="form-group text-left" style="margin-bottom: 12px;">
+                    <label style="font-weight: 500; color: #3c4043; font-size: 1.2rem; margin-bottom: 4px; display: block;">Contact Person Name (Principal / Admin) *</label>
+                    <input type="text" id="modal_person_name" name="person_name" class="form-control" placeholder="e.g. Dr. Rajesh Sharma" required="" style="border-radius: 8px; padding: 10px 14px; font-size: 1.25rem; border: 1px solid #dadce0; width: 100%; box-sizing: border-box; outline: none; transition: border-color 0.2s, box-shadow 0.2s;" onfocus="this.style.borderColor='#1a73e8'; this.style.boxShadow='0 0 0 2px rgba(26,115,232,0.2)';" onblur="this.style.borderColor='#dadce0'; this.style.boxShadow='none';">
+                </div>
+
+                <!-- Field 3 & 4: Email & Phone -->
+                <div class="row" style="margin: 0 -4px; display: flex; flex-wrap: wrap;">
+                    <div class="col-md-6" style="padding: 0 4px; margin-bottom: 12px; flex: 1 1 200px;">
+                        <div class="form-group text-left" style="margin-bottom: 0;">
+                            <label style="font-weight: 500; color: #3c4043; font-size: 1.2rem; margin-bottom: 4px; display: block;">Official Email *</label>
+                            <input type="email" id="modal_email" name="email" class="form-control" placeholder="principal@school.edu.in" required="" style="border-radius: 8px; padding: 10px 14px; font-size: 1.25rem; border: 1px solid #dadce0; width: 100%; box-sizing: border-box; outline: none; transition: border-color 0.2s, box-shadow 0.2s;" onfocus="this.style.borderColor='#1a73e8'; this.style.boxShadow='0 0 0 2px rgba(26,115,232,0.2)';" onblur="this.style.borderColor='#dadce0'; this.style.boxShadow='none';">
+                        </div>
+                    </div>
+                    <div class="col-md-6" style="padding: 0 4px; margin-bottom: 12px; flex: 1 1 200px;">
+                        <div class="form-group text-left" style="margin-bottom: 0;">
+                            <label style="font-weight: 500; color: #3c4043; font-size: 1.2rem; margin-bottom: 4px; display: block;">Contact Number *</label>
+                            <input type="tel" id="modal_contact_number" name="contact_number" class="form-control" placeholder="9876543210" pattern="[6-9][0-9]{9}" maxlength="10" required="" style="border-radius: 8px; padding: 10px 14px; font-size: 1.25rem; border: 1px solid #dadce0; width: 100%; box-sizing: border-box; outline: none; transition: border-color 0.2s, box-shadow 0.2s;" onfocus="this.style.borderColor='#1a73e8'; this.style.boxShadow='0 0 0 2px rgba(26,115,232,0.2)';" onblur="this.style.borderColor='#dadce0'; this.style.boxShadow='none';">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Field 5: Notes / Requirements -->
+                <div class="form-group text-left" style="margin-bottom: 16px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                        <label style="font-weight: 500; color: #3c4043; font-size: 1.2rem; margin: 0;">Project Requirements *</label>
+                        <span id="modalNotesWordCount" style="font-size: 1.1rem; color: #5f6368;">0 / 150 words</span>
+                    </div>
+                    <textarea id="modal_notes" name="notes" class="form-control" rows="2" placeholder="Tell us your requirements (e.g. Admission form, CBSE tab)..." required="" style="border-radius: 8px; padding: 10px 14px; font-size: 1.25rem; border: 1px solid #dadce0; width: 100%; box-sizing: border-box; outline: none; transition: border-color 0.2s, box-shadow 0.2s; resize: vertical;" onfocus="this.style.borderColor='#1a73e8'; this.style.boxShadow='0 0 0 2px rgba(26,115,232,0.2)';" onblur="this.style.borderColor='#dadce0'; this.style.boxShadow='none';" oninput="updateModalNotesWordCount()"></textarea>
+                    <div id="modalWordCountAlert" style="display: none; color: #d93025; font-size: 1.1rem; margin-top: 2px;">⚠️ Limit reached! Max 150 words.</div>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" id="modalSubmitBtn" class="school-cta-btn" style="width: 100%; border-radius: 20px; font-weight: 500; font-size: 1.35rem; padding: 12px; background: #1a73e8; color: #ffffff; box-shadow: 0 1px 3px 0 rgba(60,64,67,0.3); cursor: pointer; border: none; transition: background 0.2s;" onmouseover="this.style.background='#1557b0';" onmouseout="this.style.background='#1a73e8';">
+                    Send Enquiry &amp; Get Direct Quote →
+                </button>
+
+                <!-- Success Alert -->
+                <div id="modalEnquirySuccessAlert" style="display: none; padding: 12px 14px; margin-top: 12px; border-radius: 10px; background: #e6f4ea; color: #137333; font-weight: 500; font-size: 1.25rem; text-align: left; border: 1px solid #ceead6;">
+                    ✓ Thank you! Dev Sharma will contact you shortly.
+                </div>
+
+                <!-- Error Alert -->
+                <div id="modalEnquiryErrorAlert" style="display: none; padding: 12px 14px; margin-top: 12px; border-radius: 10px; background: #fce8e6; color: #c5221f; font-weight: 500; font-size: 1.25rem; text-align: left; border: 1px solid #fad2cf;">
+                </div>
+            </form>
+
+            <!-- Quick WhatsApp Option -->
+            <div class="quote-modal-quick-contact" style="margin-top: 16px; text-align: center; border-top: 1px solid #dadce0; padding-top: 14px; display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap;">
+                <span style="color: #5f6368; font-size: 1.2rem;">Instant WhatsApp chat?</span>
+                <a href="https://wa.me/919050778830?text=Hi%20Dev%2C%20I%20found%20you%20online%20on%20your%20website%2C%20can%20you%20develop%20a%20website%20for%20us%3F" target="_blank" class="quote-modal-wa-btn" style="color: #137333; font-weight: 500; text-decoration: none; font-size: 1.25rem; display: inline-flex; align-items: center; gap: 5px;">
+                    <i class="fa fa-whatsapp" style="font-size: 1.5rem; color: #25D366;"></i> Chat on WhatsApp (+91 9050778830)
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        @keyframes quoteModalPop {
+            from { opacity: 0; transform: scale(0.94); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .quote-modal-close:hover {
+            background: #e8eaed !important;
+            color: #202124 !important;
+        }
+    </style>
+
+    <script>
+        function openQuoteModal() {
+            var modal = document.getElementById('quoteModalBackdrop');
+            if (modal) {
+                modal.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+                var selectedBox = document.getElementById('modalSelectedTemplateBox');
+                if (selectedBox) selectedBox.style.display = 'block';
+                var tName = document.getElementById('modal_template_name');
+                if (tName) tName.value = 'Template - 01';
+                var tTitle = document.getElementById('modalSelectedTemplateTitle');
+                if (tTitle) tTitle.innerText = 'Template - 01 (CBSE Senior Secondary)';
+                var input = document.getElementById('modal_school_name');
+                if (input) setTimeout(function() { input.focus(); }, 150);
+            }
+        }
+
+        function closeQuoteModal() {
+            var modal = document.getElementById('quoteModalBackdrop');
+            if (modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = '';
+            }
+        }
+
+        function handleQuoteModalBackdrop(event) {
+            if (event.target && event.target.id === 'quoteModalBackdrop') {
+                closeQuoteModal();
+            }
+        }
+
+        function clearModalSelectedTemplate() {
+            var box = document.getElementById('modalSelectedTemplateBox');
+            if (box) box.style.display = 'none';
+            var tName = document.getElementById('modal_template_name');
+            if (tName) tName.value = '';
+        }
+
+        function updateModalNotesWordCount() {
+            var notes = document.getElementById('modal_notes');
+            var countEl = document.getElementById('modalNotesWordCount');
+            var alertEl = document.getElementById('modalWordCountAlert');
+            if (!notes || !countEl) return;
+            var words = notes.value.trim().split(/\s+/).filter(Boolean);
+            countEl.innerText = words.length + ' / 150 words';
+            if (words.length > 150) {
+                countEl.style.color = '#d93025';
+                if (alertEl) alertEl.style.display = 'block';
+            } else {
+                countEl.style.color = '#5f6368';
+                if (alertEl) alertEl.style.display = 'none';
+            }
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' || e.keyCode === 27) {
+                closeQuoteModal();
+            }
+        });
+
+        async function submitModalSchoolEnquiry(event) {
+            event.preventDefault();
+            var submitBtn = document.getElementById('modalSubmitBtn');
+            var successAlert = document.getElementById('modalEnquirySuccessAlert');
+            var errorAlert = document.getElementById('modalEnquiryErrorAlert');
+
+            if (errorAlert) errorAlert.style.display = 'none';
+            if (successAlert) successAlert.style.display = 'none';
+
+            var schoolName = document.getElementById('modal_school_name').value.trim();
+            var personName = document.getElementById('modal_person_name').value.trim();
+            var email = document.getElementById('modal_email').value.trim();
+            var contactNumber = document.getElementById('modal_contact_number').value.trim();
+            var notes = document.getElementById('modal_notes').value.trim();
+            var templateName = document.getElementById('modal_template_name') ? document.getElementById('modal_template_name').value.trim() : 'Template - 01';
+            var templateLink = window.location.href;
+            var websiteHp = document.getElementById('modal_website_hp') ? document.getElementById('modal_website_hp').value.trim() : '';
+
+            if (websiteHp) return;
+
+            if (!schoolName || !personName || !email || !contactNumber || !notes) {
+                if (errorAlert) {
+                    errorAlert.style.display = 'block';
+                    errorAlert.innerText = 'All fields are compulsory. Please fill in School Name, Contact Person, Email, Phone, and Notes.';
+                }
+                return;
+            }
+
+            var cleanPhone = contactNumber.replace(/[^0-9]/g, '').slice(-10);
+            if (!/^[6-9]\d{9}$/.test(cleanPhone)) {
+                if (errorAlert) {
+                    errorAlert.style.display = 'block';
+                    errorAlert.innerText = 'Please enter a valid 10-digit Indian Mobile number (starts with 6-9).';
+                }
+                return;
+            }
+
+            var words = notes.split(/\s+/).filter(Boolean);
+            if (words.length > 150) {
+                if (errorAlert) {
+                    errorAlert.style.display = 'block';
+                    errorAlert.innerText = 'Project requirements must be 150 words or less (current: ' + words.length + ').';
+                }
+                return;
+            }
+
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = 'Sending Enquiry...';
+            }
+
+            try {
+                var response = await fetch('https://formspree.io/f/mqaebezn', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                    body: JSON.stringify({
+                        school_name: schoolName,
+                        contact_person: personName,
+                        official_email: email,
+                        contact_number: cleanPhone,
+                        notes: notes,
+                        template_name: templateName,
+                        template_link: templateLink
+                    })
+                });
+
+                if (response.ok) {
+                    if (successAlert) {
+                        successAlert.style.display = 'block';
+                        successAlert.innerText = '✓ Thank you! Dev Sharma will contact you shortly.';
+                    }
+                    if (submitBtn) submitBtn.innerHTML = '✓ Sent Successfully!';
+                    var form = document.getElementById('modalSchoolEnquiryForm');
+                    if (form) form.reset();
+                    setTimeout(function() {
+                        var waMsg = encodeURIComponent('Hi Dev, I submitted an enquiry for ' + templateName + ' for ' + schoolName + '. Please share quote details.');
+                        window.open('https://wa.me/919050778830?text=' + waMsg, '_blank');
+                    }, 1200);
+                } else {
+                    throw new Error('Submission error');
+                }
+            } catch (err) {
+                if (successAlert) {
+                    successAlert.style.display = 'block';
+                    successAlert.innerHTML = 'Redirecting to Dev Sharma on WhatsApp...';
+                }
+                var waMsg = encodeURIComponent('Hi Dev, I would like to get a quote for ' + templateName + '.\nSchool: ' + schoolName + '\nContact: ' + personName + ' (' + cleanPhone + ')\nNotes: ' + notes);
+                window.open('https://wa.me/919050778830?text=' + waMsg, '_blank');
+            }
+        }
+    </script>
+<script src="assets/application.js"></script>
+<script src="assets/main.js"></script>
+
+</body></html>

@@ -526,7 +526,7 @@ button:active {
 .home {
     min-height: 90vh;
     padding: 100px 0 80px 0 !important;
-    background: url("../img/hero.jpg") no-repeat center right / cover;
+    background: url("../img/hero.avif") no-repeat center right / cover;
     position: relative;
     z-index: 1;
     display: flex;
@@ -824,7 +824,7 @@ button:active {
 .skills .skills-right {
     margin-top: 3rem;
     height: 600px;
-    background: linear-gradient(rgba(0, 175, 144, 0.2), rgba(0, 175, 144, 0.2)), url(../img/skills.jpg);
+    background: linear-gradient(rgba(0, 175, 144, 0.2), rgba(0, 175, 144, 0.2)), url(../img/skills.avif);
     background-attachment: fixed;
     background-origin: content-box;
     background-position: center;
@@ -2705,5 +2705,69 @@ footer a:hover,
     padding: 2px 7px;
     border-radius: 4px;
 }
+
+/* =========================================================
+   GOOGLE TYPOGRAPHY & NAVBAR ANTI-WRAP ARCHITECTURE
+   Matches exact Google standard typography & clean single-row nav
+   ========================================================= */
+body {
+    font-family: 'Google Sans', Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif !important;
+    color: #3c4043 !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Google Sans', Roboto, 'Segoe UI', Arial, sans-serif !important;
+    color: #202124 !important;
+}
+
+/* Prevent any awkward wrapping of navbar links */
+.navbar-nav {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+}
+
+.navbar-nav .nav-item {
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+}
+
+.navbar .navbar-nav .nav-link {
+    font-family: 'Google Sans', Roboto, sans-serif !important;
+    font-size: 1.35rem !important;
+    font-weight: 500 !important;
+    color: #3c4043 !important;
+    padding: 6px 12px !important;
+    border-radius: 9999px !important;
+    white-space: nowrap !important;
+    transition: all 0.2s ease !important;
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active {
+    color: #00AF90 !important;
+    background-color: #E6F7F4 !important;
+}
+
+/* Desktop screen compression: 992px to 1200px */
+@media (min-width: 992px) and (max-width: 1200px) {
+    .navbar {
+        padding: 4px 2% !important;
+    }
+    .navbar-brand {
+        margin-right: 8px !important;
+    }
+    .navbar-brand span {
+        font-size: 1.8rem !important;
+    }
+    .dev-profile-pill {
+        margin-right: 6px !important;
+    }
+    .navbar .navbar-nav .nav-link {
+        font-size: 1.25rem !important;
+        padding: 5px 7px !important;
+    }
+}
+
 
 
