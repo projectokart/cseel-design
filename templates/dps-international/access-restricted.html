@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <title>Talk to Developer for Full Access | Template 01 - CSEEL Design</title>
+    <meta name="description" content="This page is restricted in preview mode. Talk directly to Dev Sharma (CSEEL Design) for full access to the complete school website template and custom portal features."/>
+    <meta name="robots" content="noindex, follow"/>
+    <link rel="icon" href="assets/school-logo-white.png"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="../../css/font-awesome-4.7.0/css/font-awesome.min.css"/>
+    <script>
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+        window.scrollTo(0, 0);
+    </script>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Google Sans', Roboto, -apple-system, sans-serif;
+            background: #F8FAFC;
+            color: #202124;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        /* Top Utility Bar */
+        .preview-top-bar {
+            background: #0A2540;
+            color: #ffffff;
+            height: 48px;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+        }
+        .top-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .live-badge {
+            background: rgba(0, 175, 144, 0.25);
+            color: #00AF90;
+            border: 1px solid rgba(0, 175, 144, 0.5);
+            font-size: 11px;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 9999px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .template-name {
+            font-size: 13px;
+            font-weight: 700;
+            color: #FFFFFF;
+        }
+        .top-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .btn-back-demo {
+            background: rgba(255, 255, 255, 0.12);
+            color: #FFFFFF;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: 9999px;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            transition: all 0.2s ease;
+        }
+        .btn-back-demo:hover {
+            background: rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+        }
+        .btn-claim {
+            background: linear-gradient(135deg, #00AF90 0%, #008770 100%);
+            color: #FFFFFF;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 6px 16px;
+            border-radius: 9999px;
+            box-shadow: 0 2px 8px rgba(0, 175, 144, 0.4);
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .btn-claim:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0, 175, 144, 0.6);
+        }
+
+        /* Main Content Container */
+        .restricted-container {
+            flex: 1;
+            max-width: 860px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 36px 20px 48px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .lock-icon-circle {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            background: #E6F7F4;
+            border: 2px solid #00AF90;
+            color: #008770;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 24px rgba(0, 175, 144, 0.15);
+        }
+        .restricted-badge {
+            display: inline-block;
+            background: #FEF3C7;
+            color: #92400E;
+            border: 1px solid #FCD34D;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 9999px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+        }
+        .restricted-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #202124;
+            line-height: 1.25;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+        .restricted-desc {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #5F6368;
+            max-width: 640px;
+            margin-bottom: 28px;
+        }
+        .restricted-desc strong {
+            color: #202124;
+        }
+
+        /* Feature Pillars Grid */
+        .features-pill-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 12px;
+            width: 100%;
+            margin-bottom: 32px;
+            text-align: left;
+        }
+        .feature-item {
+            background: #FFFFFF;
+            border: 1px solid #E2E8F0;
+            border-radius: 12px;
+            padding: 12px 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+        }
+        .feature-icon {
+            color: #00AF90;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+        .feature-text {
+            font-size: 13px;
+            font-weight: 600;
+            color: #334155;
+        }
+
+        /* Action Buttons */
+        .action-cards {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        .btn-wa-action {
+            background: #25D366;
+            color: #FFFFFF;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            padding: 12px 24px;
+            border-radius: 9999px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+            transition: all 0.2s ease;
+        }
+        .btn-wa-action:hover {
+            background: #1EBE5D;
+            transform: translateY(-1px);
+            color: #ffffff;
+        }
+        .btn-call-action {
+            background: #1A73E8;
+            color: #FFFFFF;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            padding: 12px 24px;
+            border-radius: 9999px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 14px rgba(26, 115, 232, 0.35);
+            transition: all 0.2s ease;
+        }
+        .btn-call-action:hover {
+            background: #1557B0;
+            transform: translateY(-1px);
+            color: #ffffff;
+        }
+        .btn-form-trigger {
+            background: #00AF90;
+            color: #FFFFFF;
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
+            font-weight: 700;
+            font-size: 14px;
+            padding: 12px 24px;
+            border-radius: 9999px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 14px rgba(0, 175, 144, 0.35);
+            transition: all 0.2s ease;
+        }
+        .btn-form-trigger:hover {
+            background: #008770;
+            transform: translateY(-1px);
+        }
+
+        /* Developer Bio Strip */
+        .dev-badge-strip {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: #FFFFFF;
+            border: 1px solid #E2E8F0;
+            border-radius: 50px;
+            padding: 8px 18px 8px 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            margin-bottom: 24px;
+        }
+        .dev-avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #00AF90;
+        }
+        .dev-details {
+            text-align: left;
+            font-size: 12px;
+        }
+        .dev-details strong {
+            display: block;
+            color: #202124;
+            font-weight: 700;
+        }
+        .dev-details span {
+            color: #5F6368;
+        }
+
+        /* Responsive Mobile Styles */
+        @media (max-width: 600px) {
+            .preview-top-bar {
+                height: 44px;
+                padding: 0 12px;
+            }
+            .restricted-title {
+                font-size: 22px;
+            }
+            .restricted-desc {
+                font-size: 13px;
+            }
+            .action-cards {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .action-cards > * {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Preview Bar -->
+    <header class="preview-top-bar">
+        <div class="top-brand">
+            <span class="live-badge">Live Demo</span>
+            <span class="template-name">Template - 01</span>
+        </div>
+        <div class="top-actions">
+            <a href="index.html" class="btn-back-demo">← Back to Demo</a>
+            <button type="button" class="btn-claim" onclick="openQuoteModal()">Get Full Access →</button>
+        </div>
+    </header>
+
+    <!-- Main Restricted Notice -->
+    <main class="restricted-container">
+        
+        <div class="lock-icon-circle">
+            <i class="fa fa-lock"></i>
+        </div>
+
+        <span class="restricted-badge">Interactive Demo Preview Limit</span>
+
+        <h1 class="restricted-title">Talk to Developer for Full Access</h1>
+
+        <p class="restricted-desc">
+            This internal page is <strong>restricted in the public preview mode</strong>. For complete access to all inner pages, administrative CMS, and custom school features, please talk directly to the developer.
+        </p>
+
+        <!-- Developer Strip -->
+        <div class="dev-badge-strip">
+            <img src="../../img/dev-sharma-circle.avif" alt="Dev Sharma" class="dev-avatar" />
+            <div class="dev-details">
+                <strong>Dev Sharma</strong>
+                <span>Lead School Website Architect • CSEEL Design</span>
+            </div>
+        </div>
+
+        <!-- Locked Features Included in Full Template -->
+        <div class="features-pill-grid">
+            <div class="feature-item">
+                <i class="fa fa-graduation-cap feature-icon"></i>
+                <span class="feature-text">Complete Online Admissions & Registration</span>
+            </div>
+            <div class="feature-item">
+                <i class="fa fa-file-text-o feature-icon"></i>
+                <span class="feature-text">CBSE / ICSE Mandatory Public Disclosures</span>
+            </div>
+            <div class="feature-item">
+                <i class="fa fa-bullhorn feature-icon"></i>
+                <span class="feature-text">Instant Circulars, Datesheets & Notices</span>
+            </div>
+            <div class="feature-item">
+                <i class="fa fa-credit-card feature-icon"></i>
+                <span class="feature-text">School Fee Structure & Online Payment Hub</span>
+            </div>
+            <div class="feature-item">
+                <i class="fa fa-users feature-icon"></i>
+                <span class="feature-text">Faculty & Department Directory Portals</span>
+            </div>
+            <div class="feature-item">
+                <i class="fa fa-mobile feature-icon"></i>
+                <span class="feature-text">100% Mobile Responsive Ultra-Fast Loading</span>
+            </div>
+        </div>
+
+        <!-- Immediate Contact CTAs -->
+        <div class="action-cards">
+            <a href="https://wa.me/919050778830?text=Hi%20Dev%2C%20I%20am%20exploring%20Template%2001%20on%20CSEEL%20Design.%20Can%20you%20give%20me%20full%20access%20and%20share%20a%20quote%20for%20our%20school%3F" target="_blank" class="btn-wa-action">
+                <i class="fa fa-whatsapp"></i> Chat on WhatsApp (+91 9050778830)
+            </a>
+            <a href="tel:+919050778830" class="btn-call-action">
+                <i class="fa fa-phone"></i> Call +91 90507 78830
+            </a>
+            <button type="button" onclick="openQuoteModal()" class="btn-form-trigger">
+                <i class="fa fa-envelope-o"></i> Request Access & Quote
+            </button>
+        </div>
+
+        <a href="index.html" style="color: #5F6368; font-size: 13px; text-decoration: none; font-weight: 500; display: inline-flex; align-items: center; gap: 4px;">
+            ← Return to Homepage Demo
+        </a>
+
+    </main>
+
+    <!-- ====== COMPACT GOOGLE-STYLE QUOTE MODAL ====== -->
+    <div id="quoteModalBackdrop" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); z-index: 999999999; align-items: center; justify-content: center; padding: 12px; box-sizing: border-box; overflow-y: auto;">
+        
+        <div class="compact-modal-card" style="background: #ffffff; border-radius: 16px; box-shadow: 0 12px 36px rgba(0, 0, 0, 0.22); padding: 16px 20px; max-width: 440px; width: 100%; position: relative; font-family: 'Google Sans', Roboto, sans-serif; box-sizing: border-box; margin: auto;">
+            
+            <!-- Close Button -->
+            <button type="button" onclick="closeQuoteModal()" aria-label="Close modal" style="position: absolute; top: 12px; right: 12px; background: #f1f3f4; border: none; border-radius: 50%; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; font-size: 16px; color: #5f6368; cursor: pointer;">✕</button>
+
+            <!-- Header -->
+            <div style="margin-bottom: 10px; padding-right: 28px;">
+                <span style="display: inline-block; background: #e8f0fe; color: #1967d2; font-size: 10px; font-weight: 600; padding: 2px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 3px;">Full Template Access</span>
+                <h3 style="font-size: 16px; font-weight: 600; color: #202124; margin: 0; line-height: 1.2;">Get Full Access & Direct Quote</h3>
+                <p style="font-size: 11px; color: #5f6368; margin: 2px 0 0 0;">Guaranteed response in 2 hours &bull; Direct Developer Attention</p>
+            </div>
+
+            <!-- Dynamic Selected Template Alert Banner (Hidden - passed to backend automatically) -->
+            <div id="modalSelectedTemplateBox" style="display: none !important;"></div>
+
+            <!-- Form -->
+            <form id="modalSchoolEnquiryForm" onsubmit="submitModalSchoolEnquiry(event)">
+                <input type="hidden" id="modal_template_name" name="template_name" value="Template - 01 (Restricted Access Request)">
+                <input type="hidden" id="modal_template_link" name="template_link" value="https://design.cseel.org/templates/dps-international/access-restricted.html">
+                <input type="text" id="modal_website_hp" name="website_hp" style="display:none !important;" tabindex="-1" autocomplete="off">
+
+                <!-- School Name -->
+                <div style="margin-bottom: 8px; text-align: left;">
+                    <label style="font-size: 11px; font-weight: 600; color: #475569; display: block; margin-bottom: 2px;">School / Institution Name *</label>
+                    <input type="text" id="modal_school_name" name="school_name" placeholder="e.g. Delhi Public School" required style="width: 100%; height: 34px; padding: 6px 10px; font-size: 12px; font-family: inherit; border: 1px solid #cbd5e1; border-radius: 6px; outline: none; box-sizing: border-box;">
+                </div>
+
+                <!-- Contact Person -->
+                <div style="margin-bottom: 8px; text-align: left;">
+                    <label style="font-size: 11px; font-weight: 600; color: #475569; display: block; margin-bottom: 2px;">Contact Person Name (Principal / Admin) *</label>
+                    <input type="text" id="modal_person_name" name="person_name" placeholder="e.g. Dr. Rajesh Sharma" required style="width: 100%; height: 34px; padding: 6px 10px; font-size: 12px; font-family: inherit; border: 1px solid #cbd5e1; border-radius: 6px; outline: none; box-sizing: border-box;">
+                </div>
+
+                <!-- Email & Phone Dual Row -->
+                <div style="display: flex; gap: 8px; margin-bottom: 8px;">
+                    <div style="flex: 1; text-align: left;">
+                        <label style="font-size: 11px; font-weight: 600; color: #475569; display: block; margin-bottom: 2px;">Official Email *</label>
+                        <input type="email" id="modal_email" name="email" placeholder="principal@school.edu.in" required style="width: 100%; height: 34px; padding: 6px 10px; font-size: 12px; font-family: inherit; border: 1px solid #cbd5e1; border-radius: 6px; outline: none; box-sizing: border-box;">
+                    </div>
+                    <div style="flex: 1; text-align: left;">
+                        <label style="font-size: 11px; font-weight: 600; color: #475569; display: block; margin-bottom: 2px;">WhatsApp / Phone *</label>
+                        <input type="tel" id="modal_contact_number" name="contact_number" placeholder="9876543210" pattern="[6-9][0-9]{9}" maxlength="10" required style="width: 100%; height: 34px; padding: 6px 10px; font-size: 12px; font-family: inherit; border: 1px solid #cbd5e1; border-radius: 6px; outline: none; box-sizing: border-box;">
+                    </div>
+                </div>
+
+                <!-- Requirements -->
+                <div style="margin-bottom: 10px; text-align: left;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2px;">
+                        <label style="font-size: 11px; font-weight: 600; color: #475569; margin: 0;">Requirements / Pages Needed</label>
+                        <span id="modalNotesWordCount" style="font-size: 10px; color: #94a3b8;">0/150 words</span>
+                    </div>
+                    <textarea id="modal_notes" name="notes" rows="2" placeholder="e.g. Full template setup, online admission form, custom domain..." required style="width: 100%; padding: 6px 10px; font-size: 12px; font-family: inherit; border: 1px solid #cbd5e1; border-radius: 6px; outline: none; box-sizing: border-box; resize: none;"></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" id="modalSubmitBtn" style="width: 100%; height: 36px; background: #1a73e8; color: #ffffff; font-weight: 600; font-size: 13px; font-family: inherit; border: none; border-radius: 18px; cursor: pointer; transition: background 0.2s; box-shadow: 0 1px 3px rgba(0,0,0,0.15);">
+                    Request Full Access & Direct Quote →
+                </button>
+
+                <!-- Feedback Messages -->
+                <div id="modalEnquirySuccessAlert" style="display: none; padding: 8px 10px; margin-top: 8px; border-radius: 6px; background: #e6f4ea; color: #137333; font-size: 11px; font-weight: 600; text-align: left;">
+                    ✓ Request received! Dev Sharma will contact your WhatsApp shortly.
+                </div>
+                <div id="modalEnquiryErrorAlert" style="display: none; padding: 8px 10px; margin-top: 8px; border-radius: 6px; background: #fce8e6; color: #c5221f; font-size: 11px; font-weight: 600; text-align: left;">
+                </div>
+            </form>
+
+            <!-- Bottom WhatsApp Shortcut -->
+            <div style="margin-top: 10px; padding-top: 8px; border-top: 1px solid #f1f5f9; display: flex; align-items: center; justify-content: center; gap: 6px; font-size: 11px;">
+                <span style="color: #64748b;">Instant connect:</span>
+                <a href="https://wa.me/919050778830?text=Hi%20Dev%2C%20I%20want%20full%20access%20to%20Template%2001." target="_blank" style="color: #16a34a; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 4px;">
+                    <i class="fa fa-whatsapp"></i> WhatsApp (+91 9050778830)
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openQuoteModal() {
+            var modal = document.getElementById('quoteModalBackdrop');
+            if (modal) {
+                modal.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            }
+        }
+        function closeQuoteModal() {
+            var modal = document.getElementById('quoteModalBackdrop');
+            if (modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = '';
+            }
+        }
+        window.addEventListener('click', function(e) {
+            if (e.target && e.target.id === 'quoteModalBackdrop') {
+                closeQuoteModal();
+            }
+        });
+        window.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' || e.keyCode === 27) {
+                closeQuoteModal();
+            }
+        });
+
+        async function submitModalSchoolEnquiry(event) {
+            event.preventDefault();
+            var submitBtn = document.getElementById('modalSubmitBtn');
+            var successAlert = document.getElementById('modalEnquirySuccessAlert');
+            var errorAlert = document.getElementById('modalEnquiryErrorAlert');
+
+            var hp = document.getElementById('modal_website_hp').value;
+            if (hp) { return false; }
+
+            submitBtn.disabled = true;
+            submitBtn.innerText = 'Sending Request...';
+            if (successAlert) successAlert.style.display = 'none';
+            if (errorAlert) errorAlert.style.display = 'none';
+
+            var payload = {
+                school_name: document.getElementById('modal_school_name').value.trim(),
+                person_name: document.getElementById('modal_person_name').value.trim(),
+                email: document.getElementById('modal_email').value.trim(),
+                contact_number: document.getElementById('modal_contact_number').value.trim(),
+                notes: document.getElementById('modal_notes').value.trim(),
+                template_name: document.getElementById('modal_template_name').value,
+                template_link: document.getElementById('modal_template_link').value
+            };
+
+            try {
+                var response = await fetch('/api/school-enquiry', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                var result = await response.json();
+                if (response.ok && result.success) {
+                    if (successAlert) successAlert.style.display = 'block';
+                    document.getElementById('modalSchoolEnquiryForm').reset();
+                    submitBtn.innerText = '✓ Request Sent!';
+                    setTimeout(function() {
+                        closeQuoteModal();
+                        submitBtn.disabled = false;
+                        submitBtn.innerText = 'Request Full Access & Direct Quote →';
+                    }, 2500);
+                } else {
+                    throw new Error(result.error || 'Failed to submit enquiry.');
+                }
+            } catch (err) {
+                if (errorAlert) {
+                    errorAlert.innerText = '⚠️ ' + (err.message || 'Error occurred. Please WhatsApp us directly.');
+                    errorAlert.style.display = 'block';
+                }
+                submitBtn.disabled = false;
+                submitBtn.innerText = 'Request Full Access & Direct Quote →';
+            }
+        }
+    </script>
+</body>
+</html>

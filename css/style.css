@@ -2574,7 +2574,7 @@ footer a:hover,
 .template-thumb-box {
     position: relative;
     width: 100%;
-    aspect-ratio: 16 / 10;
+    aspect-ratio: 1024 / 502;
     border-radius: 12px;
     overflow: hidden;
     background: #F8FAFC;

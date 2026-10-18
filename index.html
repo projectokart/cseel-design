@@ -617,34 +617,35 @@
         }
         .quote-modal-card {
             background: #FFFFFF !important;
-            border-radius: 20px !important;
+            border-radius: 16px !important;
             width: 100% !important;
-            max-width: 580px !important;
-            max-height: 90vh !important;
+            max-width: 440px !important;
+            max-height: 94vh !important;
             overflow-y: auto !important;
             -webkit-overflow-scrolling: touch !important;
-            padding: 32px 30px 24px 30px !important;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35) !important;
+            padding: 16px 20px !important;
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25) !important;
             position: relative !important;
-            border: 1.5px solid #E2E8F0 !important;
+            border: 1px solid #dadce0 !important;
+            font-family: 'Google Sans', Roboto, sans-serif !important;
             transform: scale(0.95);
-            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .quote-modal-backdrop.active .quote-modal-card {
             transform: scale(1);
         }
         .quote-modal-close {
             position: absolute !important;
-            top: 16px !important;
-            right: 18px !important;
-            background: #F1F5F9 !important;
+            top: 12px !important;
+            right: 12px !important;
+            background: #F1F3F4 !important;
             border: none !important;
-            width: 36px !important;
-            height: 36px !important;
+            width: 28px !important;
+            height: 28px !important;
             border-radius: 50% !important;
-            font-size: 2.2rem !important;
+            font-size: 16px !important;
             line-height: 1 !important;
-            color: #64748B !important;
+            color: #5F6368 !important;
             cursor: pointer !important;
             display: flex !important;
             align-items: center !important;
@@ -655,79 +656,80 @@
         .quote-modal-close:hover {
             background: #E2E8F0 !important;
             color: #0F172A !important;
-            transform: rotate(90deg);
         }
         .quote-modal-header {
             text-align: left;
-            margin-bottom: 20px;
-            padding-right: 40px;
+            margin-bottom: 8px !important;
+            padding-right: 28px !important;
         }
         .quote-modal-badge {
             display: inline-block;
-            background: #E6F7F4;
-            color: #008770;
-            font-size: 1.2rem;
-            font-weight: 800;
-            padding: 4px 12px;
-            border-radius: 9999px;
-            margin-bottom: 8px;
-            border: 1px solid rgba(0, 175, 144, 0.25);
+            background: #E8F0FE !important;
+            color: #1A73E8 !important;
+            font-size: 10px !important;
+            font-weight: 600 !important;
+            padding: 2px 8px !important;
+            border-radius: 4px !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.5px !important;
+            margin-bottom: 2px !important;
+            border: 1px solid rgba(26, 115, 232, 0.2) !important;
         }
         .quote-modal-title {
-            color: #1B2732;
-            font-weight: 900;
-            font-size: 2.3rem;
-            line-height: 1.2;
-            margin: 0 0 6px 0;
+            color: #202124 !important;
+            font-weight: 600 !important;
+            font-size: 16px !important;
+            line-height: 1.25 !important;
+            margin: 0 !important;
         }
         .quote-modal-subtitle {
-            color: #64748B;
-            font-size: 1.35rem;
-            margin: 0;
-            line-height: 1.4;
+            color: #5F6368 !important;
+            font-size: 11px !important;
+            margin: 2px 0 0 0 !important;
+            line-height: 1.3 !important;
         }
         .quote-modal-quick-contact {
-            margin-top: 18px;
-            padding-top: 16px;
-            border-top: 1px solid #E2E8F0;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 10px;
+            margin-top: 8px !important;
+            padding-top: 8px !important;
+            border-top: 1px solid #E2E8F0 !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: space-between !important;
+            flex-wrap: wrap !important;
+            gap: 6px !important;
         }
         .quote-modal-quick-contact span {
-            color: #64748B;
-            font-size: 1.3rem;
-            font-weight: 600;
+            color: #5F6368 !important;
+            font-size: 11px !important;
+            font-weight: 500 !important;
         }
         .quote-modal-wa-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            color: #25D366;
-            font-weight: 800;
-            font-size: 1.35rem;
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 4px !important;
+            color: #137333 !important;
+            font-weight: 600 !important;
+            font-size: 11px !important;
             text-decoration: none !important;
         }
         .quote-modal-wa-btn:hover {
             text-decoration: underline !important;
-            color: #1EBE5D;
+            color: #0d652d !important;
         }
 
         @media (max-width: 576px) {
             .quote-modal-backdrop {
-                padding: 12px !important;
+                padding: 10px !important;
             }
             .quote-modal-card {
-                padding: 24px 18px 20px 18px !important;
-                border-radius: 16px !important;
+                padding: 14px 16px !important;
+                border-radius: 14px !important;
             }
             .quote-modal-title {
-                font-size: 2rem !important;
+                font-size: 15px !important;
             }
             .quote-modal-subtitle {
-                font-size: 1.25rem !important;
+                font-size: 10.5px !important;
             }
         }
     </style>
@@ -936,7 +938,7 @@
                 <!-- MOBILE HERO SHOWCASE IMAGE -->
                 <div class="col-12 d-lg-none text-center mt-3 mb-2">
                     <div style="position: relative; display: inline-block; max-width: 290px; width: 85%;">
-                        <img src="img/dev-sharma.avif" alt="Dev Sharma - School Website Specialist" style="width: 100%; height: auto; border-radius: 20px; box-shadow: 0 12px 35px rgba(0,0,0,0.5); border: 3px solid rgba(0, 175, 144, 0.5);" />
+                        <img src="img/hero-mobile.avif" alt="School Website Specialist" style="width: 100%; height: auto; border-radius: 20px; box-shadow: 0 12px 35px rgba(0,0,0,0.5); border: 3px solid rgba(0, 175, 144, 0.5);" />
                         <div style="position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); background: #00AF90; color: #FFFFFF; font-weight: 800; font-size: 1.25rem; padding: 5px 18px; border-radius: 9999px; white-space: nowrap; box-shadow: 0 4px 12px rgba(0,0,0,0.35);">
                             ⭐ Direct School Specialist
                         </div>
@@ -2167,8 +2169,6 @@
             var notesInput = document.getElementById('modal_notes');
 
             if (slugOrKeyword === 'catalog') {
-                if (selectedBox) selectedBox.style.display = 'block';
-                if (selectedTitle) selectedTitle.innerText = '📁 Request: 50+ More School Website Templates Catalog';
                 if (hiddenName) hiddenName.value = 'Request for 50+ More School Website Templates Catalog';
                 if (hiddenLink) hiddenLink.value = 'https://design.cseel.org/#more-templates';
                 if (notesInput && !notesInput.value) {
@@ -2176,13 +2176,9 @@
                 }
             } else if (slugOrKeyword && SCHOOL_PROJECTS_DATA[slugOrKeyword]) {
                 var project = SCHOOL_PROJECTS_DATA[slugOrKeyword];
-                if (selectedBox) selectedBox.style.display = 'block';
-                if (selectedTitle) selectedTitle.innerText = project.name + ' (' + project.board + ')';
                 if (hiddenName) hiddenName.value = project.name;
                 if (hiddenLink) hiddenLink.value = project.demoUrl;
             } else if (activePreviewProject) {
-                if (selectedBox) selectedBox.style.display = 'block';
-                if (selectedTitle) selectedTitle.innerText = activePreviewProject.name + ' (' + activePreviewProject.board + ')';
                 if (hiddenName) hiddenName.value = activePreviewProject.name;
                 if (hiddenLink) hiddenLink.value = activePreviewProject.demoUrl;
             }
@@ -2307,17 +2303,9 @@
                 <p class="quote-modal-subtitle">Direct quote &bull; All fields are compulsory &bull; Guaranteed response within 2 hours</p>
             </div>
 
-            <!-- Dynamic Selected Template Alert Banner -->
-            <div id="modalSelectedTemplateBox" style="display: none; background: #E6F7F4; border: 1.5px solid #00AF90; border-radius: 12px; padding: 10px 16px; margin-bottom: 16px;">
-                <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
-                    <div>
-                        <span style="font-size: 1.15rem; font-weight: 800; color: #008770; text-transform: uppercase; letter-spacing: 0.5px;">🎯 Selected Project Template:</span>
-                        <div id="modalSelectedTemplateTitle" style="font-size: 1.45rem; font-weight: 900; color: #1B2732; margin-top: 2px;"></div>
-                    </div>
-                    <button type="button" onclick="clearModalSelectedTemplate()" style="background: none; border: none; color: #64748B; font-size: 1.25rem; font-weight: 700; cursor: pointer; text-decoration: underline;">
-                        Change
-                    </button>
-                </div>
+            <!-- Dynamic Selected Template Alert Banner (Hidden - passed to backend automatically) -->
+            <div id="modalSelectedTemplateBox" style="display: none !important;">
+                <div id="modalSelectedTemplateTitle" style="display: none !important;"></div>
             </div>
 
             <!-- Form -->
@@ -2328,63 +2316,63 @@
                 <input type="text" id="modal_website_hp" name="website_hp" style="display:none !important;" tabindex="-1" autocomplete="off">
 
                 <!-- Field 1: School Name -->
-                <div class="form-group text-left" style="margin-bottom: 14px;">
-                    <label style="font-weight: 700; color: #1B2732; font-size: 1.35rem; margin-bottom: 4px; display: block;">School / Institution Name *</label>
-                    <input type="text" id="modal_school_name" name="school_name" class="form-control" placeholder="e.g. Delhi Public School / St. Mary Academy" required style="border-radius: 10px; padding: 12px 16px; font-size: 1.4rem; border: 1.5px solid #CBD5E1; width: 100%;">
+                <div class="form-group text-left" style="margin-bottom: 7px;">
+                    <label style="font-weight: 600; color: #475569; font-size: 11px; margin-bottom: 2px; display: block;">School / Institution Name *</label>
+                    <input type="text" id="modal_school_name" name="school_name" class="form-control" placeholder="e.g. Delhi Public School" required style="border-radius: 6px; padding: 6px 10px; height: 34px; font-size: 12px; border: 1px solid #cbd5e1; width: 100%; box-sizing: border-box;">
                 </div>
 
                 <!-- Field 2: Person Name -->
-                <div class="form-group text-left" style="margin-bottom: 14px;">
-                    <label style="font-weight: 700; color: #1B2732; font-size: 1.35rem; margin-bottom: 4px; display: block;">Contact Person Name (Principal / Administrator) *</label>
-                    <input type="text" id="modal_person_name" name="person_name" class="form-control" placeholder="e.g. Dr. Rajesh Sharma" required style="border-radius: 10px; padding: 12px 16px; font-size: 1.4rem; border: 1.5px solid #CBD5E1; width: 100%;">
+                <div class="form-group text-left" style="margin-bottom: 7px;">
+                    <label style="font-weight: 600; color: #475569; font-size: 11px; margin-bottom: 2px; display: block;">Contact Person Name (Principal / Admin) *</label>
+                    <input type="text" id="modal_person_name" name="person_name" class="form-control" placeholder="e.g. Dr. Rajesh Sharma" required style="border-radius: 6px; padding: 6px 10px; height: 34px; font-size: 12px; border: 1px solid #cbd5e1; width: 100%; box-sizing: border-box;">
                 </div>
 
-                <!-- Field 3 & 4: Email & Phone -->
-                <div class="row" style="margin: 0 -6px;">
-                    <div class="col-md-6" style="padding: 0 6px; margin-bottom: 14px;">
+                <!-- Field 3 & 4: Email & Phone Dual Column -->
+                <div class="row" style="margin: 0 -4px; margin-bottom: 7px;">
+                    <div class="col-6" style="padding: 0 4px;">
                         <div class="form-group text-left" style="margin-bottom: 0;">
-                            <label style="font-weight: 700; color: #1B2732; font-size: 1.35rem; margin-bottom: 4px; display: block;">Official Email Address *</label>
-                            <input type="email" id="modal_email" name="email" class="form-control" placeholder="principal@school.edu.in" required style="border-radius: 10px; padding: 12px 16px; font-size: 1.4rem; border: 1.5px solid #CBD5E1; width: 100%;">
+                            <label style="font-weight: 600; color: #475569; font-size: 11px; margin-bottom: 2px; display: block;">Official Email *</label>
+                            <input type="email" id="modal_email" name="email" class="form-control" placeholder="principal@school.edu.in" required style="border-radius: 6px; padding: 6px 10px; height: 34px; font-size: 12px; border: 1px solid #cbd5e1; width: 100%; box-sizing: border-box;">
                         </div>
                     </div>
-                    <div class="col-md-6" style="padding: 0 6px; margin-bottom: 14px;">
+                    <div class="col-6" style="padding: 0 4px;">
                         <div class="form-group text-left" style="margin-bottom: 0;">
-                            <label style="font-weight: 700; color: #1B2732; font-size: 1.35rem; margin-bottom: 4px; display: block;">Contact Number (10-Digit Mobile / WhatsApp) *</label>
-                            <input type="tel" id="modal_contact_number" name="contact_number" class="form-control" placeholder="e.g. 9876543210" pattern="[6-9][0-9]{9}" maxlength="10" required style="border-radius: 10px; padding: 12px 16px; font-size: 1.4rem; border: 1.5px solid #CBD5E1; width: 100%;">
+                            <label style="font-weight: 600; color: #475569; font-size: 11px; margin-bottom: 2px; display: block;">WhatsApp / Phone *</label>
+                            <input type="tel" id="modal_contact_number" name="contact_number" class="form-control" placeholder="9876543210" pattern="[6-9][0-9]{9}" maxlength="10" required style="border-radius: 6px; padding: 6px 10px; height: 34px; font-size: 12px; border: 1px solid #cbd5e1; width: 100%; box-sizing: border-box;">
                         </div>
                     </div>
                 </div>
 
-                <!-- Field 5: Notes / Specific Requirements (Max 150 words) -->
-                <div class="form-group text-left" style="margin-bottom: 18px;">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
-                        <label style="font-weight: 700; color: #1B2732; font-size: 1.35rem; margin: 0;">Project Notes / Requirements *</label>
-                        <span id="modalNotesWordCount" style="font-size: 1.2rem; font-weight: 700; color: #64748B;">0 / 150 words</span>
+                <!-- Field 5: Notes / Specific Requirements -->
+                <div class="form-group text-left" style="margin-bottom: 8px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2px;">
+                        <label style="font-weight: 600; color: #475569; font-size: 11px; margin: 0;">Requirements / Pages</label>
+                        <span id="modalNotesWordCount" style="font-size: 10px; color: #94a3b8;">0/150 words</span>
                     </div>
-                    <textarea id="modal_notes" name="notes" class="form-control" rows="3" placeholder="Tell us about your requirements (e.g. CBSE mandatory disclosure tab, online admission form, instant circular updates)..." required style="border-radius: 10px; padding: 12px 16px; font-size: 1.4rem; border: 1.5px solid #CBD5E1; width: 100%;" oninput="updateModalNotesWordCount()"></textarea>
-                    <div id="modalWordCountAlert" style="display: none; color: #DC2626; font-size: 1.2rem; font-weight: 700; margin-top: 4px;">⚠️ Limit reached! Maximum 150 words allowed.</div>
+                    <textarea id="modal_notes" name="notes" class="form-control" rows="2" placeholder="e.g. CBSE mandatory disclosure tab, admissions portal..." required style="border-radius: 6px; padding: 6px 10px; font-size: 12px; height: 44px; min-height: 44px; border: 1px solid #cbd5e1; width: 100%; box-sizing: border-box; resize: none;" oninput="updateModalNotesWordCount()"></textarea>
+                    <div id="modalWordCountAlert" style="display: none; color: #DC2626; font-size: 10px; font-weight: 700; margin-top: 2px;">⚠️ Limit reached! Max 150 words.</div>
                 </div>
 
                 <!-- Submit Button -->
-                <button type="submit" id="modalSubmitBtn" class="school-cta-btn" style="width: 100%; border-radius: 9999px; font-weight: 800; font-size: 1.55rem; padding: 14px; background: #00AF90; color: #FFFFFF; box-shadow: 0 4px 15px rgba(0, 175, 144, 0.4); cursor: pointer; border: none;">
-                    Send Enquiry & Get Direct Quote &rarr;
+                <button type="submit" id="modalSubmitBtn" class="school-cta-btn" style="width: 100%; height: 36px; border-radius: 18px; font-weight: 600; font-size: 13px; padding: 0 16px; background: #1a73e8; color: #FFFFFF; box-shadow: 0 1px 3px rgba(0,0,0,0.15); cursor: pointer; border: none;">
+                    Send Enquiry &amp; Get Direct Quote &rarr;
                 </button>
 
                 <!-- Success Alert -->
-                <div id="modalEnquirySuccessAlert" style="display: none; padding: 14px 18px; margin-top: 16px; border-radius: 10px; background: #E6F7F4; color: #008770; font-weight: 700; font-size: 1.4rem; text-align: left; border: 1px solid rgba(0, 175, 144, 0.4);">
-                    ✓ Thank you! Dev Sharma has received your enquiry. We will contact your WhatsApp/Phone shortly with a direct transparent quote.
+                <div id="modalEnquirySuccessAlert" style="display: none; padding: 8px 12px; margin-top: 8px; border-radius: 6px; background: #e6f4ea; color: #137333; font-weight: 600; font-size: 11px; text-align: left; border: 1px solid #ceead6;">
+                    ✓ Thank you! Dev Sharma will contact your WhatsApp/Phone shortly.
                 </div>
 
                 <!-- Error Alert -->
-                <div id="modalEnquiryErrorAlert" style="display: none; padding: 14px 18px; margin-top: 16px; border-radius: 10px; background: #FDE8E8; color: #9B1C1C; font-weight: 700; font-size: 1.4rem; text-align: left; border: 1px solid rgba(239, 68, 68, 0.4);">
+                <div id="modalEnquiryErrorAlert" style="display: none; padding: 8px 12px; margin-top: 8px; border-radius: 6px; background: #fce8e6; color: #c5221f; font-weight: 600; font-size: 11px; text-align: left; border: 1px solid #fad2cf;">
                 </div>
             </form>
 
             <!-- Quick WhatsApp Option -->
             <div class="quote-modal-quick-contact">
-                <span>Prefer instant WhatsApp chat?</span>
+                <span>Instant WhatsApp chat?</span>
                 <a href="https://wa.me/919050778830?text=Hi%20Dev%2C%20I%20found%20you%20online%20on%20your%20website%2C%20can%20you%20develop%20a%20website%20for%20us%3F" target="_blank" class="quote-modal-wa-btn">
-                    <i class="fa fa-whatsapp" style="font-size: 1.8rem;"></i> +91 9050778830
+                    <i class="fa fa-whatsapp"></i> Chat on WhatsApp (+91 9050778830)
                 </a>
             </div>
         </div>
