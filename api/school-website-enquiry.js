@@ -230,8 +230,20 @@ module.exports = async function handler(req, res) {
     return res.status(405).json({ error: 'Method Not Allowed' });
   }
 
+  let body = {};
   try {
-    const body = req.body || {};
+    body = req.body;
+    if (typeof body === 'string') {
+      body = JSON.parse(body);
+    }
+  } catch (parseErr) {
+    return res.status(400).json({ error: 'Invalid JSON request format.' });
+  }
+  if (!body || typeof body !== 'object') {
+    body = {};
+  }
+
+  try {
     const {
       school_name,
       person_name,
