@@ -188,20 +188,23 @@ async function sendEmailNotification(enquiry) {
         },
       });
 
-    await gmailTransporter.sendMail({
-      from: `"Dev Sharma • School Web Specialist" <${SENDER_EMAIL}>`,
-      to: NOTIFICATION_EMAILS,
-      replyTo: enquiry.email,
-      subject: emailSubject,
-      html: htmlContent,
-    });
+      await gmailTransporter.sendMail({
+        from: `"Dev Sharma • School Web Specialist" <${SENDER_EMAIL}>`,
+        to: NOTIFICATION_EMAILS,
+        replyTo: enquiry.email,
+        subject: emailSubject,
+        html: htmlContent,
+      });
 
-    console.log('[design-enquiry] Delivered successfully via Gmail SMTP');
-    return true;
-  } catch (err) {
-    console.error('[design-enquiry] Email delivery error:', err);
-    return false;
+      console.log('[design-enquiry] Delivered successfully via Gmail SMTP');
+      return true;
+    } catch (err) {
+      console.error('[design-enquiry] Email delivery error:', err);
+      return false;
+    }
   }
+
+  return false;
 }
 
 module.exports = async function handler(req, res) {
