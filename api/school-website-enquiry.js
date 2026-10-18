@@ -61,81 +61,123 @@ async function sendEmailNotification(enquiry) {
   );
 
   const htmlContent = `
-    <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 620px; margin: 0 auto; padding: 24px; border: 2px solid #00AF90; border-radius: 16px; background: #ffffff;">
-      <div style="background: linear-gradient(135deg, #00AF90 0%, #141E28 100%); padding: 22px 26px; border-radius: 12px; margin-bottom: 24px; color: #ffffff;">
-        <h2 style="margin: 0; font-size: 21px; font-weight: 800;">
-          ${isMoreTemplatesRequest ? '📁 User Requested 50+ More Templates Catalog!' : '🏫 New School Website Enquiry Received!'}
-        </h2>
-        <p style="margin: 6px 0 0; font-size: 13.5px; color: #A7F3D0;">Dev Sharma • School Website Specialist • New Delhi (+91 9050778830) • design.cseel.org</p>
-      </div>
-
-      ${
-        isMoreTemplatesRequest
-          ? `<div style="background: #FEF3C7; border: 2px solid #F59E0B; padding: 14px 18px; border-radius: 10px; margin-bottom: 20px; color: #92400E; font-size: 15px; font-weight: 800;">
-              ⭐ USER DEMAND: The user has requested more school website templates / full 50+ templates catalog! Please send the catalog PDF & demo links immediately.
-            </div>`
-          : ''
-      }
-
-      <div style="margin-bottom: 24px;">
-        <p style="margin: 0 0 16px; font-size: 15px; color: #1B2732; font-weight: 700;">
-          ${isMoreTemplatesRequest ? 'A school representative has requested additional website design templates:' : 'A school administrator has submitted an official project enquiry via design.cseel.org:'}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>${isMoreTemplatesRequest ? 'Catalog Request' : 'School Website Lead'}</title>
+  <style>
+    body { margin: 0; padding: 0; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; background-color: #f1f5f9; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+    table { border-collapse: collapse; }
+    img { border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; }
+    .email-container { max-width: 600px; width: 100%; margin: 0 auto; background: #ffffff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+    .field-card { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 14px 16px; margin-bottom: 12px; word-break: break-word; overflow-wrap: anywhere; }
+    .field-label { font-size: 11px; font-weight: 800; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+    .field-value { font-size: 15px; font-weight: 700; color: #0f172a; line-height: 1.5; word-break: break-word; overflow-wrap: anywhere; }
+    .btn-action { display: inline-block; padding: 12px 20px; border-radius: 8px; font-weight: 800; font-size: 14px; text-decoration: none; text-align: center; margin: 4px 0; }
+    @media only screen and (max-width: 600px) {
+      .email-wrapper { padding: 10px !important; }
+      .email-body { padding: 18px 14px !important; }
+      .btn-action { display: block !important; width: 100% !important; box-sizing: border-box !important; }
+    }
+  </style>
+</head>
+<body style="margin: 0; padding: 0; background-color: #f1f5f9;">
+  <div class="email-wrapper" style="padding: 24px 12px; background-color: #f1f5f9;">
+    <div class="email-container" style="max-width: 600px; width: 100%; margin: 0 auto; background: #ffffff; border-radius: 16px; overflow: hidden; border: 1.5px solid #00AF90;">
+      
+      <!-- Top Banner -->
+      <div style="background: linear-gradient(135deg, #00AF90 0%, #141E28 100%); padding: 24px 20px; text-align: left; color: #ffffff;">
+        <span style="display: inline-block; background: rgba(255,255,255,0.2); font-size: 11px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; padding: 4px 10px; border-radius: 9999px; margin-bottom: 10px;">
+          ${isMoreTemplatesRequest ? '📁 CATALOG INQUIRY' : '🏫 NEW SCHOOL LEAD'}
+        </span>
+        <h1 style="margin: 0; font-size: 22px; font-weight: 900; line-height: 1.3; color: #ffffff;">
+          ${isMoreTemplatesRequest ? '50+ School Templates Catalog Request' : 'Direct School Website Enquiry'}
+        </h1>
+        <p style="margin: 8px 0 0; font-size: 13px; color: #A7F3D0; line-height: 1.5;">
+          Dev Sharma • School Website Specialist • New Delhi • <a href="https://design.cseel.org" style="color: #ffffff; text-decoration: underline;">design.cseel.org</a>
         </p>
-
-        <table style="width: 100%; border-collapse: collapse; font-size: 14.5px;">
-          <tr style="border-bottom: 1px solid #f1f5f9;">
-            <td style="padding: 10px 0; color: #64748b; font-weight: 600; width: 35%;">School Name:</td>
-            <td style="padding: 10px 0; color: #00AF90; font-weight: 900; font-size: 16px;">${enquiry.school_name}</td>
-          </tr>
-          <tr style="border-bottom: 1px solid #f1f5f9;">
-            <td style="padding: 10px 0; color: #64748b; font-weight: 600;">Contact Person:</td>
-            <td style="padding: 10px 0; color: #0f172a; font-weight: 800;">${enquiry.person_name}</td>
-          </tr>
-          <tr style="border-bottom: 1px solid #f1f5f9;">
-            <td style="padding: 10px 0; color: #64748b; font-weight: 600;">Email Address:</td>
-            <td style="padding: 10px 0; color: #008770; font-weight: 700;">
-              <a href="mailto:${enquiry.email}" style="color: #008770; text-decoration: underline;">${enquiry.email}</a>
-            </td>
-          </tr>
-          <tr style="border-bottom: 1px solid #f1f5f9;">
-            <td style="padding: 10px 0; color: #64748b; font-weight: 600;">Mobile / WhatsApp:</td>
-            <td style="padding: 10px 0; color: #00AF90; font-weight: 800; font-size: 16px;">
-              <a href="tel:${enquiry.contact_number}" style="color: #00AF90; text-decoration: none;">${enquiry.contact_number}</a>
-              &nbsp;|&nbsp;
-              <a href="${waUrl}" style="color: #25D366; text-decoration: none; font-weight: 800;">WhatsApp Lead &rarr;</a>
-            </td>
-          </tr>
-          ${
-            enquiry.template_name
-              ? `
-          <tr style="border-bottom: 1px solid #f1f5f9; background: #E6F7F4;">
-            <td style="padding: 10px 8px; color: #008770; font-weight: 800;">Requested Item / Template:</td>
-            <td style="padding: 10px 8px; color: #008770; font-weight: 800;">
-              ${enquiry.template_name}
-              ${enquiry.template_link ? `<br><a href="${enquiry.template_link}" target="_blank" style="color: #00AF90; font-size: 13px;">View Template Demo &rarr;</a>` : ''}
-            </td>
-          </tr>`
-              : ''
-          }
-          <tr style="border-bottom: 1px solid #f1f5f9;">
-            <td style="padding: 10px 0; color: #64748b; font-weight: 600; vertical-align: top;">Notes / Requirements:</td>
-            <td style="padding: 10px 0; color: #334155; line-height: 1.6;">${enquiry.notes}</td>
-          </tr>
-          <tr style="border-bottom: 1px solid #f1f5f9;">
-            <td style="padding: 10px 0; color: #94a3b8; font-size: 13px;">Source:</td>
-            <td style="padding: 10px 0; color: #94a3b8; font-size: 13px;">design.cseel.org (Dev Sharma School Portfolio)</td>
-          </tr>
-          <tr>
-            <td style="padding: 10px 0; color: #94a3b8; font-size: 13px;">Submitted At:</td>
-            <td style="padding: 10px 0; color: #94a3b8; font-size: 13px;">${new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })}</td>
-          </tr>
-        </table>
       </div>
 
-      <div style="background: #E6F7F4; padding: 14px 18px; border-radius: 10px; font-size: 13px; color: #008770; font-weight: 700;">
-        💡 Direct Reply: You can reply directly to this email to reach the school at ${enquiry.email} (or contact via WhatsApp at +91 ${cleanPhone})
+      <!-- Main Body -->
+      <div class="email-body" style="padding: 24px 20px;">
+        
+        ${isMoreTemplatesRequest ? `
+        <div style="background: #FEF3C7; border: 1.5px solid #F59E0B; padding: 14px 16px; border-radius: 10px; margin-bottom: 16px; color: #92400E; font-size: 14px; font-weight: 800; line-height: 1.5;">
+          ⭐ <strong>PRIORITY ACTION:</strong> User requested 50+ templates catalog PDF and demo links. Send catalog instantly via WhatsApp or Email!
+        </div>
+        ` : ''}
+
+        <!-- School Name -->
+        <div class="field-card" style="background: #E6F7F4; border: 1.5px solid rgba(0, 175, 144, 0.4);">
+          <div class="field-label" style="color: #008770;">School / Institution Name</div>
+          <div class="field-value" style="font-size: 18px; color: #008770; font-weight: 900;">${enquiry.school_name}</div>
+        </div>
+
+        <!-- Contact Person -->
+        <div class="field-card">
+          <div class="field-label">Contact Person (Principal / Administrator)</div>
+          <div class="field-value">${enquiry.person_name}</div>
+        </div>
+
+        <!-- Mobile & WhatsApp -->
+        <div class="field-card">
+          <div class="field-label">Mobile Number</div>
+          <div class="field-value" style="font-size: 16px;">
+            <a href="tel:${enquiry.contact_number}" style="color: #00AF90; text-decoration: none;">+91 ${cleanPhone}</a>
+          </div>
+        </div>
+
+        <!-- Email Address -->
+        <div class="field-card">
+          <div class="field-label">Official Email Address</div>
+          <div class="field-value">
+            <a href="mailto:${enquiry.email}" style="color: #008770; text-decoration: underline;">${enquiry.email}</a>
+          </div>
+        </div>
+
+        <!-- Template Selection (if any) -->
+        ${enquiry.template_name ? `
+        <div class="field-card" style="background: #F0FDF4; border: 1.5px solid #86EFAC;">
+          <div class="field-label" style="color: #15803D;">Selected Template / Item</div>
+          <div class="field-value" style="color: #15803D;">
+            ${enquiry.template_name}
+            ${enquiry.template_link ? `<div style="margin-top: 6px;"><a href="${enquiry.template_link}" target="_blank" style="color: #00AF90; font-size: 13px; text-decoration: underline;">Open Template Demo &rarr;</a></div>` : ''}
+          </div>
+        </div>
+        ` : ''}
+
+        <!-- Requirements Notes -->
+        <div class="field-card">
+          <div class="field-label">Project Requirements & Notes</div>
+          <div class="field-value" style="font-weight: 500; color: #334155; white-space: pre-wrap; line-height: 1.6;">${enquiry.notes}</div>
+        </div>
+
+        <!-- Direct Instant Action Buttons -->
+        <div style="margin: 22px 0 16px; padding: 16px; background: #F8FAF9; border-radius: 12px; border: 1px dashed #00AF90; text-align: center;">
+          <div style="font-size: 12px; font-weight: 800; color: #1B2732; text-transform: uppercase; margin-bottom: 12px; letter-spacing: 0.5px;">
+            ⚡ Quick 1-Tap Reply Options
+          </div>
+          <a href="${waUrl}" target="_blank" class="btn-action" style="background: #25D366; color: #ffffff; box-shadow: 0 4px 12px rgba(37,211,102,0.35); margin-right: 6px;">
+            📱 Chat on WhatsApp (+91 ${cleanPhone})
+          </a>
+          <a href="mailto:${enquiry.email}?subject=Dev%20Sharma%20-%20Website%20Proposal%20for%20${encodeURIComponent(enquiry.school_name)}" class="btn-action" style="background: #00AF90; color: #ffffff; box-shadow: 0 4px 12px rgba(0,175,144,0.35);">
+            ✉️ Reply via Email
+          </a>
+        </div>
+
+        <!-- Meta Information -->
+        <div style="margin-top: 16px; padding-top: 14px; border-top: 1px solid #e2e8f0; font-size: 12px; color: #94a3b8; line-height: 1.6;">
+          <div><strong>Source:</strong> design.cseel.org (Dev Sharma Direct School Web Portfolio)</div>
+          <div><strong>Received At:</strong> ${new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })} IST</div>
+        </div>
+
       </div>
     </div>
+  </div>
+</body>
+</html>
   `;
 
   const emailSubject = isMoreTemplatesRequest

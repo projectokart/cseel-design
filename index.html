@@ -447,7 +447,219 @@
                 transform: none !important;
                 flex-direction: row !important;
                 justify-content: center !important;
-                margin-top: 15px !important;
+        /* ====== NAVBAR BRAND AVATAR & HOVER TOOLTIP ====== */
+        .dev-profile-pill {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none !important;
+        }
+        .dev-avatar-img {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #00AF90;
+            box-shadow: 0 2px 8px rgba(0, 175, 144, 0.35);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+        .dev-profile-pill:hover .dev-avatar-img {
+            transform: scale(1.1);
+            box-shadow: 0 4px 14px rgba(0, 175, 144, 0.5);
+        }
+        .dev-status-dot {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 10px;
+            height: 10px;
+            background: #10B981;
+            border: 2px solid #FFFFFF;
+            border-radius: 50%;
+        }
+        .dev-name-tooltip {
+            position: absolute;
+            top: calc(100% + 10px);
+            left: 0;
+            background: #1B2732;
+            color: #FFFFFF;
+            padding: 7px 12px;
+            border-radius: 8px;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-6px);
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+            z-index: 99999;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            pointer-events: none;
+        }
+        .dev-name-tooltip strong {
+            color: #00AF90;
+            font-size: 1.25rem;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+        .dev-name-tooltip span {
+            color: #94A3B8;
+            font-size: 1.05rem;
+            line-height: 1.3;
+        }
+        .dev-name-tooltip::after {
+            content: '';
+            position: absolute;
+            bottom: 100%;
+            left: 14px;
+            border-width: 6px;
+            border-style: solid;
+            border-color: transparent transparent #1B2732 transparent;
+        }
+        .dev-profile-pill:hover .dev-name-tooltip {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        /* ====== DEDICATED POP-UP MODAL FORM STYLES ====== */
+        .quote-modal-backdrop {
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100vw !important;
+            height: 100vh !important;
+            background: rgba(15, 23, 42, 0.82) !important;
+            backdrop-filter: blur(8px) !important;
+            -webkit-backdrop-filter: blur(8px) !important;
+            z-index: 9999999 !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            padding: 20px !important;
+            box-sizing: border-box !important;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .quote-modal-backdrop.active {
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+        .quote-modal-card {
+            background: #FFFFFF !important;
+            border-radius: 20px !important;
+            width: 100% !important;
+            max-width: 580px !important;
+            max-height: 90vh !important;
+            overflow-y: auto !important;
+            -webkit-overflow-scrolling: touch !important;
+            padding: 32px 30px 24px 30px !important;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35) !important;
+            position: relative !important;
+            border: 1.5px solid #E2E8F0 !important;
+            transform: scale(0.95);
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .quote-modal-backdrop.active .quote-modal-card {
+            transform: scale(1);
+        }
+        .quote-modal-close {
+            position: absolute !important;
+            top: 16px !important;
+            right: 18px !important;
+            background: #F1F5F9 !important;
+            border: none !important;
+            width: 36px !important;
+            height: 36px !important;
+            border-radius: 50% !important;
+            font-size: 2.2rem !important;
+            line-height: 1 !important;
+            color: #64748B !important;
+            cursor: pointer !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            transition: all 0.2s ease !important;
+            z-index: 10 !important;
+        }
+        .quote-modal-close:hover {
+            background: #E2E8F0 !important;
+            color: #0F172A !important;
+            transform: rotate(90deg);
+        }
+        .quote-modal-header {
+            text-align: left;
+            margin-bottom: 20px;
+            padding-right: 40px;
+        }
+        .quote-modal-badge {
+            display: inline-block;
+            background: #E6F7F4;
+            color: #008770;
+            font-size: 1.2rem;
+            font-weight: 800;
+            padding: 4px 12px;
+            border-radius: 9999px;
+            margin-bottom: 8px;
+            border: 1px solid rgba(0, 175, 144, 0.25);
+        }
+        .quote-modal-title {
+            color: #1B2732;
+            font-weight: 900;
+            font-size: 2.3rem;
+            line-height: 1.2;
+            margin: 0 0 6px 0;
+        }
+        .quote-modal-subtitle {
+            color: #64748B;
+            font-size: 1.35rem;
+            margin: 0;
+            line-height: 1.4;
+        }
+        .quote-modal-quick-contact {
+            margin-top: 18px;
+            padding-top: 16px;
+            border-top: 1px solid #E2E8F0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .quote-modal-quick-contact span {
+            color: #64748B;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        .quote-modal-wa-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: #25D366;
+            font-weight: 800;
+            font-size: 1.35rem;
+            text-decoration: none !important;
+        }
+        .quote-modal-wa-btn:hover {
+            text-decoration: underline !important;
+            color: #1EBE5D;
+        }
+
+        @media (max-width: 576px) {
+            .quote-modal-backdrop {
+                padding: 12px !important;
+            }
+            .quote-modal-card {
+                padding: 24px 18px 20px 18px !important;
+                border-radius: 16px !important;
+            }
+            .quote-modal-title {
+                font-size: 2rem !important;
+            }
+            .quote-modal-subtitle {
+                font-size: 1.25rem !important;
             }
         }
     </style>
@@ -570,14 +782,22 @@
         <div class="container-fluid" style="padding: 0 !important;">
             <nav class="navbar navbar-expand-lg" style="position: fixed; top: 0; left: 0; width: 100%; background: #ffffff !important; z-index: 1030; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06); padding: 5px 5% !important; transition: all 0.3s ease;">
                 
-                <!-- Brand: Web Developer -->
-                <a class="navbar-brand" href="#home" style="display: flex; align-items: center; text-decoration: none; padding: 0; margin-right: 25px;">
-                    <span style="font-size: 2.2rem; font-weight: 900; color: #1B2732; letter-spacing: -0.5px;">
+                <!-- Brand: Dev Sharma Profile Avatar + Web Developer -->
+                <a class="navbar-brand" href="#home" data-scroll-nav="0" style="display: flex; align-items: center; text-decoration: none; padding: 0; margin-right: 20px;">
+                    <div class="dev-profile-pill" style="position: relative; display: flex; align-items: center; margin-right: 12px;">
+                        <img src="img/hero-mobile.jpg" alt="Dev Sharma" class="dev-avatar-img" />
+                        <span class="dev-status-dot"></span>
+                        <div class="dev-name-tooltip">
+                            <strong>Dev Sharma</strong>
+                            <span>School Web Specialist</span>
+                        </div>
+                    </div>
+                    <span style="font-size: 2.1rem; font-weight: 900; color: #1B2732; letter-spacing: -0.5px;">
                         Web <span style="color: #00AF90;">Developer</span>
                     </span>
                 </a>
 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-label="Toggle navigation">
                     <span class="icon-bar"><i class="fa fa-bars fa-2x" style="color: #00AF90;"></i></span>
                 </button>
 
@@ -602,7 +822,10 @@
                             <a class="nav-link" href="#pricing" data-scroll-nav="5" style="font-size: 1.35rem; padding: 5px 12px !important;">Agency vs Direct</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link btn-primary ml-lg-3 text-white" href="#contact" data-scroll-nav="6" style="background: #00AF90 !important; border-color: #00AF90 !important; color: #fff !important; padding: 6px 20px !important; border-radius: 9999px !important; font-weight: 700; font-size: 1.35rem; box-shadow: 0 4px 14px rgba(0, 175, 144, 0.35);">Get Quote</a>
+                            <a class="nav-link" href="#faq" data-scroll-nav="6" style="font-size: 1.35rem; padding: 5px 12px !important;">FAQ & Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-primary ml-lg-3 text-white" href="javascript:void(0);" onclick="openQuoteModal(); return false;" style="background: #00AF90 !important; border-color: #00AF90 !important; color: #fff !important; padding: 6px 20px !important; border-radius: 9999px !important; font-weight: 700; font-size: 1.35rem; box-shadow: 0 4px 14px rgba(0, 175, 144, 0.35); cursor: pointer;">Get Quote</a>
                         </li>
                     </ul>
                 </div>
@@ -629,7 +852,7 @@
                     </p>
 
                     <div class="d-flex flex-wrap align-items-center" style="gap: 15px; margin-top: 22px;">
-                        <a href="#contact" class="school-cta-btn header-btn" style="background: #00AF90; color: #fff; font-weight: 800; font-size: 1.5rem; padding: 13px 32px; border-radius: 9999px; text-decoration: none; box-shadow: 0 6px 20px rgba(0, 175, 144, 0.45); border: none;">
+                        <a href="javascript:void(0);" onclick="openQuoteModal();" class="school-cta-btn header-btn" style="background: #00AF90; color: #fff; font-weight: 800; font-size: 1.5rem; padding: 13px 32px; border-radius: 9999px; text-decoration: none; box-shadow: 0 6px 20px rgba(0, 175, 144, 0.45); border: none; cursor: pointer;">
                             Enquire For Direct Quote &rarr;
                         </a>
                         <a href="#pricing" class="button header-btn" style="background: rgba(255,255,255,0.12); border: 2px solid #FFFFFF; color: #FFFFFF; font-weight: 800; font-size: 1.5rem; padding: 11px 26px; border-radius: 9999px; text-decoration: none;">
@@ -678,7 +901,7 @@
                             With <strong>Dev Sharma</strong>, 100% of your investment goes directly into building a high-speed, prestigious digital campus. No middleman, no endless ticket delays, and no inflated ₹1L+ bills.
                         </p>
                         <div class="mt-4">
-                            <a href="#contact" class="school-cta-btn" style="background: #00AF90; color: #FFFFFF !important; border-radius: 9999px; padding: 14px 30px; font-weight: 800; font-size: 1.5rem; text-decoration: none; box-shadow: 0 4px 16px rgba(0, 175, 144, 0.35); border: none;">
+                            <a href="javascript:void(0);" onclick="openQuoteModal();" class="school-cta-btn" style="background: #00AF90; color: #FFFFFF !important; border-radius: 9999px; padding: 14px 30px; font-weight: 800; font-size: 1.5rem; text-decoration: none; box-shadow: 0 4px 16px rgba(0, 175, 144, 0.35); border: none; cursor: pointer; display: inline-block;">
                                 Discuss Your School Project &rarr;
                             </a>
                         </div>
@@ -797,7 +1020,7 @@
                         </div>
                     </div>
 
-                    <a href="#contact" class="school-cta-btn" style="background: #00AF90; color: #FFFFFF !important; border-radius: 9999px; padding: 14px 34px; font-weight: 700; font-size: 1.5rem; text-decoration: none; box-shadow: 0 4px 16px rgba(0, 175, 144, 0.35); border: none;">
+                    <a href="javascript:void(0);" onclick="openQuoteModal();" class="school-cta-btn" style="background: #00AF90; color: #FFFFFF !important; border-radius: 9999px; padding: 14px 34px; font-weight: 700; font-size: 1.5rem; text-decoration: none; box-shadow: 0 4px 16px rgba(0, 175, 144, 0.35); border: none; cursor: pointer; display: inline-block;">
                         Request Direct Quote &rarr;
                     </a>
                 </div>
@@ -1214,7 +1437,7 @@
     <!-- ====== END COUNTER ======  -->
 
     <!-- ====== START PRICING / COMPARISON ======  -->
-    <section class="price padding" id="pricing" data-scroll-index="4">
+    <section class="price padding" id="pricing" data-scroll-index="5">
         <div class="container">
 
             <div class="text-center mb-5">
@@ -1256,8 +1479,8 @@
                             </ul>
                         </div>
 
-                        <a href="#contact" class="button" style="display: block; text-align: center; border: 2px solid #CBD5E1; color: #64748B; font-weight: 700; border-radius: 9999px; padding: 12px; text-decoration: none;">
-                            Traditional Agency Model
+                        <a href="javascript:void(0);" onclick="openQuoteModal();" class="button" style="display: block; text-align: center; border: 2px solid #CBD5E1; color: #64748B; font-weight: 700; border-radius: 9999px; padding: 12px; text-decoration: none; cursor: pointer;">
+                            Compare & Get Direct Quote
                         </a>
                     </div>
                 </div>
@@ -1296,7 +1519,7 @@
                             </ul>
                         </div>
 
-                        <a href="#contact" class="school-cta-btn" style="display: block; text-align: center; background: #00AF90; color: #FFFFFF !important; font-weight: 800; font-size: 1.55rem; border-radius: 9999px; padding: 14px; text-decoration: none; box-shadow: 0 4px 20px rgba(0, 175, 144, 0.4); border: none;">
+                        <a href="javascript:void(0);" onclick="openQuoteModal();" class="school-cta-btn" style="display: block; text-align: center; background: #00AF90; color: #FFFFFF !important; font-weight: 800; font-size: 1.55rem; border-radius: 9999px; padding: 14px; text-decoration: none; box-shadow: 0 4px 20px rgba(0, 175, 144, 0.4); border: none; cursor: pointer;">
                             Enquire For Direct Quote &rarr;
                         </a>
                     </div>
@@ -1341,7 +1564,7 @@
                         </li>
                     </ul>
 
-                    <a href="#contact" class="school-cta-btn" style="background: #00AF90; color: #FFFFFF !important; border-radius: 9999px; padding: 14px 34px; font-weight: 700; font-size: 1.5rem; text-decoration: none; box-shadow: 0 4px 16px rgba(0, 175, 144, 0.35); border: none;">
+                    <a href="javascript:void(0);" onclick="openQuoteModal();" class="school-cta-btn" style="background: #00AF90; color: #FFFFFF !important; border-radius: 9999px; padding: 14px 34px; font-weight: 700; font-size: 1.5rem; text-decoration: none; box-shadow: 0 4px 16px rgba(0, 175, 144, 0.35); border: none; cursor: pointer; display: inline-block;">
                         Claim Direct School Offer &rarr;
                     </a>
                 </div>
@@ -1351,24 +1574,25 @@
     </section>
     <!-- ====== END OFFER ======  -->
 
-    <!-- ====== START CONTACT & DEDICATED 4-FIELD ENQUIRY FORM ======  -->
-    <section class="contact padding" id="contact" data-scroll-index="5">
+    <!-- ====== START FAQ & DIRECT CONSULTATION (FORM MOVED TO POP-UP MODAL) ======  -->
+    <section class="contact padding" id="faq" data-scroll-index="6">
+        <span id="contact" style="position: relative; top: -80px; visibility: hidden;"></span>
         <div class="container">
 
             <div class="text-center mb-5">
-                <span class="green-badge">Direct School Enquiry</span>
+                <span class="green-badge">Support & Questions</span>
                 <h2 class="heading-primary mb-3" style="color: #1B2732; font-weight: 900;">
-                    Get Your School Website Quote
+                    Frequently Asked Questions & Direct Consultation
                 </h2>
                 <p class="mb-4" style="max-width: 650px; margin: 0 auto; color: #64748B; font-size: 1.6rem;">
-                    Fill out the 4 details below. Dev Sharma will personally review your requirements and reply with a transparent proposal within 24 hours.
+                    Everything you need to know about getting your school portal designed by Dev Sharma.
                 </p>
             </div>
 
             <div class="row">
 
-                <!-- FAQ LEFT -->
-                <div class="col-lg-6 mb-5 mb-lg-0">
+                <!-- FAQ ACCORDION -->
+                <div class="col-lg-7 mb-5 mb-lg-0">
                     <h3 style="color: #1B2732; font-weight: 800; font-size: 2.2rem; margin-bottom: 25px;">
                         Frequently Asked Questions
                     </h3>
@@ -1383,7 +1607,7 @@
                             </div>
                             <div id="faqOne" class="card-body collapse show" data-parent="#accordion">
                                 <p style="color: #64748B; font-size: 1.45rem; line-height: 1.7; margin: 0;">
-                                    Agencies charge ₹1,00,000 to ₹2,50,000+ because they maintain corporate offices, sales agents, and middle managers. By working directly with Dev Sharma, you eliminate all middleman markups and get 1-on-1 developer attention at a fraction of the cost.
+                                    Agencies charge ₹1,00,000 to ₹2,50,000+ because they maintain corporate offices, sales executives, and middle managers. By working directly with Dev Sharma, you eliminate all middleman markups and get 1-on-1 developer attention at a fraction of the cost.
                                 </p>
                             </div>
                         </div>
@@ -1397,7 +1621,7 @@
                             </div>
                             <div id="faqTwo" class="card-body collapse" data-parent="#accordion">
                                 <p style="color: #64748B; font-size: 1.45rem; line-height: 1.7; margin: 0;">
-                                    Yes, 100%. I create a dedicated public disclosure section adhering strictly to the board's official format with downloadable PDF links for affiliation letters, safety certificates, fee structure, and staff details.
+                                    Yes, 100%. I create a dedicated public disclosure section adhering strictly to the board's official format (Appendix IX) with downloadable PDF links for affiliation letters, safety certificates, fee structure, and staff details.
                                 </p>
                             </div>
                         </div>
@@ -1429,116 +1653,63 @@
                                 </p>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Direct Info Box -->
-                    <div style="margin-top: 30px; background: #E6F7F4; border-radius: 16px; padding: 25px; border: 1.5px solid rgba(0, 175, 144, 0.3);">
-                        <div style="font-weight: 800; color: #008770; font-size: 1.6rem; margin-bottom: 8px;">
-                            <i class="fa fa-envelope" style="margin-right: 8px;"></i> Official Contact Email
+                        <!-- Q5 -->
+                        <div class="card mb-3" style="border-radius: 12px; border: 1px solid #E2E8F0; overflow: hidden;">
+                            <div class="card-header collapsed" style="background: #F8FAF9; cursor: pointer; padding: 16px 20px;" data-toggle="collapse" href="#faqFive">
+                                <h5 style="margin: 0; color: #1B2732; font-weight: 700; font-size: 1.55rem;">
+                                    Do we get complete ownership of domain and hosting?
+                                </h5>
+                            </div>
+                            <div id="faqFive" class="card-body collapse" data-parent="#accordion">
+                                <p style="color: #64748B; font-size: 1.45rem; line-height: 1.7; margin: 0;">
+                                    Yes, 100% full ownership. Unlike agencies that lock you in proprietary hosting, your school retains complete master credentials, source code, and domain control.
+                                </p>
+                            </div>
                         </div>
-                        <p style="margin: 0; font-size: 1.5rem; color: #1B2732; font-weight: 700;">
-                            <a href="mailto:website@design.cseel.org" style="color: #1B2732; text-decoration: none;">website@design.cseel.org</a>
-                        </p>
-                        
-                        <div style="margin-top: 18px; font-weight: 800; color: #008770; font-size: 1.6rem; margin-bottom: 6px;">
-                            <i class="fa fa-whatsapp" style="margin-right: 8px; color: #25D366; font-size: 2rem;"></i> Direct WhatsApp & Call
-                        </div>
-                        <p style="margin: 0; font-size: 1.7rem; color: #008770; font-weight: 900;">
-                            <a href="https://wa.me/919050778830?text=Hi%20Dev%2C%20I%20found%20you%20online%20on%20your%20website%2C%20can%20you%20develop%20a%20website%20for%20us%3F" target="_blank" style="color: #008770; text-decoration: none;">+91 9050778830</a>
-                        </p>
-                        <div style="margin-top: 14px;">
-                            <a href="https://wa.me/919050778830?text=Hi%20Dev%2C%20I%20found%20you%20online%20on%20your%20website%2C%20can%20you%20develop%20a%20website%20for%20us%3F" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #25D366; color: #ffffff; padding: 10px 22px; border-radius: 9999px; font-weight: 800; font-size: 1.4rem; text-decoration: none; box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4);">
-                                <i class="fa fa-whatsapp" style="font-size: 2rem;"></i> Chat Directly on WhatsApp &rarr;
-                            </a>
-                        </div>
-                        <p style="margin: 14px 0 0 0; font-size: 1.35rem; color: #4A5568;">
-                            Location: New Delhi, India &nbsp;•&nbsp; Support: Mon - Sat 9:00 AM - 8:00 PM
-                        </p>
                     </div>
                 </div>
 
-                <!-- DEDICATED 5-FIELD SECURE ENQUIRY FORM -->
-                <div class="col-lg-6">
-                    <div class="contact-form" style="background: #FFFFFF; border-radius: 20px; padding: 36px 30px; border: 1.5px solid #E2E8F0; box-shadow: 0 10px 30px rgba(0, 175, 144, 0.1);">
+                <!-- DIRECT CONSULTATION & QUOTE CTA CARD -->
+                <div class="col-lg-5">
+                    <div style="background: #FFFFFF; border-radius: 20px; padding: 32px 26px; border: 1.5px solid #E2E8F0; box-shadow: 0 10px 30px rgba(0, 175, 144, 0.08);">
                         
-                        <div style="text-align: left; margin-bottom: 22px;">
-                            <span class="green-badge" style="font-size: 1.2rem; padding: 4px 12px; margin-bottom: 8px;">100% Confidential & Direct</span>
-                            <h3 style="color: #1B2732; font-weight: 900; font-size: 2.4rem; margin-bottom: 6px;">
-                                School Website Enquiry
-                            </h3>
-                            <p style="color: #64748B; font-size: 1.4rem; margin: 0;">
-                                Direct quote &bull; All fields are compulsory &bull; Guaranteed response within 2 hours
-                            </p>
-                        </div>
-
-                        <!-- Dynamic Selected Template Alert Banner -->
-                        <div id="selectedTemplateBox" style="display: none; background: #E6F7F4; border: 1.5px solid #00AF90; border-radius: 12px; padding: 12px 18px; margin-bottom: 20px;">
-                            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
-                                <div>
-                                    <span style="font-size: 1.2rem; font-weight: 800; color: #008770; text-transform: uppercase; letter-spacing: 0.5px;">🎯 Selected Project Template:</span>
-                                    <div id="selectedTemplateTitle" style="font-size: 1.55rem; font-weight: 900; color: #1B2732; margin-top: 2px;"></div>
-                                </div>
-                                <button type="button" onclick="clearSelectedTemplate()" style="background: none; border: none; color: #64748B; font-size: 1.3rem; font-weight: 700; cursor: pointer; text-decoration: underline;">
-                                    Change Template
-                                </button>
+                        <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 20px;">
+                            <img src="img/hero-mobile.jpg" alt="Dev Sharma" style="width: 58px; height: 58px; border-radius: 50%; object-fit: cover; border: 2.5px solid #00AF90; box-shadow: 0 4px 12px rgba(0, 175, 144, 0.3);" />
+                            <div>
+                                <h4 style="margin: 0; color: #1B2732; font-weight: 900; font-size: 1.85rem;">Dev Sharma</h4>
+                                <span style="color: #008770; font-size: 1.3rem; font-weight: 700;">School Website Specialist • New Delhi</span>
                             </div>
                         </div>
 
-                        <form id="schoolEnquiryForm" onsubmit="submitSchoolEnquiry(event)">
-                            <input type="hidden" id="template_name" name="template_name" value="">
-                            <input type="hidden" id="template_link" name="template_link" value="">
-                            <!-- Anti-bot Honeypot Trap -->
-                            <input type="text" id="website_hp" name="website_hp" style="display:none !important;" tabindex="-1" autocomplete="off">
-                            
-                            <!-- Field 1: School Name -->
-                            <div class="form-group text-left" style="margin-bottom: 18px;">
-                                <label style="font-weight: 700; color: #1B2732; font-size: 1.4rem; margin-bottom: 6px;">School / Institution Name *</label>
-                                <input type="text" id="school_name" name="school_name" class="form-control" placeholder="e.g. Delhi Public School / St. Mary Academy" required style="border-radius: 12px; padding: 14px 18px; font-size: 1.45rem; border: 1.5px solid #CBD5E1;">
+                        <p style="color: #64748B; font-size: 1.45rem; line-height: 1.65; margin-bottom: 22px;">
+                            Have an upcoming CBSE inspection, school affiliation renewal, or want a high-speed modern portal? Request a direct proposal or discuss your requirements directly with Dev.
+                        </p>
+
+                        <!-- Primary Pop-up Modal Button -->
+                        <button type="button" onclick="openQuoteModal();" class="school-cta-btn" style="width: 100%; border-radius: 9999px; font-weight: 800; font-size: 1.6rem; padding: 16px; background: #00AF90; color: #FFFFFF; box-shadow: 0 6px 20px rgba(0, 175, 144, 0.45); cursor: pointer; border: none; margin-bottom: 16px; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                            <span>Get Direct School Quote &rarr;</span>
+                        </button>
+
+                        <!-- Direct WhatsApp Link Button -->
+                        <a href="https://wa.me/919050778830?text=Hi%20Dev%2C%20I%20found%20you%20online%20on%20your%20website%2C%20can%20you%20develop%20a%20website%20for%20us%3F" target="_blank" style="display: flex; align-items: center; justify-content: center; gap: 8px; background: #25D366; color: #ffffff; padding: 13px 20px; border-radius: 9999px; font-weight: 800; font-size: 1.45rem; text-decoration: none; box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35); margin-bottom: 20px;">
+                            <i class="fa fa-whatsapp" style="font-size: 2rem;"></i> Chat Directly on WhatsApp
+                        </a>
+
+                        <!-- Direct Contact List -->
+                        <div style="background: #F8FAF9; border-radius: 12px; padding: 16px; border: 1px solid #E2E8F0; font-size: 1.35rem;">
+                            <div style="margin-bottom: 10px; color: #1B2732;">
+                                <strong style="color: #008770;"><i class="fa fa-envelope" style="margin-right: 6px;"></i> Email:</strong>
+                                <a href="mailto:website@design.cseel.org" style="color: #1B2732; text-decoration: none; font-weight: 600;">website@design.cseel.org</a>
                             </div>
-
-                            <!-- Field 2: Person Name -->
-                            <div class="form-group text-left" style="margin-bottom: 18px;">
-                                <label style="font-weight: 700; color: #1B2732; font-size: 1.4rem; margin-bottom: 6px;">Contact Person Name (Principal / Administrator) *</label>
-                                <input type="text" id="person_name" name="person_name" class="form-control" placeholder="e.g. Dr. Rajesh Sharma" required style="border-radius: 12px; padding: 14px 18px; font-size: 1.45rem; border: 1.5px solid #CBD5E1;">
+                            <div style="margin-bottom: 10px; color: #1B2732;">
+                                <strong style="color: #008770;"><i class="fa fa-phone" style="margin-right: 6px;"></i> Direct Call:</strong>
+                                <a href="tel:+919050778830" style="color: #1B2732; text-decoration: none; font-weight: 600;">+91 9050778830</a>
                             </div>
-
-                            <!-- Field 3: Official Email Address -->
-                            <div class="form-group text-left" style="margin-bottom: 18px;">
-                                <label style="font-weight: 700; color: #1B2732; font-size: 1.4rem; margin-bottom: 6px;">Official Email Address *</label>
-                                <input type="email" id="email" name="email" class="form-control" placeholder="e.g. principal@school.edu.in" required style="border-radius: 12px; padding: 14px 18px; font-size: 1.45rem; border: 1.5px solid #CBD5E1;">
+                            <div style="color: #64748B;">
+                                <i class="fa fa-map-marker" style="margin-right: 6px; color: #00AF90;"></i> New Delhi, India &bull; Mon - Sat (9 AM - 8 PM)
                             </div>
-
-                            <!-- Field 4: Contact Number -->
-                            <div class="form-group text-left" style="margin-bottom: 18px;">
-                                <label style="font-weight: 700; color: #1B2732; font-size: 1.4rem; margin-bottom: 6px;">Contact Number (10-Digit Mobile / WhatsApp) *</label>
-                                <input type="tel" id="contact_number" name="contact_number" class="form-control" placeholder="e.g. 9876543210" pattern="[6-9][0-9]{9}" maxlength="10" required style="border-radius: 12px; padding: 14px 18px; font-size: 1.45rem; border: 1.5px solid #CBD5E1;">
-                            </div>
-
-                            <!-- Field 5: Notes / Specific Requirements (Max 150 words) -->
-                            <div class="form-group text-left" style="margin-bottom: 22px;">
-                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
-                                    <label style="font-weight: 700; color: #1B2732; font-size: 1.4rem; margin: 0;">Project Notes / Requirements *</label>
-                                    <span id="notesWordCount" style="font-size: 1.25rem; font-weight: 700; color: #64748B;">0 / 150 words</span>
-                                </div>
-                                <textarea id="notes" name="notes" class="form-control" rows="3" placeholder="Tell us about your requirements (e.g. CBSE mandatory disclosure tab, online admission form, instant circular updates, custom domain)..." required style="border-radius: 12px; padding: 14px 18px; font-size: 1.45rem; border: 1.5px solid #CBD5E1;" oninput="updateNotesWordCount()"></textarea>
-                                <div id="wordCountAlert" style="display: none; color: #DC2626; font-size: 1.25rem; font-weight: 700; margin-top: 4px;">⚠️ Limit reached! Maximum 150 words allowed.</div>
-                            </div>
-
-                            <!-- Submit Button -->
-                            <button type="submit" id="submitBtn" class="school-cta-btn" style="width: 100%; border-radius: 9999px; font-weight: 800; font-size: 1.6rem; padding: 16px; background: #00AF90; color: #FFFFFF; box-shadow: 0 4px 15px rgba(0, 175, 144, 0.4); cursor: pointer; border: none;">
-                                Send Enquiry & Get Direct Quote &rarr;
-                            </button>
-
-                            <!-- Success Alert -->
-                            <div id="enquirySuccessAlert" style="display: none; padding: 14px 18px; margin-top: 20px; border-radius: 12px; background: #E6F7F4; color: #008770; font-weight: 700; font-size: 1.45rem; text-align: left; border: 1px solid rgba(0, 175, 144, 0.4);">
-                                ✓ Thank you! Dev Sharma has received your enquiry. We will contact your WhatsApp/Phone shortly with a direct transparent quote.
-                            </div>
-
-                            <!-- Error Alert -->
-                            <div id="enquiryErrorAlert" style="display: none; padding: 14px 18px; margin-top: 20px; border-radius: 12px; background: #FDE8E8; color: #9B1C1C; font-weight: 700; font-size: 1.45rem; text-align: left; border: 1px solid rgba(239, 68, 68, 0.4);">
-                            </div>
-
-                        </form>
+                        </div>
 
                     </div>
                 </div>
@@ -1547,7 +1718,7 @@
 
         </div>
     </section>
-    <!-- ====== END CONTACT ======  -->
+    <!-- ====== END FAQ & CONSULTATION ======  -->
 
     <!-- ====== START FOOTER ======  -->
     <section class="footer" style="background: #141E28; color: #D1E3F0; padding: 50px 0 25px 0; border-top: 1px solid rgba(0, 175, 144, 0.25);">
@@ -1571,7 +1742,7 @@
                         <li style="margin-bottom: 8px;"><a href="#about" style="color: #94A3B8; text-decoration: none;">About Dev Sharma</a></li>
                         <li style="margin-bottom: 8px;"><a href="#services" style="color: #94A3B8; text-decoration: none;">School Features</a></li>
                         <li style="margin-bottom: 8px;"><a href="#pricing" style="color: #94A3B8; text-decoration: none;">Agency Comparison</a></li>
-                        <li style="margin-bottom: 8px;"><a href="#contact" style="color: #94A3B8; text-decoration: none;">Get Direct Quote</a></li>
+                        <li style="margin-bottom: 8px;"><a href="javascript:void(0);" onclick="openQuoteModal();" style="color: #94A3B8; text-decoration: none; cursor: pointer;">Get Direct Quote</a></li>
                     </ul>
                 </div>
 
@@ -1723,16 +1894,9 @@
 
         function claimPromoQuote() {
             closePromoModal();
-            var contactSec = document.getElementById('contact');
-            if (contactSec) {
-                contactSec.scrollIntoView({ behavior: 'smooth' });
-            }
             setTimeout(function() {
-                var personNameInput = document.getElementById('person_name');
-                if (personNameInput) {
-                    personNameInput.focus();
-                }
-            }, 600);
+                openQuoteModal();
+            }, 300);
         }
 
         window.addEventListener('DOMContentLoaded', initPromoModal);
@@ -1919,37 +2083,79 @@
         }
 
         function claimSelectedTemplateFromModal() {
+            var selectedSlug = activePreviewProject ? activePreviewProject.slug : null;
             closeProjectPreviewModal();
+            openQuoteModal(selectedSlug);
+        }
 
-            if (activePreviewProject) {
-                var selectedBox = document.getElementById('selectedTemplateBox');
-                var selectedTitle = document.getElementById('selectedTemplateTitle');
-                var hiddenName = document.getElementById('template_name');
-                var hiddenLink = document.getElementById('template_link');
+        function openQuoteModal(slugOrKeyword) {
+            var modal = document.getElementById('quoteModal');
+            if (!modal) return;
 
+            var selectedBox = document.getElementById('modalSelectedTemplateBox');
+            var selectedTitle = document.getElementById('modalSelectedTemplateTitle');
+            var hiddenName = document.getElementById('modal_template_name');
+            var hiddenLink = document.getElementById('modal_template_link');
+            var notesInput = document.getElementById('modal_notes');
+
+            if (slugOrKeyword === 'catalog') {
+                if (selectedBox) selectedBox.style.display = 'block';
+                if (selectedTitle) selectedTitle.innerText = '📁 Request: 50+ More School Website Templates Catalog';
+                if (hiddenName) hiddenName.value = 'Request for 50+ More School Website Templates Catalog';
+                if (hiddenLink) hiddenLink.value = 'https://design.cseel.org/#more-templates';
+                if (notesInput && !notesInput.value) {
+                    notesInput.value = 'Please share the complete catalog of 50+ school website templates and design architectures for our school.';
+                }
+            } else if (slugOrKeyword && SCHOOL_PROJECTS_DATA[slugOrKeyword]) {
+                var project = SCHOOL_PROJECTS_DATA[slugOrKeyword];
+                if (selectedBox) selectedBox.style.display = 'block';
+                if (selectedTitle) selectedTitle.innerText = project.name + ' (' + project.board + ')';
+                if (hiddenName) hiddenName.value = project.name;
+                if (hiddenLink) hiddenLink.value = project.demoUrl;
+            } else if (activePreviewProject) {
                 if (selectedBox) selectedBox.style.display = 'block';
                 if (selectedTitle) selectedTitle.innerText = activePreviewProject.name + ' (' + activePreviewProject.board + ')';
                 if (hiddenName) hiddenName.value = activePreviewProject.name;
                 if (hiddenLink) hiddenLink.value = activePreviewProject.demoUrl;
             }
 
-            var contactSec = document.getElementById('contact');
-            if (contactSec) {
-                contactSec.scrollIntoView({ behavior: 'smooth' });
-            }
+            modal.style.display = 'flex';
+            setTimeout(function() {
+                modal.classList.add('active');
+            }, 10);
+            document.body.style.overflow = 'hidden';
+
+            updateModalNotesWordCount();
 
             setTimeout(function() {
-                var schoolNameInput = document.getElementById('school_name');
+                var schoolNameInput = document.getElementById('modal_school_name');
                 if (schoolNameInput) {
                     schoolNameInput.focus();
                 }
-            }, 600);
+            }, 150);
         }
 
-        function clearSelectedTemplate() {
-            var selectedBox = document.getElementById('selectedTemplateBox');
-            var hiddenName = document.getElementById('template_name');
-            var hiddenLink = document.getElementById('template_link');
+        function closeQuoteModal() {
+            var modal = document.getElementById('quoteModal');
+            if (modal) {
+                modal.classList.remove('active');
+                setTimeout(function() {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = '';
+                }, 250);
+            }
+        }
+
+        function handleQuoteModalBackdrop(event) {
+            if (event.target && event.target.id === 'quoteModal') {
+                closeQuoteModal();
+            }
+        }
+
+        function clearModalSelectedTemplate() {
+            var selectedBox = document.getElementById('modalSelectedTemplateBox');
+            var hiddenName = document.getElementById('modal_template_name');
+            var hiddenLink = document.getElementById('modal_template_link');
 
             if (selectedBox) selectedBox.style.display = 'none';
             if (hiddenName) hiddenName.value = '';
@@ -1957,70 +2163,16 @@
             activePreviewProject = null;
         }
 
-        function selectTemplateBySlug(slug) {
-            var project = SCHOOL_PROJECTS_DATA[slug];
-            if (!project) return;
-            var selectedBox = document.getElementById('selectedTemplateBox');
-            var selectedTitle = document.getElementById('selectedTemplateTitle');
-            var hiddenName = document.getElementById('template_name');
-            var hiddenLink = document.getElementById('template_link');
-
-            if (selectedBox) selectedBox.style.display = 'block';
-            if (selectedTitle) selectedTitle.innerText = project.name + ' (' + project.board + ')';
-            if (hiddenName) hiddenName.value = project.name;
-            if (hiddenLink) hiddenLink.value = project.demoUrl;
-        }
-
-        window.addEventListener('DOMContentLoaded', function() {
-            var urlParams = new URLSearchParams(window.location.search);
-            var claimSlug = urlParams.get('claim');
-            if (claimSlug) {
-                selectTemplateBySlug(claimSlug);
-                var contactSec = document.getElementById('contact');
-                if (contactSec) {
-                    setTimeout(function() {
-                        contactSec.scrollIntoView({ behavior: 'smooth' });
-                    }, 400);
-                }
-            }
-        });
-
         // 11th Project Card: Request 50+ More Templates Catalog
         function requestMoreTemplates() {
-            var selectedBox = document.getElementById('selectedTemplateBox');
-            var selectedTitle = document.getElementById('selectedTemplateTitle');
-            var hiddenName = document.getElementById('template_name');
-            var hiddenLink = document.getElementById('template_link');
-            var notesInput = document.getElementById('notes');
-
-            if (selectedBox) selectedBox.style.display = 'block';
-            if (selectedTitle) selectedTitle.innerText = '📁 Request: 50+ More School Website Templates Catalog';
-            if (hiddenName) hiddenName.value = 'Request for 50+ More School Website Templates Catalog';
-            if (hiddenLink) hiddenLink.value = 'https://design.cseel.org/#more-templates';
-
-            if (notesInput && !notesInput.value) {
-                notesInput.value = 'Please share the complete catalog of 50+ school website templates and design architectures for our school.';
-                updateNotesWordCount();
-            }
-
-            var contactSec = document.getElementById('contact');
-            if (contactSec) {
-                contactSec.scrollIntoView({ behavior: 'smooth' });
-            }
-
-            setTimeout(function() {
-                var schoolNameInput = document.getElementById('school_name');
-                if (schoolNameInput) {
-                    schoolNameInput.focus();
-                }
-            }, 600);
+            openQuoteModal('catalog');
         }
 
-        // Real-time Notes Word Counter (Max 150 Words)
-        function updateNotesWordCount() {
-            var notesInput = document.getElementById('notes');
-            var countDisplay = document.getElementById('notesWordCount');
-            var alertDisplay = document.getElementById('wordCountAlert');
+        // Real-time Modal Notes Word Counter (Max 150 Words)
+        function updateModalNotesWordCount() {
+            var notesInput = document.getElementById('modal_notes');
+            var countDisplay = document.getElementById('modalNotesWordCount');
+            var alertDisplay = document.getElementById('modalWordCountAlert');
             if (!notesInput) return;
 
             var text = notesInput.value.trim();
@@ -2053,24 +2205,139 @@
                 return 'device_fallback_' + Math.random().toString(36).substring(2, 10);
             }
         }
+
+        // Auto-open modal if ?claim=<slug> is in URL
+        window.addEventListener('DOMContentLoaded', function() {
+            var urlParams = new URLSearchParams(window.location.search);
+            var claimSlug = urlParams.get('claim');
+            if (claimSlug) {
+                setTimeout(function() {
+                    openQuoteModal(claimSlug);
+                }, 500);
+            }
+        });
+
+        // ESC Key to close modal
+        window.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeQuoteModal();
+                closeProjectPreviewModal();
+            }
+        });
     </script>
 
-    <!-- ====== SECURE ENQUIRY FORM AJAX SUBMISSION SCRIPT ====== -->
-    <script>
-        async function submitSchoolEnquiry(event) {
-            event.preventDefault();
-            var submitBtn = document.getElementById('submitBtn');
-            var successAlert = document.getElementById('enquirySuccessAlert');
-            var errorAlert = document.getElementById('enquiryErrorAlert');
+    <!-- ====== DEDICATED POP-UP MODAL ENQUIRY FORM ====== -->
+    <div id="quoteModal" class="quote-modal-backdrop" onclick="handleQuoteModalBackdrop(event)">
+        <div class="quote-modal-card" role="dialog" aria-modal="true" aria-labelledby="modalFormHeading">
+            <!-- Close Button -->
+            <button type="button" class="quote-modal-close" onclick="closeQuoteModal()" aria-label="Close quote modal">&times;</button>
 
-            var schoolName = document.getElementById('school_name').value.trim();
-            var personName = document.getElementById('person_name').value.trim();
-            var email = document.getElementById('email').value.trim();
-            var contactNumber = document.getElementById('contact_number').value.trim();
-            var notes = document.getElementById('notes').value.trim();
-            var templateName = document.getElementById('template_name') ? document.getElementById('template_name').value.trim() : '';
-            var templateLink = document.getElementById('template_link') ? document.getElementById('template_link').value.trim() : '';
-            var websiteHp = document.getElementById('website_hp') ? document.getElementById('website_hp').value.trim() : '';
+            <!-- Header -->
+            <div class="quote-modal-header">
+                <span class="quote-modal-badge">Direct School Enquiry</span>
+                <h3 id="modalFormHeading" class="quote-modal-title">Get Direct School Website Quote</h3>
+                <p class="quote-modal-subtitle">Direct quote &bull; All fields are compulsory &bull; Guaranteed response within 2 hours</p>
+            </div>
+
+            <!-- Dynamic Selected Template Alert Banner -->
+            <div id="modalSelectedTemplateBox" style="display: none; background: #E6F7F4; border: 1.5px solid #00AF90; border-radius: 12px; padding: 10px 16px; margin-bottom: 16px;">
+                <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
+                    <div>
+                        <span style="font-size: 1.15rem; font-weight: 800; color: #008770; text-transform: uppercase; letter-spacing: 0.5px;">🎯 Selected Project Template:</span>
+                        <div id="modalSelectedTemplateTitle" style="font-size: 1.45rem; font-weight: 900; color: #1B2732; margin-top: 2px;"></div>
+                    </div>
+                    <button type="button" onclick="clearModalSelectedTemplate()" style="background: none; border: none; color: #64748B; font-size: 1.25rem; font-weight: 700; cursor: pointer; text-decoration: underline;">
+                        Change
+                    </button>
+                </div>
+            </div>
+
+            <!-- Form -->
+            <form id="modalSchoolEnquiryForm" onsubmit="submitModalSchoolEnquiry(event)">
+                <input type="hidden" id="modal_template_name" name="template_name" value="">
+                <input type="hidden" id="modal_template_link" name="template_link" value="">
+                <!-- Anti-bot Honeypot Trap -->
+                <input type="text" id="modal_website_hp" name="website_hp" style="display:none !important;" tabindex="-1" autocomplete="off">
+
+                <!-- Field 1: School Name -->
+                <div class="form-group text-left" style="margin-bottom: 14px;">
+                    <label style="font-weight: 700; color: #1B2732; font-size: 1.35rem; margin-bottom: 4px; display: block;">School / Institution Name *</label>
+                    <input type="text" id="modal_school_name" name="school_name" class="form-control" placeholder="e.g. Delhi Public School / St. Mary Academy" required style="border-radius: 10px; padding: 12px 16px; font-size: 1.4rem; border: 1.5px solid #CBD5E1; width: 100%;">
+                </div>
+
+                <!-- Field 2: Person Name -->
+                <div class="form-group text-left" style="margin-bottom: 14px;">
+                    <label style="font-weight: 700; color: #1B2732; font-size: 1.35rem; margin-bottom: 4px; display: block;">Contact Person Name (Principal / Administrator) *</label>
+                    <input type="text" id="modal_person_name" name="person_name" class="form-control" placeholder="e.g. Dr. Rajesh Sharma" required style="border-radius: 10px; padding: 12px 16px; font-size: 1.4rem; border: 1.5px solid #CBD5E1; width: 100%;">
+                </div>
+
+                <!-- Field 3 & 4: Email & Phone -->
+                <div class="row" style="margin: 0 -6px;">
+                    <div class="col-md-6" style="padding: 0 6px; margin-bottom: 14px;">
+                        <div class="form-group text-left" style="margin-bottom: 0;">
+                            <label style="font-weight: 700; color: #1B2732; font-size: 1.35rem; margin-bottom: 4px; display: block;">Official Email Address *</label>
+                            <input type="email" id="modal_email" name="email" class="form-control" placeholder="principal@school.edu.in" required style="border-radius: 10px; padding: 12px 16px; font-size: 1.4rem; border: 1.5px solid #CBD5E1; width: 100%;">
+                        </div>
+                    </div>
+                    <div class="col-md-6" style="padding: 0 6px; margin-bottom: 14px;">
+                        <div class="form-group text-left" style="margin-bottom: 0;">
+                            <label style="font-weight: 700; color: #1B2732; font-size: 1.35rem; margin-bottom: 4px; display: block;">Contact Number (10-Digit Mobile / WhatsApp) *</label>
+                            <input type="tel" id="modal_contact_number" name="contact_number" class="form-control" placeholder="e.g. 9876543210" pattern="[6-9][0-9]{9}" maxlength="10" required style="border-radius: 10px; padding: 12px 16px; font-size: 1.4rem; border: 1.5px solid #CBD5E1; width: 100%;">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Field 5: Notes / Specific Requirements (Max 150 words) -->
+                <div class="form-group text-left" style="margin-bottom: 18px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                        <label style="font-weight: 700; color: #1B2732; font-size: 1.35rem; margin: 0;">Project Notes / Requirements *</label>
+                        <span id="modalNotesWordCount" style="font-size: 1.2rem; font-weight: 700; color: #64748B;">0 / 150 words</span>
+                    </div>
+                    <textarea id="modal_notes" name="notes" class="form-control" rows="3" placeholder="Tell us about your requirements (e.g. CBSE mandatory disclosure tab, online admission form, instant circular updates)..." required style="border-radius: 10px; padding: 12px 16px; font-size: 1.4rem; border: 1.5px solid #CBD5E1; width: 100%;" oninput="updateModalNotesWordCount()"></textarea>
+                    <div id="modalWordCountAlert" style="display: none; color: #DC2626; font-size: 1.2rem; font-weight: 700; margin-top: 4px;">⚠️ Limit reached! Maximum 150 words allowed.</div>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" id="modalSubmitBtn" class="school-cta-btn" style="width: 100%; border-radius: 9999px; font-weight: 800; font-size: 1.55rem; padding: 14px; background: #00AF90; color: #FFFFFF; box-shadow: 0 4px 15px rgba(0, 175, 144, 0.4); cursor: pointer; border: none;">
+                    Send Enquiry & Get Direct Quote &rarr;
+                </button>
+
+                <!-- Success Alert -->
+                <div id="modalEnquirySuccessAlert" style="display: none; padding: 14px 18px; margin-top: 16px; border-radius: 10px; background: #E6F7F4; color: #008770; font-weight: 700; font-size: 1.4rem; text-align: left; border: 1px solid rgba(0, 175, 144, 0.4);">
+                    ✓ Thank you! Dev Sharma has received your enquiry. We will contact your WhatsApp/Phone shortly with a direct transparent quote.
+                </div>
+
+                <!-- Error Alert -->
+                <div id="modalEnquiryErrorAlert" style="display: none; padding: 14px 18px; margin-top: 16px; border-radius: 10px; background: #FDE8E8; color: #9B1C1C; font-weight: 700; font-size: 1.4rem; text-align: left; border: 1px solid rgba(239, 68, 68, 0.4);">
+                </div>
+            </form>
+
+            <!-- Quick WhatsApp Option -->
+            <div class="quote-modal-quick-contact">
+                <span>Prefer instant WhatsApp chat?</span>
+                <a href="https://wa.me/919050778830?text=Hi%20Dev%2C%20I%20found%20you%20online%20on%20your%20website%2C%20can%20you%20develop%20a%20website%20for%20us%3F" target="_blank" class="quote-modal-wa-btn">
+                    <i class="fa fa-whatsapp" style="font-size: 1.8rem;"></i> +91 9050778830
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ====== SECURE MODAL ENQUIRY FORM AJAX SUBMISSION SCRIPT ====== -->
+    <script>
+        async function submitModalSchoolEnquiry(event) {
+            event.preventDefault();
+            var submitBtn = document.getElementById('modalSubmitBtn');
+            var successAlert = document.getElementById('modalEnquirySuccessAlert');
+            var errorAlert = document.getElementById('modalEnquiryErrorAlert');
+
+            var schoolName = document.getElementById('modal_school_name').value.trim();
+            var personName = document.getElementById('modal_person_name').value.trim();
+            var email = document.getElementById('modal_email').value.trim();
+            var contactNumber = document.getElementById('modal_contact_number').value.trim();
+            var notes = document.getElementById('modal_notes').value.trim();
+            var templateName = document.getElementById('modal_template_name') ? document.getElementById('modal_template_name').value.trim() : '';
+            var templateLink = document.getElementById('modal_template_link') ? document.getElementById('modal_template_link').value.trim() : '';
+            var websiteHp = document.getElementById('modal_website_hp') ? document.getElementById('modal_website_hp').value.trim() : '';
 
             // 1. Compulsory Check
             if (!schoolName || !personName || !email || !contactNumber || !notes) {
@@ -2144,14 +2411,15 @@
                 if (response.ok && result.success) {
                     successAlert.style.display = 'block';
                     successAlert.innerHTML = '✓ ' + result.message;
-                    document.getElementById('schoolEnquiryForm').reset();
-                    clearSelectedTemplate();
-                    updateNotesWordCount();
+                    document.getElementById('modalSchoolEnquiryForm').reset();
+                    clearModalSelectedTemplate();
+                    updateModalNotesWordCount();
                     submitBtn.innerText = 'Enquiry Sent Successfully ✓';
                     setTimeout(function() {
+                        closeQuoteModal();
                         submitBtn.disabled = false;
                         submitBtn.innerText = 'Send Enquiry & Get Direct Quote →';
-                    }, 5000);
+                    }, 4000);
                 } else {
                     errorAlert.style.display = 'block';
                     errorAlert.innerText = result.error || 'Failed to submit enquiry. Please try again.';
