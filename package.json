@@ -1,0 +1,12 @@
+{
+  "name": "cseel-design",
+  "version": "1.0.0",
+  "description": "School Website Design Specialist & Templates Portal - design.cseel.org",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve ."
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.16"
+  }
+}

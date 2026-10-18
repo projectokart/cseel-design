@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="catBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A2540"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00AF90"/>
+      <stop offset="100%" stop-color="#008770"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" rx="14" fill="url(#catBgGrad)"/>
+  <rect x="2" y="2" width="796" height="496" rx="12" fill="none" stroke="#00AF90" stroke-width="2.5" stroke-dasharray="8 6"/>
+
+  <!-- Centered Folder Icon -->
+  <g transform="translate(400, 190)">
+    <circle cx="0" cy="0" r="54" fill="rgba(0, 175, 144, 0.18)" stroke="#00AF90" stroke-width="2"/>
+    <path d="M-24,-14 L-8,-14 L-2,-6 L24,-6 C27,-6 29,-4 29,-1 L29,18 C29,21 27,23 24,23 L-24,23 C-27,23 -29,21 -29,18 L-29,-9 C-29,-12 -27,-14 -24,-14 Z" fill="#00AF90"/>
+    <line x1="-12" y1="8" x2="12" y2="8" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="0" y1="-4" x2="0" y2="20" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Title & Subtitle -->
+  <text x="400" y="295" text-anchor="middle" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="24" font-weight="900" fill="#FFFFFF" letter-spacing="-0.3">
+    50+ More School Templates
+  </text>
+  <text x="400" y="328" text-anchor="middle" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#A7F3D0">
+    Extended Design Catalog &bull; CBSE &bull; ICSE &bull; Cambridge &bull; Residential
+  </text>
+
+  <!-- Badge Pills -->
+  <g transform="translate(400, 375)">
+    <!-- Pill 1 -->
+    <rect x="-160" y="-14" width="95" height="28" rx="14" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+    <text x="-112" y="4" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">CBSE K-12</text>
+
+    <!-- Pill 2 -->
+    <rect x="-50" y="-14" width="100" height="28" rx="14" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+    <text x="0" y="4" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">ICSE Board</text>
+
+    <!-- Pill 3 -->
+    <rect x="65" y="-14" width="95" height="28" rx="14" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+    <text x="112" y="4" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">IB World</text>
+  </g>
+</svg>
